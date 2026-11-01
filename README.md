@@ -1,6 +1,6 @@
-# Khojki OCR
+# Khojki OCR pipeline
 
-Local OCR for Khojki PDFs and images, with line detection, an editable transcript and UTF-8 download.
+Local OCR for Khojki script, with line detection, an editable transcript and UTF-8 download.
 
 ![Khojki OCR showing a generated sample and its recognized text](web/assets/app-screenshot.png)
 
