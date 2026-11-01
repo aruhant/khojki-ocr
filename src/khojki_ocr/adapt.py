@@ -17,7 +17,7 @@ from khojki_ocr.evaluation import score_line
 from khojki_ocr.training import file_sha256, line_text, write_input_contract, write_json
 
 
-HELD_OUT_PAGES = frozenset({"1", "18", "19", "23", "24"})
+HELD_OUT_PAGES = frozenset({"1", "18", "19", "23", "24", "34", "44"})
 
 
 def _new_path(path: Path) -> None:
@@ -52,6 +52,8 @@ def _read_references(path: Path) -> dict:
             raise ValueError("Each reference requires a unique nonempty string id")
         if record.get("status") != "reviewed":
             raise ValueError(f"Reference {identifier!r} must be reviewed")
+        if record.get("uncertain"):
+            raise ValueError(f"Reference {identifier!r} has unresolved characters")
         if not isinstance(record.get("text"), str):
             raise ValueError(f"Reference {identifier!r} requires string text")
         text = line_text(record["text"])
@@ -232,7 +234,8 @@ class _StopRun(Exception):
 
 def run_adaptation(training: Path, development: Path, checkpoint: Path, output: Path, *,
                    seconds: int = 1200, max_steps: int = 100, lrate: float = 0.0005,
-                   max_width: int = 1280, batch_size: int = 4, measure_every: int = 5) -> dict:
+                   max_width: int = 1280, batch_size: int = 4, measure_every: int = 5,
+                   augment: bool = False) -> dict:
     """Start fresh optimization from a trusted checkpoint; select by dev CER only."""
     _new_path(output)
     output.mkdir(parents=True)
@@ -265,6 +268,8 @@ def run_adaptation(training: Path, development: Path, checkpoint: Path, output: 
     try:
         if type(seconds) is not int or not 1 <= seconds <= 1200:
             raise ValueError("seconds must be an integer between 1 and 1200")
+        if type(augment) is not bool:
+            raise ValueError("augment must be a boolean")
         for name, value in (("max_steps", max_steps), ("batch_size", batch_size), ("measure_every", measure_every)):
             if type(value) is not int or value <= 0:
                 raise ValueError(f"{name} must be a positive integer")
@@ -293,7 +298,7 @@ def run_adaptation(training: Path, development: Path, checkpoint: Path, output: 
         seed_everything(42, workers=True)
         torch.set_num_threads(2)
         options = dict(partition=1, format_type="path", linetype="bbox", normalization="NFC",
-                       normalize_whitespace=False, bidi_reordering=False, augment=False,
+                       normalize_whitespace=False, bidi_reordering=False, augment=augment,
                        num_workers=0, max_width=max_width, padding=16, variant="small", resize="fail",
                        batch_size=batch_size, optimizer="AdamW", lrate=lrate, schedule="constant",
                        warmup=0, quit="fixed", epochs=max_steps, min_epochs=0,
@@ -480,6 +485,7 @@ def main():
     parser.add_argument("--max-width", type=int, default=1280)
     parser.add_argument("--batch-size", type=int, default=4)
     parser.add_argument("--measure-every", type=int, choices=(5, 10), default=5)
+    parser.add_argument("--augment", action="store_true", help="Use Kraken's training image augmentation")
     args = parser.parse_args()
     result = run_adaptation(**vars(args))
     if result["error"] or not result["export_complete"]:

@@ -10,13 +10,177 @@ from PIL import Image, ImageDraw, ImageFont
 
 from khojki_ocr.core import POLICY_VERSION, raster_digest
 from khojki_ocr.pipeline import (
-    confirmed_blank, iter_pages, line_hypothesis, load_recognition_model, parse_pages, pdf_caption_regions,
+    confirmed_blank, iter_pages, line_hypothesis, load_recognition_model, main, parse_pages, pdf_caption_regions,
     prepare_output, process_page, raster_statistics, recognize_page, run_pipeline,
     segment_page,
 )
 
 
 KA = "\U00011208"
+
+
+class SegmentationModeTests(unittest.TestCase):
+    def setUp(self):
+        with Image.new("RGB", (16, 16), "white") as image:
+            raster_statistics(image)
+        self.binarization = SimpleNamespace(nlbin=Mock(side_effect=lambda image: image.copy()))
+        self.pageseg = SimpleNamespace(segment=Mock(return_value=SimpleNamespace(lines=[])))
+        self.config = Mock()
+        self.model = Mock()
+        self.model.predict.return_value = SimpleNamespace(type="baselines", lines=[], regions={})
+        self.loader = Mock(return_value=self.model)
+        self.input_error = type("KrakenInputException", (Exception,), {})
+        modules = patch.dict("sys.modules", {
+            "kraken": SimpleNamespace(binarization=self.binarization, pageseg=self.pageseg),
+            "kraken.configs": SimpleNamespace(SegmentationInferenceConfig=self.config),
+            "kraken.tasks": SimpleNamespace(SegmentationTaskModel=SimpleNamespace(load_model=self.loader)),
+            "kraken.lib.exceptions": SimpleNamespace(KrakenInputException=self.input_error),
+        })
+        modules.start()
+        self.addCleanup(modules.stop)
+
+    def test_invalid_mode_is_rejected_before_processing(self):
+        for mode in ("", "unknown", "AUTO", None, True, []):
+            with self.subTest(mode=mode):
+                image = Mock()
+                with self.assertRaisesRegex(ValueError, "Segmentation mode"):
+                    segment_page(image, self.model, segmentation_mode=mode)
+                image.convert.assert_not_called()
+                with patch("khojki_ocr.pipeline.prepare_output") as output, patch(
+                        "khojki_ocr.pipeline.iter_pages") as pages:
+                    with self.assertRaisesRegex(ValueError, "Segmentation mode"):
+                        run_pipeline("missing.png", "unused", segmentation_mode=mode)
+                    output.assert_not_called()
+                    pages.assert_not_called()
+        self.binarization.nlbin.assert_not_called()
+        self.pageseg.segment.assert_not_called()
+        self.loader.assert_not_called()
+        self.model.predict.assert_not_called()
+
+    def test_forced_baselines_bypasses_component_extraction(self):
+        with Image.new("RGB", (64, 64), "black") as image:
+            before = image.tobytes()
+            result = segment_page(image, self.model, segmentation_mode="baselines")
+            self.assertIs(result, self.model.predict.return_value)
+            self.model.predict.assert_called_once_with(image, self.config.return_value)
+            self.assertEqual(image.tobytes(), before)
+        self.binarization.nlbin.assert_not_called()
+        self.pageseg.segment.assert_not_called()
+        self.loader.assert_not_called()
+
+    def test_forced_baselines_retains_wide_image_padding_and_lazy_loading(self):
+        with Image.new("RGB", (128, 16), "black") as image:
+            before = image.tobytes()
+
+            def predict(padded, config):
+                self.assertEqual(padded.size, (128, 64))
+                with padded.crop((0, 0, 128, 16)) as original:
+                    self.assertEqual(original.tobytes(), before)
+                self.assertEqual(padded.getpixel((0, 63)), (255, 255, 255))
+                self.assertIs(config, self.config.return_value)
+                return SimpleNamespace(type="baselines", lines=[], regions={})
+
+            self.model.predict.side_effect = predict
+            segment_page(image, segmentation_mode="baselines")
+            self.assertEqual(image.tobytes(), before)
+        self.loader.assert_called_once_with()
+        self.model.predict.assert_called_once()
+        self.binarization.nlbin.assert_not_called()
+        self.pageseg.segment.assert_not_called()
+
+    def test_components_without_rows_fails_without_learned_fallback(self):
+        for color in ("white", "black"):
+            with self.subTest(color=color), Image.new("RGB", (64, 64), color) as image:
+                self.pageseg.segment.reset_mock()
+                before = image.tobytes()
+                with self.assertRaisesRegex(ValueError, "Component segmentation could not extract rows"):
+                    segment_page(image, segmentation_mode="components")
+                self.assertEqual(image.tobytes(), before)
+                if color == "black":
+                    self.pageseg.segment.assert_called_once()
+                    self.assertEqual(self.pageseg.segment.call_args.kwargs,
+                                     {"text_direction": "horizontal-lr", "black_colseps": True})
+                else:
+                    self.pageseg.segment.assert_not_called()
+        self.loader.assert_not_called()
+        self.model.predict.assert_not_called()
+
+    def test_components_extraction_errors_are_explicit_and_auto_still_falls_back(self):
+        for error in (ValueError("bad image"), self.input_error("bad rows")):
+            with self.subTest(error=error), Image.new("RGB", (64, 64), "black") as image:
+                self.pageseg.segment.side_effect = error
+                with self.assertRaisesRegex(ValueError, "Component segmentation") as failure:
+                    segment_page(image, self.model, segmentation_mode="components")
+                self.assertIs(failure.exception.__cause__, error)
+                self.model.predict.assert_not_called()
+                self.assertIs(segment_page(image, self.model), self.model.predict.return_value)
+                self.model.predict.assert_called_once()
+                self.model.predict.reset_mock()
+        self.loader.assert_not_called()
+
+    def test_pipeline_forwards_mode_records_config_and_preserves_auto_callback(self):
+        with tempfile.TemporaryDirectory() as directory, Image.new("RGB", (64, 64), "white") as image:
+            root = Path(directory)
+            source = root / "pages.tiff"
+            with image.copy() as second:
+                image.save(source, save_all=True, append_images=[second])
+            for mode in ("auto", "components", "baselines"):
+                with self.subTest(mode=mode):
+                    self.loader.reset_mock()
+
+                    def legacy_segment(source, model):
+                        return SimpleNamespace(type="bbox", lines=[], regions={})
+
+                    with patch("khojki_ocr.pipeline.segment_page", side_effect=(
+                            legacy_segment if mode == "auto" else None)) as segmenter:
+                        segmenter.return_value = SimpleNamespace(type="bbox", lines=[], regions={})
+                        options = {} if mode == "auto" else {"segmentation_mode": mode}
+                        result = run_pipeline(source, root / mode, segment_only=True, **options)
+                        self.assertEqual(result["summary"]["processed_pages"], 2)
+                        self.assertEqual(result["status"], "completed")
+                        self.assertEqual(segmenter.call_count, 2)
+                        for call in segmenter.call_args_list:
+                            self.assertEqual(len(call.args), 2)
+                            self.assertIs(call.args[1], None if mode == "components" else self.model)
+                            self.assertEqual(call.kwargs, {} if mode == "auto" else {"segmentation_mode": mode})
+                    self.assertEqual(result["config"]["segmentation_mode"], mode)
+                    stored = json.loads((root / mode / "report.json").read_text(encoding="utf-8"))
+                    self.assertEqual(stored["config"]["segmentation_mode"], mode)
+                    self.assertEqual(result["models_loaded"]["segmentation"], mode != "components")
+                    if mode == "components":
+                        self.loader.assert_not_called()
+                    else:
+                        self.loader.assert_called_once_with()
+
+    def test_pipeline_reports_component_failure_without_loading_detector(self):
+        with tempfile.TemporaryDirectory() as directory, Image.new("RGB", (64, 64), "black") as image:
+            root = Path(directory)
+            source = root / "input.png"
+            image.save(source)
+            result = run_pipeline(source, root / "run", segment_only=True, segmentation_mode="components")
+        self.assertEqual(result["status"], "completed_with_errors")
+        self.assertIn("segmentation_failed", result["pages"][0]["uncertainty_flags"])
+        self.assertIn("Component segmentation could not extract rows", result["pages"][0]["errors"][0])
+        self.loader.assert_not_called()
+        self.model.predict.assert_not_called()
+
+    def test_cli_forwards_segmentation_mode_and_defaults_to_auto(self):
+        for mode in (None, "auto", "components", "baselines"):
+            with self.subTest(mode=mode), patch("khojki_ocr.pipeline.run_pipeline") as pipeline, patch("builtins.print"):
+                pipeline.return_value = {"status": "completed", "summary": {}}
+                arguments = ["--input", "input.png", "--output", "run", "--segment-only"]
+                if mode is not None:
+                    arguments.extend(["--segmentation-mode", mode])
+                self.assertEqual(main(arguments), 0)
+                self.assertEqual(pipeline.call_args.kwargs["segmentation_mode"], mode or "auto")
+                self.assertTrue(pipeline.call_args.kwargs["segment_only"])
+
+    def test_cli_rejects_invalid_mode_before_running_pipeline(self):
+        with patch("khojki_ocr.pipeline.run_pipeline") as pipeline, patch("sys.stderr"):
+            with self.assertRaises(SystemExit) as failure:
+                main(["--input", "input.png", "--output", "run", "--segmentation-mode", "unknown"])
+        self.assertEqual(failure.exception.code, 2)
+        pipeline.assert_not_called()
 
 
 class RecognitionInputContractTests(unittest.TestCase):

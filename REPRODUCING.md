@@ -24,14 +24,14 @@ Historical reference previews for pages 17/18/19/20 were rendered with macOS PDF
 swift scripts/render_reference_previews.swift data/private/sample.pdf data/private 17 18 19 20
 ```
 
-Later previews use PDFium. Run this command to generate pages 21/22/23/24/26:
+Later previews use PDFium. Run this command to generate the evaluation and research previews:
 
 ```sh
 python - <<'PY'
 from pathlib import Path
 import pypdfium2 as pdfium
 with pdfium.PdfDocument("data/private/sample.pdf") as pdf:
-  for number in (21, 22, 23, 24, 26):
+  for number in (21, 22, 23, 24, 26, 28, 29, 31, 32, 34, 44):
     page = pdf[number - 1]
     bitmap = page.render(scale=2000 / page.get_width())
     path = Path("data/private") / f"preview-{number:03d}.png"
@@ -81,6 +81,34 @@ python -m pip install -e '.[test]'
 python -c 'from PIL import features; assert features.check("raqm"), "RAQM support is required for shaping tests"'
 python -m pytest -q
 ```
+
+## Fine-Tuning Experiments
+
+Training requires reviewed source crops and a trusted Kraken `.ckpt` initialization file, neither of which is bundled. Complete the preview preparation above and supply your checkpoint path before running:
+
+```sh
+python -m khojki_ocr.adapt --training data/training-research-002.json \
+  --development data/development-research-002.json \
+  --checkpoint path/to/trusted.ckpt --output runs/new-fine-tune \
+  --lrate 0.0002 --max-steps 100 --seconds 1200
+```
+
+Add `--augment` for a separate image-augmentation experiment. Checkpoints are selected by development CER; held-out pages and unresolved labels are rejected. Use a new output directory for each run. [results/research-experiments-001.json](results/research-experiments-001.json) records the initial experiments; neither candidate was promoted because real-page performance did not improve.
+
+The frozen research manifests contain 24 training crops/308 code points and eight development spans/54 code points. Their inherited `scope` fields describe the earlier base corpus; the `lines` arrays and experiment record contain the expanded counts. Preserve the manifests used by each run rather than rewriting its inputs afterward.
+
+Use `--segmentation-mode components` to require component-based rows, or `--segmentation-mode baselines` to test the learned detector. The default `auto` keeps the current component-first behavior. These modes enable handwriting experiments; they do not supply a handwriting-trained recognizer.
+
+Prepare unlabelled source crops without loading a recognizer:
+
+```sh
+python -m khojki_ocr.pipeline --input data/private/sample.pdf \
+  --pages 20,21,22,28,29,31,32,34,44 --segment-only \
+  --segmentation-mode components --line-crops runs/new-annotation-crops \
+  --output runs/new-annotation-pack
+```
+
+The recorded run produced 303 candidate crops. Review the complete pages for omitted lines, crop boundaries and reading order, then transcribe and classify each region before admitting it to a split. Page-disjoint splits within this PDF do not establish generalization across books or writers.
 
 ## Measurement Notes
 

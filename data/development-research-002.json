@@ -1,0 +1,135 @@
+{
+  "dataset_kind": "real",
+  "label_provenance": "Earlier reviewed printed crops plus independently agreed new words with exact crop review; AI-assisted, not expert-certified",
+  "lines": [
+    {
+      "bbox": [
+        403,
+        725,
+        557,
+        861
+      ],
+      "crop_scope": "partial_line",
+      "id": "p022-span01",
+      "page": 22,
+      "review_note": "GA with U and RA, bounded by visible separators; uncertain neighboring word excluded.",
+      "source_preview": "data/private/preview-022.png",
+      "status": "reviewed",
+      "text": "\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a"
+    },
+    {
+      "bbox": [
+        943,
+        725,
+        1550,
+        861
+      ],
+      "crop_scope": "partial_line",
+      "id": "p022-span02",
+      "page": 22,
+      "review_note": "Three complete separator-delimited words; the uncertain HA/I cluster is outside the crop.",
+      "source_preview": "data/private/preview-022.png",
+      "status": "reviewed",
+      "text": "\ud804\ude1e\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude2c\ud804\ude24\ud804\ude3a"
+    },
+    {
+      "bbox": [
+        106,
+        862,
+        443,
+        986
+      ],
+      "crop_scope": "partial_line",
+      "id": "p022-span03",
+      "page": 22,
+      "review_note": "Retains PA, MA+AA+ANUSVARA, GA+U and RA+E; disputed following KA/MA word excluded.",
+      "source_preview": "data/private/preview-022.png",
+      "status": "reviewed",
+      "text": "\ud804\ude1f\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude3a\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude30\ud804\ude3a"
+    },
+    {
+      "bbox": [
+        695,
+        993,
+        1123,
+        1125
+      ],
+      "crop_scope": "partial_line",
+      "id": "p022-span04",
+      "page": 22,
+      "review_note": "Two complete central words, excluding the initial disputed glyph and later content.",
+      "source_preview": "data/private/preview-022.png",
+      "status": "reviewed",
+      "text": "\ud804\ude1e\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a"
+    },
+    {
+      "bbox": [
+        999,
+        1128,
+        1102,
+        1258
+      ],
+      "crop_scope": "partial_line",
+      "id": "p022-span05",
+      "page": 22,
+      "review_note": "HA+O and its following separator; ambiguous preceding joined letters excluded.",
+      "source_preview": "data/private/preview-022.png",
+      "status": "reviewed",
+      "text": "\ud804\ude2a\ud804\ude32\ud804\ude3a"
+    },
+    {
+      "bbox": [
+        105,
+        2042,
+        274,
+        2178
+      ],
+      "crop_scope": "partial_line_word",
+      "id": "p022-lower-final-word",
+      "page": 22,
+      "review_note": "Two independent chart readers agreed on the codepoints; parent checked exact enlarged crops, retained every vowel/dot and placed edges in measured gaps to exclude neighboring ink.",
+      "source_preview": "data/private/preview-022.png",
+      "status": "reviewed",
+      "text": "\ud804\ude28\ud804\ude34\ud804\ude19\ud804\ude2c\ud804\ude3a"
+    },
+    {
+      "id": "research-agreed-p032-left-group02",
+      "page": 32,
+      "source_preview": "data/private/preview-032.png",
+      "bbox": [
+        304,
+        781,
+        698,
+        934
+      ],
+      "text": "\ud804\ude27\ud804\ude2f\ud804\ude18\ud804\ude29\ud804\ude32\ud804\ude3a",
+      "status": "reviewed",
+      "uncertain": [],
+      "crop_scope": "partial_line",
+      "review_note": "Independent texts and admission audit support LA U+11227 with U, NNA U+11218, SA U+11229 with O U+11232, and separator. Crop preserves all marks and excludes adjacent digit/rule. O follows supplied chart convention; not equivalent to E+AA.",
+      "label_provenance": "Two independent AI chart transcriptions with exact Unicode agreement and parent enlarged-crop review; not expert-certified"
+    },
+    {
+      "id": "research-agreed-p029-first-word",
+      "page": 29,
+      "source_preview": "data/private/preview-029.png",
+      "bbox": [
+        128,
+        951,
+        295,
+        1070
+      ],
+      "text": "\ud804\ude21\ud804\ude3a",
+      "status": "reviewed",
+      "uncertain": [],
+      "crop_scope": "partial_line",
+      "review_note": "BA plus separator is the independently shared first word; exact short crop excludes the following word. Parent crop review confirmed boundaries.",
+      "label_provenance": "Two independent AI chart readings agree on the full first word; parent crop review; not expert-certified"
+    }
+  ],
+  "policy_version": "khojki-only-nfc-v1",
+  "previous_manifest_sha256": "04ceaa12518ef65df9b6410516f60203ba57c0ce80b6148a896a4a9ad22832fa",
+  "scope": "Six checked partial printed development spans on page22; 46 codepoints",
+  "research_policy": "Disputed records excluded; new held-out pages34/44 reserved; selection by development data only",
+  "admission_audit": ".local/research-admission-audit.json; uncertain page28 excluded, page31 boundary repaired, page32 character names corrected"
+}

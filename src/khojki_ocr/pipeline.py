@@ -169,27 +169,38 @@ def iter_pages(input_path: str | Path, pages: Sequence[int] | None = None,
                     image.close()
 
 
-def segment_page(image, model=None):
-    """Extract complete horizontal rows, falling back to learned baselines."""
-    from kraken import binarization, pageseg
-    from kraken.configs import SegmentationInferenceConfig
-    from kraken.lib.exceptions import KrakenInputException
-    from kraken.tasks import SegmentationTaskModel
+def _validate_segmentation_mode(segmentation_mode: str) -> None:
+    if segmentation_mode not in ("auto", "components", "baselines"):
+        raise ValueError("Segmentation mode must be auto, components, or baselines")
 
-    try:
-        with image.convert("L") as grayscale, binarization.nlbin(grayscale).convert("1") as binary:
-            if binary.histogram()[0] >= 16:
-                segmentation = pageseg.segment(binary, text_direction="horizontal-lr",
-                                               black_colseps=True)
-                if segmentation.lines:
-                    lines = [replace(line, bbox=(max(0, line.bbox[0] - 8),
-                                                 max(0, line.bbox[1] - 8),
-                                                 min(image.width, line.bbox[2] + 8),
-                                                 min(image.height, line.bbox[3] + 8)))
-                             for line in segmentation.lines]
-                    return replace(segmentation, lines=lines)
-    except (ValueError, KrakenInputException):
-        pass
+
+def segment_page(image, model=None, *, segmentation_mode: str = "auto"):
+    """Extract horizontal rows or learned baselines; auto tries rows first."""
+    _validate_segmentation_mode(segmentation_mode)
+    from kraken import binarization, pageseg
+    from kraken.lib.exceptions import KrakenInputException
+
+    if segmentation_mode != "baselines":
+        try:
+            with image.convert("L") as grayscale, binarization.nlbin(grayscale).convert("1") as binary:
+                if binary.histogram()[0] >= 16:
+                    segmentation = pageseg.segment(binary, text_direction="horizontal-lr",
+                                                   black_colseps=True)
+                    if segmentation.lines:
+                        lines = [replace(line, bbox=(max(0, line.bbox[0] - 8),
+                                                     max(0, line.bbox[1] - 8),
+                                                     min(image.width, line.bbox[2] + 8),
+                                                     min(image.height, line.bbox[3] + 8)))
+                                 for line in segmentation.lines]
+                        return replace(segmentation, lines=lines)
+        except (ValueError, KrakenInputException) as error:
+            if segmentation_mode == "components":
+                raise ValueError("Component segmentation could not extract rows") from error
+        if segmentation_mode == "components":
+            raise ValueError("Component segmentation could not extract rows")
+
+    from kraken.configs import SegmentationInferenceConfig
+    from kraken.tasks import SegmentationTaskModel
 
     if model is None:
         model = SegmentationTaskModel.load_model()
@@ -599,7 +610,7 @@ def run_pipeline(input_path: str | Path, output_dir: str | Path, *,
                  line_crops: str | Path | None = None, warn_confidence: float | None = None,
                  pdf_caption_texts: Sequence[str] = (), cleanup_mode: str = "none",
                  deskew: bool = False, crop_border: bool = False,
-                 export_drafts: bool = False) -> dict:
+                 export_drafts: bool = False, segmentation_mode: str = "auto") -> dict:
     """Run local page inference and write one aggregate report.json.
 
     Debug crops go into a unique, lazily created run below line_crops, outside
@@ -608,6 +619,7 @@ def run_pipeline(input_path: str | Path, output_dir: str | Path, *,
     Models are loaded once, on demand, so reference-only runs need no Kraken.
     No trained script classifier is supplied; model pages require review.
     """
+    _validate_segmentation_mode(segmentation_mode)
     if not Path(input_path).is_file():
         raise FileNotFoundError(input_path)
     if not math.isfinite(dpi) or dpi <= 0:
@@ -643,11 +655,13 @@ def run_pipeline(input_path: str | Path, output_dir: str | Path, *,
     models = {"segmentation": None, "recognition": None}
 
     def segment(image):
-        if models["segmentation"] is None:
+        if segmentation_mode != "components" and models["segmentation"] is None:
             from kraken.tasks import SegmentationTaskModel
 
             models["segmentation"] = SegmentationTaskModel.load_model()
-        return segment_page(image, models["segmentation"])
+        if segmentation_mode == "auto":
+            return segment_page(image, models["segmentation"])
+        return segment_page(image, models["segmentation"], segmentation_mode=segmentation_mode)
 
     def recognize(image, segmentation):
         if models["recognition"] is None:
@@ -664,6 +678,7 @@ def run_pipeline(input_path: str | Path, output_dir: str | Path, *,
         "policy_version": POLICY_VERSION, "status": "completed", "pages": [], "errors": [],
         "config": {"pages": list(pages) if pages is not None else None, "dpi": dpi,
                    "mode": "segment_only" if segment_only or model_path is None else "recognition",
+                   "segmentation_mode": segmentation_mode,
                    "model": str(model_path) if model_path is not None else None,
                    "model_sha256": model_digest,
                    "input_contract_sha256": contract_digest,
@@ -729,6 +744,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--references", type=Path, help="Explicitly approved exact-raster reference manifest")
     parser.add_argument("--disable-references", action="store_true")
     parser.add_argument("--segment-only", action="store_true", help="Disable recognition and reference transcript replay")
+    parser.add_argument("--segmentation-mode", choices=("auto", "components", "baselines"), default="auto",
+                        help="auto tries classical rows first; components forbids fallback; baselines forces the learned detector")
     parser.add_argument("--export-drafts", action="store_true", help="Write nonempty target-only raw model text under drafts/, still requiring review")
     parser.add_argument("--dpi", type=float, default=300)
     parser.add_argument("--cleanup", choices=("none", "conservative", "normalized"), default="none")
@@ -746,7 +763,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             segment_only=args.segment_only, dpi=args.dpi, line_crops=args.line_crops,
             cleanup_mode=args.cleanup, deskew=args.deskew, crop_border=args.crop_border,
             warn_confidence=args.warn_confidence, pdf_caption_texts=args.pdf_caption_text,
-            export_drafts=args.export_drafts,
+            export_drafts=args.export_drafts, segmentation_mode=args.segmentation_mode,
         )
     except (OSError, ValueError, ImportError) as error:
         print(f"khojki-ocr: {error}", file=sys.stderr)

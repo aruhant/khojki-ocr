@@ -124,13 +124,20 @@ class PreparationTests(unittest.TestCase):
             prepare_data(self.training, self.development, link)
 
     def test_held_out_pages_rejected_before_images_open(self):
-        for page in (1, 18, 19, 23, 24):
+        for page in (1, 18, 19, 23, 24, 34, 44):
             with self.subTest(page=page):
                 self.train["page"] = page
                 self.save()
                 with patch("PIL.Image.open", side_effect=AssertionError("must not open test image")):
                     with self.assertRaisesRegex(ValueError, "Held-out page"):
                         self.prepare()
+
+    def test_reviewed_record_with_unresolved_characters_is_rejected(self):
+        self.train["uncertain"] = ["O versus E+AA"]
+        self.save()
+        with self.assertRaisesRegex(ValueError, "unresolved characters"):
+            self.prepare()
+        self.assertFalse(self.output.exists())
 
     def test_explicit_evaluation_only_manifest_rejected_before_images_open(self):
         manifest = json.loads(self.training.read_text())
@@ -198,6 +205,15 @@ class PreparationTests(unittest.TestCase):
         self.assertIn("FileNotFoundError", result["error"])
         self.assertIn("Traceback", (self.output / "error.log").read_text())
         self.assertEqual(json.loads((self.output / "summary.json").read_text()), result)
+
+    def test_augmentation_requires_explicit_boolean_before_loading_checkpoint(self):
+        for index, value in enumerate((None, 1, "true")):
+            with self.subTest(augment=value):
+                output = self.root / f"invalid-augmentation-{index}"
+                result = run_adaptation(self.training, self.development,
+                                        self.root / "absent.ckpt", output, augment=value)
+                self.assertIn("augment must be a boolean", result["error"])
+                self.assertFalse(result["export_complete"])
 
 
 if __name__ == "__main__":

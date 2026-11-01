@@ -1,0 +1,145 @@
+{
+  "schema": "khojki-research-experiments-v1",
+  "verified_at": "2026-11-01T15:40:21.029632-05:00",
+  "production_model_sha256": "05c02e4be38dc9392e3517c1e3d21d7f4461a15a4c4d7f019e0b18a79019e4c2",
+  "production_model_changed": false,
+  "target": {
+    "printed_raw_page_cer": 0.05,
+    "no_missing_lines": true,
+    "handwriting": "Separate dataset and writer-disjoint evaluation before promotion",
+    "threshold_met": false
+  },
+  "preprocessing_development_only": {
+    "reference_characters": 46,
+    "raw_errors": 1,
+    "autocontrast_errors": 1,
+    "extra_border_8_errors": 3,
+    "decision": "Keep raw; no demonstrated preprocessing gain"
+  },
+  "label_review": {
+    "independent_printed_passes": 2,
+    "initial_new_training_spans": 2,
+    "initial_new_development_spans": 2,
+    "audit_findings": "Unclassified page28 fleck excluded; page31 rule-containing crop repaired at blank boundaryx908; page32 prose names corrected to LA/NNA; original label strings preserved",
+    "corrected_training_manifest": "data/training-research-002.json",
+    "corrected_development_manifest": "data/development-research-002.json",
+    "training_manifest_sha256": "e97c184061c98f6eba1292dc8fb947f57b8988a632067df576e71dee34eefa51",
+    "development_manifest_sha256": "7e6a240d21c47e2979fb986ee9f9be277705effbff81a310786161b9d3bd2985",
+    "manifest_scope_note": "Inherited scope metadata describes the base corpus; lines arrays contain the expanded counts below. Exact run inputs preserved.",
+    "training_crops": 24,
+    "training_codepoints": 308,
+    "development_spans": 8,
+    "development_codepoints": 54,
+    "fresh_reserved_pages": [
+      34,
+      44
+    ],
+    "fresh_references_admitted": 0,
+    "fresh_reference_status": "Independent drafts disagree; withheld rather than scored as gold"
+  },
+  "annotation_pack": {
+    "report": "runs/research-annotation-pack-001/report.json",
+    "template": "runs/research-annotation-pack-001/annotation-template.json",
+    "crop_root": "runs/research-annotation-crops-001",
+    "processed_pages": 9,
+    "unlabelled_crops": 303,
+    "training_crops": 121,
+    "development_crops": 77,
+    "test_crops": 105,
+    "pages_with_errors": 0,
+    "recognizer_predictions_supplied": false,
+    "training_allowed": false,
+    "private_artifacts_published": false,
+    "review_required": "Expert transcription, completeness and reading-order checks, script/digit/nontext classification before split-specific admission",
+    "split_note": "Current roles are page-disjoint within one exercise PDF, not a source-disjoint generalization benchmark. Additional books and documented writers are needed."
+  },
+  "experiments": [
+    {
+      "name": "augmented-001",
+      "augment": true,
+      "training_manifest": "data/training-research-001.json",
+      "development_manifest": "data/development-research-001.json",
+      "steps": 100,
+      "best_step": 0,
+      "initial_development_cer": 0.1111111111111111,
+      "selected_development_cer": 0.1111111111111111,
+      "wall_seconds": 1038.016,
+      "decision": "No gain; rejected. Admissions also failed independent crop audit."
+    },
+    {
+      "name": "real-002",
+      "augment": false,
+      "steps": 1,
+      "stop_reason": "interrupted",
+      "decision": "Interrupted; not used as a completed result"
+    },
+    {
+      "name": "real-003",
+      "augment": false,
+      "training_manifest": "data/training-research-002.json",
+      "development_manifest": "data/development-research-002.json",
+      "steps": 92,
+      "best_step": 50,
+      "initial_development_cer": 0.1111111111111111,
+      "selected_development_cer": 0.09259259259259259,
+      "wall_seconds": 1151.387,
+      "candidate_sha256": "3774875b77f325e1ae5c97f5412773e90218e353f20ba285f5154ad6021013ed",
+      "historical_manual_crop": {
+        "errors": 26,
+        "reference_characters": 103,
+        "cer": 0.2524271844660194
+      },
+      "historical_raw_page": {
+        "errors": 29,
+        "reference_characters": 103,
+        "cer": 0.2815533980582524,
+        "failed_regions": 0
+      },
+      "short_words": {
+        "errors": 4,
+        "reference_characters": 20,
+        "cer": 0.2
+      },
+      "decision": "Rejected for regression: current raw-page CER0.203883 versus candidate0.281553. Candidate remains local."
+    }
+  ],
+  "handwriting": {
+    "exact_crop_hypotheses_reviewed": 3,
+    "confirmed_text_sequences": 2,
+    "current_clean_crop_recommended": 1,
+    "development_label_ready": false,
+    "trained": false,
+    "reason": "One confirmed training crop still needs clean boundaries; proposed dev glyph identity/vowel assignment unresolved. Two words cannot establish a handwriting benchmark."
+  },
+  "research_controls": {
+    "augmentation_opt_in": true,
+    "segmentation_modes": [
+      "auto",
+      "components",
+      "baselines"
+    ],
+    "held_out_pages_protected": [
+      1,
+      18,
+      19,
+      23,
+      24,
+      34,
+      44
+    ],
+    "unresolved_reviewed_labels_rejected": true,
+    "tests_passed": 194,
+    "subtests_passed": 223
+  },
+  "next_data_target": {
+    "printed_training_lines": 500,
+    "printed_development_lines": 100,
+    "printed_test_lines": 100,
+    "source_split": "Whole pages/books separated before annotation; representative full-line and full-page references, not only easy words",
+    "handwriting_pilot_lines": 200,
+    "handwriting_split": "By manuscript/writer when documented; held-out writers for generalization",
+    "counts_note": "Initial collection targets, not a guarantee of reaching5% CER"
+  },
+  "compute": "Local CPU only; no paid OCR APIs or scan uploads",
+  "scope_note": "Historical test sets were reused in earlier diagnostics; newly reserved page34/44 references are not yet admitted. No claim of a blind full-page or handwriting improvement."
+}

@@ -8,6 +8,8 @@ __pycache__/
 .ruff_cache/
 data/private/
 /data/training-mixed.json
+/data/training-research-001.json
+/data/development-research-001.json
 models/*
 runs/
 *.ckpt
