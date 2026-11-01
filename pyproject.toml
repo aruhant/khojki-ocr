@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "khojki-ocr"
+version = "0.1.0"
+description = "Auditable, local-first OCR for historical Khojki pages"
+requires-python = ">=3.11,<3.14"
+dependencies = ["Pillow>=10", "fonttools>=4", "numpy", "opencv-python>=4.8", "pypdfium2>=4", "rapidfuzz>=3"]
+
+[project.optional-dependencies]
+ocr = ["kraken==7.1.1", "tensorboard>=2.15"]
+test = ["pytest>=8"]
+
+[project.scripts]
+khojki-ocr = "khojki_ocr.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

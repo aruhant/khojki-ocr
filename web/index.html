@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Khojki Transcription</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="identity"><span class="identity-mark" aria-hidden="true">K</span><h1>Khojki Transcription</h1></div>
+    <div class="header-actions">
+      <button id="download" class="icon-button" type="button" disabled title="Download transcript" aria-label="Download transcript"><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/lucide.svg#download"></use></svg></button>
+      <button id="upload" class="primary-button" type="button"><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/lucide.svg#upload"></use></svg><span>Upload document</span></button>
+      <input id="file-input" type="file" accept="application/pdf,image/png,image/jpeg,.pdf,.png,.jpg,.jpeg" hidden>
+    </div>
+  </header>
+
+  <main id="workspace" class="workspace">
+    <div id="alert" class="alert" role="alert" hidden></div>
+    <section id="empty" class="empty-workspace" aria-label="Document upload">
+      <button id="empty-upload" class="empty-upload" type="button"><svg class="lucide empty-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/lucide.svg#file-up"></use></svg><span>Upload document</span></button>
+      <span class="file-types">PDF · PNG · JPEG</span>
+    </section>
+
+    <section id="document" class="document-workspace" aria-label="Document workspace" hidden>
+      <div class="job-toolbar">
+        <div class="job-details"><strong id="filename"></strong><span id="job-status" role="status" aria-live="polite"></span></div>
+        <button id="cancel" class="quiet-button" type="button" hidden><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/lucide.svg#square"></use></svg><span>Cancel</span></button>
+      </div>
+      <div id="progress-track" class="progress-track" role="progressbar" aria-label="Document processing" aria-valuemin="0" aria-valuemax="100"><div id="progress-fill" class="progress-fill"></div></div>
+      <div class="mobile-tabs" role="tablist" aria-label="Workspace view">
+        <button id="page-tab" type="button" role="tab" aria-selected="true" aria-controls="page-panel">Page</button>
+        <button id="text-tab" type="button" role="tab" aria-selected="false" aria-controls="text-panel">Text</button>
+      </div>
+
+      <div class="panels">
+        <section id="page-panel" class="page-panel" aria-labelledby="page-heading">
+          <div class="panel-toolbar"><h2 id="page-heading">Page <span id="page-number">1</span></h2><div class="image-controls">
+            <button id="zoom-out" class="icon-button small" type="button" title="Zoom out" aria-label="Zoom out"><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/lucide.svg#zoom-out"></use></svg></button>
+            <button id="fit" class="icon-button small" type="button" title="Fit page" aria-label="Fit page"><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/lucide.svg#maximize"></use></svg></button>
+            <button id="zoom-in" class="icon-button small" type="button" title="Zoom in" aria-label="Zoom in"><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/lucide.svg#zoom-in"></use></svg></button>
+          </div></div>
+          <div id="image-viewport" class="image-viewport" tabindex="0" aria-label="Page image">
+            <div id="image-message" class="image-message" role="status">Waiting for page image</div>
+            <img id="page-image" alt="" hidden draggable="false">
+          </div>
+        </section>
+
+        <section id="text-panel" class="text-panel" aria-labelledby="text-heading">
+          <div class="panel-toolbar text-toolbar"><div class="transcript-heading"><h2 id="text-heading">Transcript</h2><span id="draft-label" class="draft-label">Model draft</span></div><div class="text-controls">
+            <button id="copy" class="icon-button small" type="button" disabled title="Copy page text" aria-label="Copy page text"><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/lucide.svg#copy"></use></svg></button>
+            <div class="mode-switch" role="group" aria-label="Transcript mode"><button id="edit-mode" type="button" aria-pressed="true">Edit</button><button id="read-mode" type="button" aria-pressed="false">Read</button></div>
+          </div></div>
+          <div class="transcript-status"><span id="page-status" role="status">Waiting</span><span id="review-badge" class="review-badge" hidden>Review required</span></div>
+          <textarea id="transcript" class="transcript" aria-label="Page transcript" dir="ltr" spellcheck="false" autocorrect="off" autocapitalize="off" autocomplete="off" disabled></textarea>
+          <div id="reader" class="transcript reader" dir="ltr" hidden></div>
+          <div class="transcript-footer"><span id="save-status" role="status">Model draft</span><span id="character-count">0 characters</span></div>
+        </section>
+      </div>
+      <nav class="page-navigation" aria-label="Document pages">
+        <button id="previous" class="icon-button small" type="button" disabled title="Previous page" aria-label="Previous page"><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/lucide.svg#chevron-left"></use></svg></button>
+        <div id="page-list" class="page-list"></div>
+        <button id="next" class="icon-button small" type="button" disabled title="Next page" aria-label="Next page"><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/lucide.svg#chevron-right"></use></svg></button>
+      </nav>
+    </section>
+    <div id="drop-overlay" class="drop-overlay" hidden aria-hidden="true"><span>Upload document</span></div>
+  </main>
+</body>
+</html>

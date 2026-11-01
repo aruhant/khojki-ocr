@@ -1,0 +1,40 @@
+{
+  "policy_version": "khojki-only-nfc-v1",
+  "dataset_kind": "real",
+  "source_type": "printed_scans",
+  "label_provenance": "AI-assisted visual transcription, independent chart comparison and parent adjudication; not expert-certified",
+  "review_method": "Original line crops were compared against the Khojki chart and historical encoding proposal without recognizer predictions. Initial ambiguous lines were replaced. THA and SA corrections were resolved from enlarged glyphs.",
+  "coordinate_system": "Half-open pixel boxes in the named private source preview, before cleanup",
+  "lines": [
+    {
+      "id": "p018-row05", "page": 18, "status": "reviewed",
+      "source_preview": "data/private/preview-018.png", "bbox": [509, 1044, 1248, 1165],
+      "text": "𑈁𑈟𑈺𑈞𑈭𑈦𑈴𑈐𑈞𑈺𑈃𑈟𑈞𑈬𑈴𑈺",
+      "review_note": "Independent chart agreement, including NA+I, independent U and final AA+ANUSVARA."
+    },
+    {
+      "id": "p018-row06", "page": 18, "status": "reviewed",
+      "source_preview": "data/private/preview-018.png", "bbox": [509, 1199, 1442, 1332],
+      "text": "𑈀𑈞𑈰𑈺𑈁𑈟𑈰𑈴𑈺𑈃𑈟𑈬𑈂𑈺𑈐𑈬𑈙𑈺𑈦𑈰𑈺",
+      "review_note": "Independent chart agreement; independent I retains its horizontal dots and no invented separator."
+    },
+    {
+      "id": "p018-row08", "page": 18, "status": "reviewed",
+      "source_preview": "data/private/preview-018.png", "bbox": [505, 1525, 1445, 1655],
+      "text": "𑈩𑈲𑈺𑈩𑈙𑈊𑈯𑈦𑈺𑈩𑈙𑈬𑈦𑈬𑈺𑈩𑈬𑈚𑈦𑈰𑈺",
+      "review_note": "Replaced provisional KHA with THA U+1121A: enlarged glyph has two connected bowls and a descending right stem."
+    },
+    {
+      "id": "p018-row14", "page": 18, "status": "reviewed",
+      "source_preview": "data/private/preview-018.png", "bbox": [312, 2495, 1335, 2635],
+      "text": "𑈃𑈟𑈩𑈰𑈺𑈩𑈙𑈬𑈦𑈬𑈺𑈀𑈊𑈲𑈎𑈦𑈺𑈩𑈲𑈺𑈂𑈺",
+      "review_note": "Replaced provisional second PA with SA U+11229: separate descending left stroke is visible. Gujarati line number excluded."
+    },
+    {
+      "id": "p019-row01", "page": 19, "status": "reviewed",
+      "source_preview": "data/private/preview-019.png", "bbox": [277, 449, 1381, 588],
+      "text": "𑈙𑈡𑈺𑈙𑈲𑈺𑈩𑈙𑈊𑈯𑈦𑈺𑈀𑈊𑈲𑈎𑈦𑈺𑈪𑈲𑈙𑈰𑈺",
+      "review_note": "TA/BA, GA+U, GA+O, CA and final HA+O/TA+E checked against the chart. Gujarati line number excluded."
+    }
+  ]
+}

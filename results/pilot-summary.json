@@ -1,0 +1,22 @@
+{
+  "checkpoints": [
+    "checkpoints/checkpoint_00-0.4367.ckpt"
+  ],
+  "elapsed_seconds": 474.753,
+  "error": null,
+  "metrics": "Read actual Kraken metrics in ketos.log and local TensorBoard logs; no gold/test evaluation performed",
+  "output_bytes": 168293904,
+  "returncode": 0,
+  "status": "completed",
+  "stop_reason": null,
+  "termination_signal": null,
+  "train_count": 180,
+  "validation_count": 20,
+  "weights": [
+    "checkpoints/best_0.4367.safetensors"
+  ],
+  "scope": "synthetic_training_pilot",
+  "resume_note": "Resumed after 31 of 45 epoch steps; elapsed_seconds covers the resumed segment only",
+  "training_labels": "programmatically generated basic Khojki patterns",
+  "real_training_lines": 0
+}

@@ -1,0 +1,208 @@
+{
+  "policy_version": "khojki-only-nfc-v1",
+  "dataset_kind": "real",
+  "result_mode": "model_evaluation",
+  "allow_reference": false,
+  "prediction_provenances": [
+    "model"
+  ],
+  "prediction_format": "lines_object",
+  "metric": "codepoint_cer",
+  "normalization": "core.normalize_text: NFC and CRLF/CR to LF",
+  "whitespace": "counted",
+  "punctuation": "counted",
+  "warnings": [],
+  "line_count": 5,
+  "prediction_count": 5,
+  "reference_characters": 20,
+  "prediction_characters": 19,
+  "substitutions": 3,
+  "insertions": 0,
+  "deletions": 1,
+  "errors": 4,
+  "exact_line_count": 1,
+  "missing_prediction_count": 0,
+  "cer": 0.2,
+  "exact_line_accuracy": 0.2,
+  "invalid_codepoints": [],
+  "reference_invalid_codepoints": [],
+  "confusion_pairs": {
+    "U+11200 -> <empty>": 1,
+    "U+1120A -> U+1121E": 1,
+    "U+1120A -> U+11224": 1,
+    "U+11219 -> U+11221": 1
+  },
+  "lines": [
+    {
+      "id": "p023-row01-fresh-final-word",
+      "reference_metadata": {
+        "bbox": [
+          1699,
+          358,
+          1868,
+          479
+        ],
+        "crop_scope": "partial_line_word",
+        "page": 23,
+        "review_note": "Parent checked the complete A horizontal hook and bare RA; no following vowel is present.",
+        "source_preview": "data/private/preview-023.png",
+        "status": "reviewed"
+      },
+      "provenance": "model",
+      "missing_prediction": false,
+      "reference_text": "\ud804\ude00\ud804\ude26",
+      "prediction_text": "\ud804\ude26",
+      "reference_characters": 2,
+      "prediction_characters": 1,
+      "substitutions": 0,
+      "insertions": 0,
+      "deletions": 1,
+      "errors": 1,
+      "cer": 0.5,
+      "exact_match": false,
+      "invalid_codepoints": [],
+      "reference_invalid_codepoints": [],
+      "confusion_pairs": {
+        "U+11200 -> <empty>": 1
+      }
+    },
+    {
+      "id": "p023-row07-fresh-gu-ra-ta",
+      "reference_metadata": {
+        "bbox": [
+          1048,
+          1126,
+          1269,
+          1249
+        ],
+        "crop_scope": "partial_line_word",
+        "page": 23,
+        "review_note": "Parent checked GA-U, RA, TA and both separator dots; crop begins in the measured gap after the preceding separator.",
+        "source_preview": "data/private/preview-023.png",
+        "status": "reviewed"
+      },
+      "provenance": "model",
+      "missing_prediction": false,
+      "reference_text": "\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude19\ud804\ude3a",
+      "prediction_text": "\ud804\ude24\ud804\ude2f\ud804\ude26\ud804\ude19\ud804\ude3a",
+      "reference_characters": 5,
+      "prediction_characters": 5,
+      "substitutions": 1,
+      "insertions": 0,
+      "deletions": 0,
+      "errors": 1,
+      "cer": 0.2,
+      "exact_match": false,
+      "invalid_codepoints": [],
+      "reference_invalid_codepoints": [],
+      "confusion_pairs": {
+        "U+1120A -> U+11224": 1
+      }
+    },
+    {
+      "id": "p023-row11-fresh-initial-gu-ra",
+      "reference_metadata": {
+        "bbox": [
+          145,
+          1635,
+          303,
+          1761
+        ],
+        "crop_scope": "partial_line_word",
+        "page": 23,
+        "review_note": "Parent checked GA-U, RA and both separator dots; the next word beginning near x=306 is excluded.",
+        "source_preview": "data/private/preview-023.png",
+        "status": "reviewed"
+      },
+      "provenance": "model",
+      "missing_prediction": false,
+      "reference_text": "\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a",
+      "prediction_text": "\ud804\ude1e\ud804\ude2f\ud804\ude26\ud804\ude3a",
+      "reference_characters": 4,
+      "prediction_characters": 4,
+      "substitutions": 1,
+      "insertions": 0,
+      "deletions": 0,
+      "errors": 1,
+      "cer": 0.25,
+      "exact_match": false,
+      "invalid_codepoints": [],
+      "reference_invalid_codepoints": [],
+      "confusion_pairs": {
+        "U+1120A -> U+1121E": 1
+      }
+    },
+    {
+      "id": "p024-row04-fresh-initial-ka-ra",
+      "reference_metadata": {
+        "bbox": [
+          113,
+          730,
+          303,
+          853
+        ],
+        "crop_scope": "partial_line_word",
+        "page": 24,
+        "review_note": "Parent added the separate AA upright omitted by the AI draft, then checked KA-AA, RA and separator; next-word ink is excluded.",
+        "source_preview": "data/private/preview-024.png",
+        "status": "reviewed"
+      },
+      "provenance": "model",
+      "missing_prediction": false,
+      "reference_text": "\ud804\ude08\ud804\ude2c\ud804\ude26\ud804\ude3a",
+      "prediction_text": "\ud804\ude08\ud804\ude2c\ud804\ude26\ud804\ude3a",
+      "reference_characters": 4,
+      "prediction_characters": 4,
+      "substitutions": 0,
+      "insertions": 0,
+      "deletions": 0,
+      "errors": 0,
+      "cer": 0.0,
+      "exact_match": true,
+      "invalid_codepoints": [],
+      "reference_invalid_codepoints": [],
+      "confusion_pairs": {}
+    },
+    {
+      "id": "p024-row07-fresh-ta-e-na-e",
+      "reference_metadata": {
+        "bbox": [
+          1257,
+          1112,
+          1412,
+          1235
+        ],
+        "crop_scope": "partial_line_word",
+        "page": 24,
+        "review_note": "Parent checked TA-E, NA-E and separator with both overhead signs; preceding I-foot and following-letter ink are excluded.",
+        "source_preview": "data/private/preview-024.png",
+        "status": "reviewed"
+      },
+      "provenance": "model",
+      "missing_prediction": false,
+      "reference_text": "\ud804\ude19\ud804\ude30\ud804\ude1e\ud804\ude30\ud804\ude3a",
+      "prediction_text": "\ud804\ude21\ud804\ude30\ud804\ude1e\ud804\ude30\ud804\ude3a",
+      "reference_characters": 5,
+      "prediction_characters": 5,
+      "substitutions": 1,
+      "insertions": 0,
+      "deletions": 0,
+      "errors": 1,
+      "cer": 0.2,
+      "exact_match": false,
+      "invalid_codepoints": [],
+      "reference_invalid_codepoints": [],
+      "confusion_pairs": {
+        "U+11219 -> U+11221": 1
+      }
+    }
+  ],
+  "inference": {
+    "model_sha256": "05c02e4be38dc9392e3517c1e3d21d7f4461a15a4c4d7f019e0b18a79019e4c2",
+    "elapsed_seconds": 12.79,
+    "scope": "recognition_only_manual_crops",
+    "cleanup_mode": "none",
+    "reference_text_given_to_model": false
+  },
+  "label_provenance": "AI-assisted chart matching and parent crop/codepoint adjudication; not expert-certified. A reviewer incidentally saw aggregate experiment metrics, but no prediction text was used."
+}

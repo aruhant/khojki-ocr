@@ -1,0 +1,169 @@
+{
+  "scope": "training_fit_only_not_generalization",
+  "summary": {
+    "elapsed_seconds": 117.362,
+    "error": null,
+    "final_cer": 0.0,
+    "gradient_norm": 2.2961910941118915,
+    "initial_cer": 0.972972972972973,
+    "passed": true,
+    "scope": "training_fit_only_not_generalization",
+    "steps": 15,
+    "stop_reason": "target_training_cer"
+  },
+  "learning_curve": [
+    {
+      "step": 0,
+      "elapsed_seconds": 5.008,
+      "cer": 0.972972972972973,
+      "errors": 36,
+      "reference_characters": 37,
+      "loss": null,
+      "gradient_norm": null,
+      "input_shapes": [
+        [
+          8,
+          3,
+          96,
+          512
+        ]
+      ]
+    },
+    {
+      "step": 1,
+      "elapsed_seconds": 13.979,
+      "cer": 0.8918918918918919,
+      "errors": 33,
+      "reference_characters": 37,
+      "loss": 9.56576919555664,
+      "gradient_norm": 420.51379136752126,
+      "input_shapes": [
+        [
+          8,
+          3,
+          96,
+          512
+        ]
+      ]
+    },
+    {
+      "step": 5,
+      "elapsed_seconds": 42.838,
+      "cer": 0.35135135135135137,
+      "errors": 13,
+      "reference_characters": 37,
+      "loss": 5.930074691772461,
+      "gradient_norm": 9.557919498078363,
+      "input_shapes": [
+        [
+          8,
+          3,
+          96,
+          512
+        ]
+      ]
+    },
+    {
+      "step": 10,
+      "elapsed_seconds": 77.995,
+      "cer": 0.02702702702702703,
+      "errors": 1,
+      "reference_characters": 37,
+      "loss": 2.2733945846557617,
+      "gradient_norm": 5.109322075095182,
+      "input_shapes": [
+        [
+          8,
+          3,
+          96,
+          512
+        ]
+      ]
+    },
+    {
+      "step": 15,
+      "elapsed_seconds": 113.7,
+      "cer": 0.0,
+      "errors": 0,
+      "reference_characters": 37,
+      "loss": 1.2699207067489624,
+      "gradient_norm": 2.2961910941118915,
+      "input_shapes": [
+        [
+          8,
+          3,
+          96,
+          512
+        ]
+      ]
+    },
+    {
+      "step": 15,
+      "elapsed_seconds": 115.706,
+      "cer": 0.0,
+      "errors": 0,
+      "reference_characters": 37,
+      "loss": 1.2699207067489624,
+      "gradient_norm": 2.2961910941118915,
+      "input_shapes": [
+        [
+          8,
+          3,
+          96,
+          512
+        ]
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "reference": "\ud804\ude08\ud804\ude2c\ud804\ude19\ud804\ude2d",
+      "prediction": "\ud804\ude08\ud804\ude2c\ud804\ude19\ud804\ude2d",
+      "errors": 0
+    },
+    {
+      "reference": "\ud804\ude1e\ud804\ude2e\ud804\ude26\ud804\ude30",
+      "prediction": "\ud804\ude1e\ud804\ude2e\ud804\ude26\ud804\ude30",
+      "errors": 0
+    },
+    {
+      "reference": "\ud804\ude24\ud804\ude2f\ud804\ude1f\ud804\ude2c",
+      "prediction": "\ud804\ude24\ud804\ude2f\ud804\ude1f\ud804\ude2c",
+      "errors": 0
+    },
+    {
+      "reference": "\ud804\ude29\ud804\ude32\ud804\ude2a\ud804\ude30\ud804\ude34",
+      "prediction": "\ud804\ude29\ud804\ude32\ud804\ude2a\ud804\ude30\ud804\ude34",
+      "errors": 0
+    },
+    {
+      "reference": "\ud804\ude00\ud804\ude1f\ud804\ude1e\ud804\ude2d",
+      "prediction": "\ud804\ude00\ud804\ude1f\ud804\ude1e\ud804\ude2d",
+      "errors": 0
+    },
+    {
+      "reference": "\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude2c\ud804\ude34",
+      "prediction": "\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude2c\ud804\ude34",
+      "errors": 0
+    },
+    {
+      "reference": "\ud804\ude26\ud804\ude30\ud804\ude0e\ud804\ude2e\ud804\ude3a",
+      "prediction": "\ud804\ude26\ud804\ude30\ud804\ude0e\ud804\ude2e\ud804\ude3a",
+      "errors": 0
+    },
+    {
+      "reference": "\ud804\ude0a\ud804\ude2f\ud804\ude19\ud804\ude08\ud804\ude2c\ud804\ude3a",
+      "prediction": "\ud804\ude0a\ud804\ude2f\ud804\ude19\ud804\ude08\ud804\ude2c\ud804\ude3a",
+      "errors": 0
+    }
+  ],
+  "reload_errors_without_input_contract": 14,
+  "reload_errors_with_input_contract": 0,
+  "model_and_loss": "Kraken PP-OCRv6 small, CTC plus NRTR auxiliary loss",
+  "changed_training_parameters": {
+    "max_width": 512,
+    "learning_rate": 0.0005,
+    "batch_size": 8
+  },
+  "real_training_lines": 0
+}

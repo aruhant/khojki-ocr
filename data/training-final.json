@@ -1,0 +1,785 @@
+{
+  "dataset_kind": "real",
+  "label_provenance": "AI-assisted transcription and separate chart-based review; not expert-certified",
+  "lines": [
+    {
+      "bbox": [
+        518,
+        402,
+        781,
+        516
+      ],
+      "codepoints": [
+        "U+11229",
+        "U+11219",
+        "U+1120A",
+        "U+1122F",
+        "U+11226",
+        "U+1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p020-row01",
+      "original_bbox": [
+        320,
+        402,
+        1505,
+        516
+      ],
+      "original_text": "\ud804\ude04\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude19\ud804\ude0e\ud804\ude30\ud804\ude3a\ud804\ude1f\ud804\ude2c\ud804\ude04\ud804\ude25\ud804\ude2c\ud804\ude3a\ud804\ude1e\ud804\ude2d\ud804\ude29\ud804\ude30\ud804\ude29\ud804\ude32\ud804\ude3a",
+      "page": 20,
+      "retained_original_span": [
+        4,
+        10
+      ],
+      "review_note": "AI-reviewed second word only, including its trailing separator. SA has a distinct detached left descending stroke; TA has one arch; GA has its separate right stroke and a lower U return; RA has the tall stem and lower right sweep. All retained ink matches these six codepoints. Crop excludes the whole words containing E/PA+I and crowded CA/MA, rather than resolving those by context. Original full-row PNG is not the training crop: use this bbox on source_preview.",
+      "source_preview": "data/private/preview-020.png",
+      "status": "reviewed",
+      "text": "\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        316,
+        562,
+        1390,
+        677
+      ],
+      "codepoints": [
+        "U+1121D",
+        "U+1121D",
+        "U+1122F",
+        "U+11234",
+        "U+11208",
+        "U+1122C",
+        "U+11226",
+        "U+1123A",
+        "U+11224",
+        "U+1122C",
+        "U+11234",
+        "U+1122A",
+        "U+11230",
+        "U+1123A",
+        "U+1121D",
+        "U+1121F",
+        "U+11230",
+        "U+11201",
+        "U+1123A",
+        "U+1121F",
+        "U+1122E",
+        "U+11201",
+        "U+1121E",
+        "U+1123A"
+      ],
+      "id": "p020-row02",
+      "page": 20,
+      "review_note": "AI-reviewed entire row, unchanged. Checked DHA, DHA+U+anusvara, KA+AA, RA; MA+AA+anusvara and HA+E; DHA, PA+E, independent AA; PA+II, independent AA and NA, with all separators. PA+E has one left bowl stroke and no detached SA stroke. Final PA+II has the historical joined central descending junction and one right II hook, without PHA's additional lower branch/bowl. The open ring above AA in the second word is separated from HA's E roof.",
+      "source_preview": "data/private/preview-020.png",
+      "status": "reviewed",
+      "text": "\ud804\ude1d\ud804\ude1d\ud804\ude2f\ud804\ude34\ud804\ude08\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude1d\ud804\ude1f\ud804\ude30\ud804\ude01\ud804\ude3a\ud804\ude1f\ud804\ude2e\ud804\ude01\ud804\ude1e\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        318,
+        722,
+        1468,
+        836
+      ],
+      "codepoints": [
+        "U+11229",
+        "U+11219",
+        "U+1120A",
+        "U+1122F",
+        "U+11226",
+        "U+1123A",
+        "U+1121E",
+        "U+11230",
+        "U+11234",
+        "U+1123A",
+        "U+11219",
+        "U+11221",
+        "U+1123A",
+        "U+11208",
+        "U+1121F",
+        "U+11230",
+        "U+11201",
+        "U+1123A",
+        "U+1120A",
+        "U+1122E",
+        "U+11201",
+        "U+1121E",
+        "U+1123A"
+      ],
+      "id": "p020-row03",
+      "page": 20,
+      "review_note": "AI-reviewed entire row. Corrected original codepoint 14 from SA U+11229 to PA U+1121F: E-marked base after KA has only PA's bowl/stem, with no detached left descending stroke; initial SA visibly has that extra stroke. Also checked first SA/TA/GA+U/RA group, closed NA loop with E and separate anusvara, TA/BA, KA and independent AA, final GA+II/AA/NA, and all five separators.",
+      "source_preview": "data/private/preview-020.png",
+      "status": "reviewed",
+      "text": "\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude08\ud804\ude1f\ud804\ude30\ud804\ude01\ud804\ude3a\ud804\ude0a\ud804\ude2e\ud804\ude01\ud804\ude1e\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        316,
+        882,
+        1334,
+        998
+      ],
+      "codepoints": [
+        "U+1121E",
+        "U+1122D",
+        "U+11226",
+        "U+11234",
+        "U+11210",
+        "U+1121E",
+        "U+1123A",
+        "U+11226",
+        "U+1120E",
+        "U+1121E",
+        "U+1122C",
+        "U+1123A",
+        "U+11229",
+        "U+11221",
+        "U+1122A",
+        "U+1122E",
+        "U+1123A",
+        "U+11224",
+        "U+1122C",
+        "U+11234",
+        "U+1121F",
+        "U+1122E",
+        "U+1123A"
+      ],
+      "id": "p020-row04",
+      "page": 20,
+      "review_note": "AI-reviewed entire row, unchanged. Initial NA has an explicit closed left loop plus I; RA carries the detached dot, followed by JA and NA. Checked RA/CA/NA+AA and SA/BA/HA+II, including SA's detached left stroke. Final joined PA+II has a single central descending junction and tall right II hook, not PHA's extra lower branch. The preceding ring is above MA's AA stroke; all four separators are represented.",
+      "source_preview": "data/private/preview-020.png",
+      "status": "reviewed",
+      "text": "\ud804\ude1e\ud804\ude2d\ud804\ude26\ud804\ude34\ud804\ude10\ud804\ude1e\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude21\ud804\ude2a\ud804\ude2e\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude1f\ud804\ude2e\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        793,
+        1042,
+        1149,
+        1161
+      ],
+      "codepoints": [
+        "U+11229",
+        "U+11219",
+        "U+1120A",
+        "U+1122F",
+        "U+11226",
+        "U+1121E",
+        "U+11230",
+        "U+11234",
+        "U+1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p020-row05",
+      "original_bbox": [
+        315,
+        1042,
+        1378,
+        1161
+      ],
+      "original_text": "\ud804\ude29\ud804\ude19\ud804\ude08\ud804\ude2e\ud804\ude3a\ud804\ude2a\ud804\ude32\ud804\ude18\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude1e\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude34\ud804\ude1f\ud804\ude2e\ud804\ude3a",
+      "page": 20,
+      "retained_original_span": [
+        9,
+        18
+      ],
+      "review_note": "AI-reviewed third word only with its trailing separator. Checked detached-left-stroke SA, single-arched TA, GA with lower U sweep, tall RA, and closed-loop NA with one E roof and separate anusvara. There is no separator between RA and NA in this crop. Second word and final joined PA/PHA question are wholly excluded, not guessed. Original full-row PNG is not the training crop: use this bbox on source_preview.",
+      "source_preview": "data/private/preview-020.png",
+      "status": "reviewed",
+      "text": "\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude1e\ud804\ude30\ud804\ude34\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        319,
+        1201,
+        1248,
+        1307
+      ],
+      "codepoints": [
+        "U+11201",
+        "U+1121F",
+        "U+11230",
+        "U+11234",
+        "U+1123A",
+        "U+11229",
+        "U+11230",
+        "U+11227",
+        "U+1123A",
+        "U+11226",
+        "U+1120E",
+        "U+1121E",
+        "U+1122C",
+        "U+11208",
+        "U+1122C",
+        "U+1123A",
+        "U+11208",
+        "U+1122E",
+        "U+11219",
+        "U+1122C",
+        "U+1123A"
+      ],
+      "id": "p020-row06",
+      "page": 20,
+      "review_note": "AI-reviewed entire row, unchanged. Second-word SA+E has an additional left descending stroke beside its inner bowl; first-word PA+E lacks that stroke, providing a direct within-row visual comparison. Checked initial independent AA, PA's single roof and detached anusvara, following LA, RA/CA/NA+AA/KA+AA group, final KA+II/TA+AA and all four separators.",
+      "source_preview": "data/private/preview-020.png",
+      "status": "reviewed",
+      "text": "\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude27\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude1e\ud804\ude2c\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2e\ud804\ude19\ud804\ude2c\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        317,
+        1365,
+        1438,
+        1477
+      ],
+      "codepoints": [
+        "U+11229",
+        "U+11219",
+        "U+1121F",
+        "U+11234",
+        "U+1121A",
+        "U+1123A",
+        "U+11224",
+        "U+1122C",
+        "U+11226",
+        "U+1120A",
+        "U+1123A",
+        "U+11229",
+        "U+11219",
+        "U+1120A",
+        "U+1122F",
+        "U+11226",
+        "U+11208",
+        "U+1122F",
+        "U+11234",
+        "U+1123A",
+        "U+1121B",
+        "U+1122E",
+        "U+11219",
+        "U+1122C",
+        "U+1123A"
+      ],
+      "id": "p020-row07",
+      "page": 20,
+      "review_note": "AI-reviewed entire row, unchanged. First-word final THA has two connected bowls with a central upright and a long right descending return: not PA's single bowl or KHA's diagonal inner stroke/short terminal. Anusvara belongs to preceding PA. Checked both detached-left-stroke SA bases, TA forms, MA+AA/RA/GA, GA+U and KA+U+anusvara in the third word, final DA+II/TA+AA, and all four separators.",
+      "source_preview": "data/private/preview-020.png",
+      "status": "reviewed",
+      "text": "\ud804\ude29\ud804\ude19\ud804\ude1f\ud804\ude34\ud804\ude1a\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude26\ud804\ude0a\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude08\ud804\ude2f\ud804\ude34\ud804\ude3a\ud804\ude1b\ud804\ude2e\ud804\ude19\ud804\ude2c\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        512,
+        1527,
+        1500,
+        1624
+      ],
+      "codepoints": [
+        "U+11224",
+        "U+1122D",
+        "U+11226",
+        "U+11224",
+        "U+11234",
+        "U+11217",
+        "U+1123A",
+        "U+11226",
+        "U+1120E",
+        "U+11230",
+        "U+11201",
+        "U+1123A",
+        "U+11201",
+        "U+11229",
+        "U+11224",
+        "U+1122C",
+        "U+1121E",
+        "U+1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p020-row08",
+      "original_bbox": [
+        314,
+        1527,
+        1500,
+        1624
+      ],
+      "original_text": "\ud804\ude04\ud804\ude34\ud804\ude17\ud804\ude3a\ud804\ude24\ud804\ude2d\ud804\ude26\ud804\ude24\ud804\ude34\ud804\ude17\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude30\ud804\ude01\ud804\ude3a\ud804\ude01\ud804\ude29\ud804\ude24\ud804\ude2c\ud804\ude1e\ud804\ude3a",
+      "page": 20,
+      "retained_original_span": [
+        4,
+        22
+      ],
+      "review_note": "AI-reviewed last three words. MA+I has a closed lower loop and attached tall I hook, followed by RA and MA+anusvara. The following DDHA closes its right loop at the baseline without CHA's descending right tail. Checked next RA/CA+E/independent AA, final independent AA/SA/MA+AA/NA and their separators. Entire initial alias-bearing word excluded; no E versus PA+I decision made. Original full-row PNG is not the training crop: use this bbox on source_preview.",
+      "source_preview": "data/private/preview-020.png",
+      "status": "reviewed",
+      "text": "\ud804\ude24\ud804\ude2d\ud804\ude26\ud804\ude24\ud804\ude34\ud804\ude17\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude30\ud804\ude01\ud804\ude3a\ud804\ude01\ud804\ude29\ud804\ude24\ud804\ude2c\ud804\ude1e\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        317,
+        1685,
+        1630,
+        1793
+      ],
+      "codepoints": [
+        "U+11229",
+        "U+11219",
+        "U+1120A",
+        "U+1122F",
+        "U+11226",
+        "U+1123A",
+        "U+11208",
+        "U+11234",
+        "U+1121F",
+        "U+11230",
+        "U+11201",
+        "U+1123A",
+        "U+11219",
+        "U+11221",
+        "U+1123A",
+        "U+11200",
+        "U+11224",
+        "U+11226",
+        "U+1123A",
+        "U+1120A",
+        "U+1122E",
+        "U+11201",
+        "U+1121E",
+        "U+1123A"
+      ],
+      "id": "p020-row09",
+      "page": 20,
+      "review_note": "AI-reviewed entire row. Corrected original codepoint 8 from SA U+11229 to PA U+1121F: the E-marked bowl has no separate left descending stroke, unlike the initial SA. The preceding dot is above the KA boundary and is retained as KA's anusvara. Checked initial SA/TA/GA+U/RA, independent AA after PA+E, TA/BA, independent A without an AA stroke before MA/RA, final GA+II/AA/NA, and all five separators.",
+      "source_preview": "data/private/preview-020.png",
+      "status": "reviewed",
+      "text": "\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude08\ud804\ude34\ud804\ude1f\ud804\ude30\ud804\ude01\ud804\ude3a\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude00\ud804\ude24\ud804\ude26\ud804\ude3a\ud804\ude0a\ud804\ude2e\ud804\ude01\ud804\ude1e\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        799,
+        561,
+        1235,
+        693
+      ],
+      "codepoints": [
+        "11224",
+        "1122F",
+        "11226",
+        "11219",
+        "1123A",
+        "11221",
+        "11230",
+        "11227",
+        "1122C",
+        "1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p021-row02",
+      "original_bbox": [
+        315,
+        561,
+        1235,
+        693
+      ],
+      "page": 21,
+      "review_note": "Retain the final two complete words only. MA has its closed left loop and a distinct lower U sweep; RA and TA match their chart forms. The last word begins with BA, with a left shoulder and two open arches rather than MA's enclosed loop, followed by E, LA and separate AA. Both visible word separators are U+1123A. Earlier words, including the E/PA+I-shaped glyph, are outside the revised bbox.",
+      "source_preview": "data/private/preview-021.png",
+      "status": "reviewed",
+      "text": "\ud804\ude24\ud804\ude2f\ud804\ude26\ud804\ude19\ud804\ude3a\ud804\ude21\ud804\ude30\ud804\ude27\ud804\ude2c\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        315,
+        714,
+        763,
+        854
+      ],
+      "codepoints": [
+        "11229",
+        "11219",
+        "1120A",
+        "1122F",
+        "11226",
+        "1123A",
+        "11224",
+        "1122C",
+        "11234",
+        "1122A",
+        "11230",
+        "1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p021-row03",
+      "original_bbox": [
+        315,
+        714,
+        1345,
+        854
+      ],
+      "page": 21,
+      "review_note": "Retain the first two complete words. SA's separate left stroke, TA, GA with lower U and RA are distinct. The next word shows MA, a separate AA stroke with open-circle ANUSVARA above it, and HA with E; the circle is not a second vowel stroke. Keep both U+1123A separators. Crop stops before the next RA, excluding the later independent-E/PA+I ambiguity and the entire following suffix.",
+      "source_preview": "data/private/preview-021.png",
+      "status": "reviewed",
+      "text": "\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        315,
+        877,
+        1012,
+        1003
+      ],
+      "codepoints": [
+        "1121E",
+        "1122D",
+        "11219",
+        "1123A",
+        "11203",
+        "11215",
+        "1123A",
+        "11208",
+        "11226",
+        "11230",
+        "1123A",
+        "1122A",
+        "11226",
+        "11229",
+        "1122F",
+        "11234",
+        "1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p021-row04",
+      "original_bbox": [
+        315,
+        877,
+        1220,
+        1003
+      ],
+      "page": 21,
+      "review_note": "Retain the first four complete words. Initial closed loop joins NA's right stem and the rising I hook; it lacks BBA's descending left leg. TA follows. Independent U and the closed lower bowl of TTHA match the charts. KA-RA-E and HA-RA-SA-U-ANUSVARA are clear; the nasal dot sits above the SA-U group. Preserve four U+1123A separators. Exclude the ink-damaged final TTA/DDDA-like word by reducing the bbox, not by dropping its label alone.",
+      "source_preview": "data/private/preview-021.png",
+      "status": "reviewed",
+      "text": "\ud804\ude1e\ud804\ude2d\ud804\ude19\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude3a\ud804\ude08\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude2a\ud804\ude26\ud804\ude29\ud804\ude2f\ud804\ude34\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        623,
+        1194,
+        1007,
+        1327
+      ],
+      "codepoints": [
+        "11226",
+        "1120E",
+        "1121E",
+        "1122C",
+        "1123A",
+        "11229",
+        "11221",
+        "1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p021-row06",
+      "original_bbox": [
+        315,
+        1194,
+        1520,
+        1327
+      ],
+      "page": 21,
+      "review_note": "Retain the contiguous second and third words only: RA-CA-NA-AA, separator, SA-BA, separator. CA has an open hook beside its right stem; NA has a closed oval, and the separate AA stroke is visible. BA's two arches differ from the looped MA in the excluded next word. Both separators are U+1123A. The unresolved forked-II prefix and E/PA+I-containing suffix are physically outside the revised bbox.",
+      "source_preview": "data/private/preview-021.png",
+      "status": "reviewed",
+      "text": "\ud804\ude26\ud804\ude0e\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude21\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        795,
+        1352,
+        1123,
+        1484
+      ],
+      "codepoints": [
+        "11210",
+        "11232",
+        "1123A",
+        "11229",
+        "11222",
+        "1121C",
+        "1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p021-row07",
+      "original_bbox": [
+        315,
+        1352,
+        1500,
+        1484
+      ],
+      "page": 21,
+      "review_note": "Retain the two middle words. JA has its enclosed hooked interior; its upper E component and separate right AA component together form O. The following word has SA's detached left stroke, BBA's closed upper-left loop with a descending leg, and DDDA's two open stacked bends. Both U+1123A separators are retained. Exclude the unresolved nested-U/forked-II prefix and PA/PHA plus E/PA+I suffix through the bbox.",
+      "source_preview": "data/private/preview-021.png",
+      "status": "reviewed",
+      "text": "\ud804\ude10\ud804\ude32\ud804\ude3a\ud804\ude29\ud804\ude22\ud804\ude1c\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        556,
+        1513,
+        1137,
+        1646
+      ],
+      "codepoints": [
+        "11229",
+        "11222",
+        "1121C",
+        "1123A",
+        "11229",
+        "11219",
+        "1120A",
+        "1122F",
+        "11226",
+        "11208",
+        "1122F",
+        "11234",
+        "1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p021-row08",
+      "original_bbox": [
+        315,
+        1513,
+        1595,
+        1646
+      ],
+      "page": 21,
+      "review_note": "Retain the middle two complete words. SA-BBA-DDDA matches the same source glyph sequence in row07. The next sequence visibly contains SA, TA, GA-U, RA and KA-U with a nasal dot above the final group. KA's crossing upper strokes and rounded lower U are distinct here. Keep both U+1123A separators. The initial PA/PHA word and the entire final word, including its disputed KA/PHA base and E/PA+I outline, are excluded from both image bbox and text.",
+      "source_preview": "data/private/preview-021.png",
+      "status": "reviewed",
+      "text": "\ud804\ude29\ud804\ude22\ud804\ude1c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude08\ud804\ude2f\ud804\ude34\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        626,
+        1671,
+        1405,
+        1804
+      ],
+      "codepoints": [
+        "11200",
+        "11224",
+        "11226",
+        "1123A",
+        "11221",
+        "11230",
+        "1121C",
+        "1123A",
+        "11210",
+        "11232",
+        "1123A",
+        "11208",
+        "1122E",
+        "1121E",
+        "1122C",
+        "1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p021-row09",
+      "original_bbox": [
+        315,
+        1671,
+        1405,
+        1804
+      ],
+      "page": 21,
+      "review_note": "Retain the final four complete words. A-MA-RA is clear. BA under E has two open arches, unlike the enclosed loop in the immediately preceding MA; DDDA has two stacked open bends. JA-O matches row07. Final KA-II has the chart's joined doubled arch and descending terminal, followed by closed-loop NA and separate AA. Preserve four U+1123A separators. The ambiguous forked-II first word and its separator are outside the revised bbox.",
+      "source_preview": "data/private/preview-021.png",
+      "status": "reviewed",
+      "text": "\ud804\ude00\ud804\ude24\ud804\ude26\ud804\ude3a\ud804\ude21\ud804\ude30\ud804\ude1c\ud804\ude3a\ud804\ude10\ud804\ude32\ud804\ude3a\ud804\ude08\ud804\ude2e\ud804\ude1e\ud804\ude2c\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        635,
+        1830,
+        1410,
+        1966
+      ],
+      "codepoints": [
+        "11229",
+        "11219",
+        "1120A",
+        "1122F",
+        "11226",
+        "1123A",
+        "11219",
+        "1122D",
+        "11229",
+        "11208",
+        "1122F",
+        "11234",
+        "1123A",
+        "1121B",
+        "1122E",
+        "1121E",
+        "1122C",
+        "1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p021-row10",
+      "original_bbox": [
+        315,
+        1830,
+        1410,
+        1966
+      ],
+      "page": 21,
+      "review_note": "Retain the final three complete words. SA-TA-GA-U-RA agrees with the independently inspected same glyph forms in row03. Next TA-I has a rising right hook, followed by SA and KA-U with ANUSVARA. Final DA-II has the characteristic upper open hook and joined descending right vowel terminal, followed by NA-AA. Preserve three U+1123A separators. The THA/KHA and curled PA/PHA questions in the first word are excluded by the new left boundary.",
+      "source_preview": "data/private/preview-021.png",
+      "status": "reviewed",
+      "text": "\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude19\ud804\ude2d\ud804\ude29\ud804\ude08\ud804\ude2f\ud804\ude34\ud804\ude3a\ud804\ude1b\ud804\ude2e\ud804\ude1e\ud804\ude2c\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        500,
+        875,
+        865,
+        1008
+      ],
+      "codepoints": [
+        "U+11200",
+        "U+1120C",
+        "U+11226",
+        "U+1122C",
+        "U+1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p026-row03-left-span",
+      "page": 26,
+      "review_note": "Independent chart review followed by parent original-scale crop inspection; all four boundaries retain the selected ink and exclude neighboring words. Printed title page, not handwriting. AI-reviewed, not expert-certified.",
+      "source_preview": "data/private/preview-026.png",
+      "status": "reviewed",
+      "text": "\ud804\ude00\ud804\ude0c\ud804\ude26\ud804\ude2c\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        979,
+        1025,
+        1254,
+        1169
+      ],
+      "codepoints": [
+        "U+1121F",
+        "U+1122C",
+        "U+11229",
+        "U+11230",
+        "U+1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p026-row04-right-span",
+      "page": 26,
+      "review_note": "Independent chart review followed by parent original-scale crop inspection; all four boundaries retain the selected ink and exclude neighboring words. Printed title page, not handwriting. AI-reviewed, not expert-certified.",
+      "source_preview": "data/private/preview-026.png",
+      "status": "reviewed",
+      "text": "\ud804\ude1f\ud804\ude2c\ud804\ude29\ud804\ude30\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        533,
+        1382,
+        829,
+        1518
+      ],
+      "codepoints": [
+        "U+1121E",
+        "U+1122A",
+        "U+11227"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p026-row06-left-span",
+      "page": 26,
+      "review_note": "Independent chart review followed by parent original-scale crop inspection; all four boundaries retain the selected ink and exclude neighboring words. Printed title page, not handwriting. AI-reviewed, not expert-certified.",
+      "source_preview": "data/private/preview-026.png",
+      "status": "reviewed",
+      "text": "\ud804\ude1e\ud804\ude2a\ud804\ude27",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        342,
+        1566,
+        688,
+        1714
+      ],
+      "codepoints": [
+        "U+1120F",
+        "U+1121F",
+        "U+1122C",
+        "U+11228",
+        "U+1122E",
+        "U+1123A"
+      ],
+      "crop_scope": "partial_line",
+      "id": "p026-row07-left-span",
+      "page": 26,
+      "review_note": "Independent chart review followed by parent original-scale crop inspection; all four boundaries retain the selected ink and exclude neighboring words. Printed title page, not handwriting. AI-reviewed, not expert-certified.",
+      "source_preview": "data/private/preview-026.png",
+      "status": "reviewed",
+      "text": "\ud804\ude0f\ud804\ude1f\ud804\ude2c\ud804\ude28\ud804\ude2e\ud804\ude3a",
+      "uncertain": []
+    },
+    {
+      "bbox": [
+        489,
+        786,
+        670,
+        910
+      ],
+      "crop_scope": "partial_line_word",
+      "id": "p017-row02-final-word",
+      "page": 17,
+      "review_note": "Two independent chart readers agreed on the codepoints; parent checked exact enlarged crops, retained every vowel/dot and placed edges in measured gaps to exclude neighboring ink.",
+      "source_preview": "data/private/preview-017.png",
+      "status": "reviewed",
+      "text": "\ud804\ude00\ud804\ude34\ud804\ude19\ud804\ude2c\ud804\ude3a"
+    },
+    {
+      "bbox": [
+        481,
+        1596,
+        640,
+        1725
+      ],
+      "crop_scope": "partial_line_word",
+      "id": "p017-row07-final-word",
+      "page": 17,
+      "review_note": "Two independent chart readers agreed on the codepoints; parent checked exact enlarged crops, retained every vowel/dot and placed edges in measured gaps to exclude neighboring ink.",
+      "source_preview": "data/private/preview-017.png",
+      "status": "reviewed",
+      "text": "\ud804\ude28\ud804\ude30\ud804\ude27\ud804\ude3a"
+    }
+  ],
+  "policy_version": "khojki-only-nfc-v1",
+  "previous_manifest_sha256": "36f67e35b1e9b4c9590f559da8c9686307f3520649b4df57a8f13f822c89e5fe",
+  "scope": "23 reviewed full/partial printed crops on pages17,20,21,26; 302 codepoints"
+}

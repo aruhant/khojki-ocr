@@ -1,0 +1,13 @@
+{
+  "policy_version": "khojki-only-nfc-v1",
+  "dataset_kind": "real",
+  "label_provenance": "AI-assisted chart matching and parent visual review; not expert-certified",
+  "scope": "Five unambiguous printed line spans on development page 22; not full-page text",
+  "lines": [
+    {"id": "p022-span01", "page": 22, "status": "reviewed", "source_preview": "data/private/preview-022.png", "bbox": [403, 725, 557, 861], "text": "\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a", "crop_scope": "partial_line", "review_note": "GA with U and RA, bounded by visible separators; uncertain neighboring word excluded."},
+    {"id": "p022-span02", "page": 22, "status": "reviewed", "source_preview": "data/private/preview-022.png", "bbox": [943, 725, 1550, 861], "text": "\ud804\ude1e\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude2c\ud804\ude24\ud804\ude3a", "crop_scope": "partial_line", "review_note": "Three complete separator-delimited words; the uncertain HA/I cluster is outside the crop."},
+    {"id": "p022-span03", "page": 22, "status": "reviewed", "source_preview": "data/private/preview-022.png", "bbox": [106, 862, 443, 986], "text": "\ud804\ude1f\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude3a\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude30\ud804\ude3a", "crop_scope": "partial_line", "review_note": "Retains PA, MA+AA+ANUSVARA, GA+U and RA+E; disputed following KA/MA word excluded."},
+    {"id": "p022-span04", "page": 22, "status": "reviewed", "source_preview": "data/private/preview-022.png", "bbox": [695, 993, 1123, 1125], "text": "\ud804\ude1e\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a", "crop_scope": "partial_line", "review_note": "Two complete central words, excluding the initial disputed glyph and later content."},
+    {"id": "p022-span05", "page": 22, "status": "reviewed", "source_preview": "data/private/preview-022.png", "bbox": [999, 1128, 1102, 1258], "text": "\ud804\ude2a\ud804\ude32\ud804\ude3a", "crop_scope": "partial_line", "review_note": "HA+O and its following separator; ambiguous preceding joined letters excluded."}
+  ]
+}

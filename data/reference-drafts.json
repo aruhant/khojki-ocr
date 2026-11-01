@@ -1,0 +1,36 @@
+{
+  "policy_version": "khojki-only-nfc-v1",
+  "dataset_kind": "real_scan_drafts",
+  "review_status": "Unverified chart-based drafts; not approved evaluation ground truth",
+  "method": "AI-assisted visual chart matching without recognizer predictions",
+  "lines": [
+    {
+      "id": "p018-row03", "page": 18, "status": "needs_review",
+      "bbox": [318, 714, 1300, 848],
+      "text": "𑈩𑈲𑈺𑈩𑈡𑈺𑈪𑈯𑈄𑈺𑈀𑈟𑈘𑈮𑈺𑈐𑈬𑈙𑈬𑈴𑈺",
+      "uncertain": [{"span": [8, 9], "alternatives": ["𑈟𑈭"], "reason": "Independent E versus PA with dependent I remains visually ambiguous."}]
+    },
+    {
+      "id": "p018-row05", "page": 18, "status": "needs_review",
+      "bbox": [509, 1044, 1248, 1165],
+      "text": "𑈁𑈟𑈺𑈞𑈭𑈦𑈴𑈐𑈞𑈺𑈃𑈟𑈞𑈬𑈴𑈺", "uncertain": []
+    },
+    {
+      "id": "p018-row06", "page": 18, "status": "needs_review",
+      "bbox": [509, 1199, 1442, 1332],
+      "text": "𑈀𑈞𑈰𑈺𑈁𑈟𑈰𑈴𑈺𑈃𑈟𑈬𑈂𑈺𑈐𑈬𑈙𑈺𑈦𑈰𑈺", "uncertain": []
+    },
+    {
+      "id": "p018-row07", "page": 18, "status": "needs_review",
+      "bbox": [509, 1366, 1320, 1500],
+      "text": "𑈁𑈟𑈩𑈺𑈤𑈬𑈴𑈪𑈰𑈴𑈟𑈮𑈺𑈃𑈟𑈞𑈬𑈴𑈺",
+      "uncertain": [{"span": [10, 12], "alternatives": ["𑈠𑈮"], "reason": "Historical joined PA/ PHA with II remains ambiguous."}]
+    },
+    {
+      "id": "p019-row03", "page": 19, "status": "needs_review",
+      "bbox": [286, 782, 1150, 918],
+      "text": "𑈟𑈮𑈏𑈰𑈺𑈦𑈎𑈞𑈬𑈺𑈦𑈎𑈮𑈺𑈀𑈟𑈬𑈦𑈺",
+      "uncertain": [{"span": [0, 2], "alternatives": ["𑈠𑈮"], "reason": "Historical joined PA/ PHA with II remains ambiguous."}]
+    }
+  ]
+}

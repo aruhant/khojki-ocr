@@ -1,0 +1,7 @@
+{
+  "max_width": 1280,
+  "model_sha256": "05c02e4be38dc9392e3517c1e3d21d7f4461a15a4c4d7f019e0b18a79019e4c2",
+  "operation": "right-pad normalized tensors with zeros; preserve sequence lengths",
+  "padding": 16,
+  "schema": "khojki-ppocrv6-input-v1"
+}

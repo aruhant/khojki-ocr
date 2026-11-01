@@ -1,0 +1,42 @@
+{
+  "scope": "real_training_and_development_only_no_test_evaluation",
+  "selection_metric": "development_codepoint_cer",
+  "stop_reason": "max_steps",
+  "steps": 100,
+  "best_step": 50,
+  "best_dev_cer": 0.04878048780487805,
+  "initial_train_cer": 0.7737226277372263,
+  "initial_dev_cer": 0.5609756097560976,
+  "selected_train_cer": 0.025547445255474453,
+  "selected_dev_cer": 0.04878048780487805,
+  "elapsed_seconds": 1102.565,
+  "input_height": 96,
+  "max_width": 1280,
+  "padding": 16,
+  "weights_sha256": "3962b2ed0de21b6f31f7c3fe9adec9fe5fa66e8c8b03094f6a4c3654159f03a1",
+  "checkpoint_optimizer_matches_best_step": true,
+  "training_lines": 17,
+  "training_codepoints": 274,
+  "development_spans": 5,
+  "development_codepoints": 41,
+  "training_pages": [
+    20,
+    21
+  ],
+  "development_pages": [
+    22
+  ],
+  "test_pages": [
+    18,
+    19
+  ],
+  "labels": "AI-reviewed, not expert-certified",
+  "test_cer": 0.2815533980582524,
+  "full_page_trial": {
+    "detected_regions": 30,
+    "processed_regions": 30,
+    "nonempty_predictions": 24,
+    "region_errors": 1,
+    "review_required": true
+  }
+}
