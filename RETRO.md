@@ -1,13 +1,34 @@
-# Technical Retrospective
+# Technical Retro
 
-I built a local page-to-UTF-8 pipeline with PDFium, Kraken line detection and a fine-tuned PP-OCRv6 recognizer. It works as a draft-and-review tool, not reliable transcription: the delivered model scored **20.39% CER on five manual crops** and **23.30% on the same annotated regions extracted from raw pages**, with no exact lines. Five fresh, short words scored 20%, with one exact word; that tiny, easy-word set is not a robust benchmark.
+PDFium renders pages, Kraken BLLA detects lines, and PP-OCRv6 recognizes them after fine-tuning on 23 printed crops. Five test lines (103 code points) score 23.30% CER end to end and 20.39% on manual crops.
 
-Manual-crop errors were 12 substitutions, six insertions and three deletions. All six O signs were output as E+AA; NFC does not unify those sequences. I cannot separate visual recognition from glyph-to-Unicode mapping error: valid code points are not necessarily right. Raw-page processing added a net three errors, mixing automatic crop geometry with different raster resolution. All five labelled regions matched without splits; six other oversized regions failed explicitly. Ornaments and non-Khojki content can yield spurious drafts. Unlabelled lines are not scored as false positives, and full-page CER is unknown.
+## Error Breakdown by Stage
 
-The least glamorous fix mattered: restoring training's fixed right padding reduced the original model's CER from 98.06% to 89.32% with unchanged weights. Eight synthetic examples reached 0/37 errors, proving learnability, not generalization. Mixing 323 shaped cases with 17 real crops did not improve 2/41 development errors after 41 updates. A separate curriculum then real adaptation scored one fewer augmented-development error (2/46 versus 3/46), so the final run started from it. Final training used 23 checked crops/302 code points and six partial development spans/46 code points: 88 updates took 1136.6 seconds, step 5 won at 1/46 development errors, and training error was 4/302. The earlier model scored better on the reused historical test (18.45% versus 20.39%); I did not switch after seeing final tests. Normalization worsened an earlier comparison from 1/41 to 2/41 and tied the final 1/46, so raw stayed default. Font-shaped coverage is not historical conjunct coverage; Noto lacks U+1123F/40/41.
+- **Line detection:** all five annotated lines were found without splits. Raw pages gave 24 text errors versus 21 on manual crops; the net increase of three also includes differences in crop geometry and raster resolution.
+- **Recognition and Unicode mapping:** manual crops had 12 substitutions, six insertions and three deletions. All six O signs (U+11232) were output as E+AA (U+11230 U+1122C); NFC does not unify them. The model emits Unicode directly, so these stages were not measured separately.
+- **Common errors:** three inserted TTHA letters, independent vowel I misread both times and A read as AA.
 
-I preserve dependent-vowel sequences in NFC and encode the colon-like separator as U+1123A, not ASCII colon. The target policy accepts assigned Khojki U+11200-U+11241 except reserved U+11212, plus spaces/newlines. Unexpected output is retained and counted in CER, not silently cleaned away. Khojki has no native Unicode decimal digits; borrowed Gujarati/Arabic digits fail strict target-only export. CER counts code points, punctuation and whitespace, not UTF-8 bytes.
+## Experiments That Did Not Work
 
-The bottleneck is checked real labels, not another training loop. I would budget roughly 500 printed lines, then 200 handwritten lines stratified by style, with page/writer-disjoint evaluation; that is an estimate, not a sufficiency claim. Handwriting drafts remained unresolved, so I did not train or publish a handwriting CER. Joined strokes and writer variation need their own data. Labels remain AI-assisted, not expert-certified. One AI draft read AA plus open-circle anusvara as II; enlarged crops and the historical Unicode chart caught it. A fresh word also lost its AA until two readers and the exact crop disagreed with the draft.
+- **Synthetic-only training:** 180 font-rendered lines reached 43.7% accuracy on synthetic validation but 98.06% CER on the real test lines.
+- **Default variable-width inference:** training pads lines to a fixed width; padding at inference the same way cut CER from 98.06% to 89.32% with the same weights.
+- **Mixing synthetic and real lines:** adding 323 synthetic lines to 17 real lines kept development errors at 2/41.
+- **Background flattening:** development errors rose from 1/41 to 2/41 and tied at 1/46 on the final model, so images stay unmodified.
 
-The final raw two-page run took 154.77 seconds on an Intel CPU at 180 DPI, including detection and recognition: about 77 seconds/page, or roughly an hour for 47 similar pages before review. That extrapolation is not a collection benchmark. I used no paid compute or OCR API, and scans stayed local. Annotation/review time was not reliably recorded; it will dominate any serious expansion.
+## Encoding Decisions
+
+- Output is NFC Unicode in U+11200–U+11241 (excluding unassigned U+11212), plus space and newline. Each prediction is checked against this set; invalid characters are reported and counted in CER, and the CLI writes only drafts that pass.
+- Dependent vowel signs U+1122C–U+11233 (AA, I, II, U, E, AI, O, AU) follow consonants. Independent vowels use U+11200–U+11207; anusvara uses U+11234 and the word separator U+1123A, not an ASCII colon or space.
+- Khojki has no Unicode digits, and none appear in the labelled lines, so digits are excluded; borrowed Gujarati digits (U+0AE6–U+0AEF) would need to be added explicitly.
+
+## Bottleneck
+
+More labelled real lines. Fine-tuning the synthetic model on 17 real lines cut CER from 89.32% to 28.16%. Common errors involve O (two training examples) or independent I (none). I estimate about 500 printed lines from several books, with each vowel sign appearing a few dozen times, then about 200 lines per handwriting style.
+
+## Scale
+
+At 180 DPI, two pages took 154.77 seconds on a 4-core Intel Core i7-10510U, including model loading: about 77 seconds per page, or one hour for 45 pages, with no paid compute. Handwriting needs real handwritten labels, detection checks on uneven baselines and writer-disjoint evaluation. Labelling becomes the main cost.
+
+## AI Tools
+
+An AI draft read vowel sign AA plus anusvara (a small open circle) as vowel sign II (U+1122E). Enlarging the crop and comparing both shapes with the script chart exposed the error; the label is now U+1122C U+11234.
