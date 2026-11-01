@@ -1,0 +1,2786 @@
+{
+  "run_id": "733a8a020ecc44a9aa9d0b2e8baedbaa",
+  "input": "/Users/aruhant/Documents/code/khojki ocr/data/private/sample.pdf",
+  "policy_version": "khojki-only-nfc-v1",
+  "status": "completed_with_review",
+  "pages": [
+    {
+      "page": 18,
+      "raster_digest": "554812ccd3ab361d79d0e78d028265c1ca46e1f5db43986837cded1dddc17fad",
+      "size": [
+        1885,
+        3113
+      ],
+      "source": {
+        "source_kind": "pdf",
+        "dpi": 180.0,
+        "pdf_rotation": 0,
+        "captions": {
+          "mode": "disabled",
+          "allowed_texts": [],
+          "regions": [],
+          "rejected": [],
+          "uncertainty_flags": []
+        }
+      },
+      "status": "review",
+      "review_required": true,
+      "provenance": "model",
+      "raw_raster_statistics": {
+        "near_white_fraction": 0.04231267696602167,
+        "minimum_channel": 0,
+        "high_whiteness": false,
+        "near_white_floor": 250
+      },
+      "preprocessing": {
+        "border_handling": "preserve_full_page",
+        "crop": null,
+        "caption_masks": [],
+        "mask_note": "Disabled unless exact ASCII captions are explicitly named"
+      },
+      "segmentation": {
+        "line_count": 21,
+        "lines": [
+          {
+            "id": "_f895b976-ab2e-47dd-9614-b82988718a93",
+            "bbox": [
+              625,
+              43,
+              1064,
+              151
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                625,
+                43
+              ],
+              [
+                1063,
+                43
+              ],
+              [
+                1063,
+                150
+              ],
+              [
+                625,
+                150
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_7f178328-ee9e-4a2a-a8fb-5be3d33f8ea3",
+            "bbox": [
+              112,
+              189,
+              1807,
+              278
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                112,
+                189
+              ],
+              [
+                1806,
+                189
+              ],
+              [
+                1806,
+                277
+              ],
+              [
+                112,
+                277
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_9a33a954-df28-418a-bc48-f4c472b2d0aa",
+            "bbox": [
+              331,
+              372,
+              1722,
+              482
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                331,
+                372
+              ],
+              [
+                1721,
+                372
+              ],
+              [
+                1721,
+                481
+              ],
+              [
+                331,
+                481
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_986b19aa-7750-48b0-becf-5d45b82a0b5b",
+            "bbox": [
+              317,
+              528,
+              1736,
+              629
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                317,
+                528
+              ],
+              [
+                1735,
+                528
+              ],
+              [
+                1735,
+                628
+              ],
+              [
+                317,
+                628
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_0da82765-70c7-4b86-b8b9-ee3713175154",
+            "bbox": [
+              312,
+              682,
+              1209,
+              793
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                312,
+                682
+              ],
+              [
+                1208,
+                682
+              ],
+              [
+                1208,
+                792
+              ],
+              [
+                312,
+                792
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_44edc2a5-bc61-47e7-a5d2-f368bea92ff1",
+            "bbox": [
+              484,
+              834,
+              1562,
+              950
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                484,
+                834
+              ],
+              [
+                1561,
+                834
+              ],
+              [
+                1561,
+                949
+              ],
+              [
+                484,
+                949
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_f50c2760-17d5-4432-8188-2227350f87a0",
+            "bbox": [
+              488,
+              987,
+              1162,
+              1082
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                488,
+                987
+              ],
+              [
+                1161,
+                987
+              ],
+              [
+                1161,
+                1081
+              ],
+              [
+                488,
+                1081
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_f5705a41-090d-4369-b1ad-9c3f497678fe",
+            "bbox": [
+              488,
+              1138,
+              1342,
+              1264
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                488,
+                1138
+              ],
+              [
+                1341,
+                1138
+              ],
+              [
+                1341,
+                1263
+              ],
+              [
+                488,
+                1263
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_e505926c-d8e8-4768-87c7-7891d566bd4d",
+            "bbox": [
+              488,
+              1289,
+              1230,
+              1396
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                488,
+                1289
+              ],
+              [
+                1229,
+                1289
+              ],
+              [
+                1229,
+                1395
+              ],
+              [
+                488,
+                1395
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_84c75695-bd09-489a-b454-6fc2f30031b8",
+            "bbox": [
+              480,
+              1446,
+              1769,
+              1571
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                480,
+                1446
+              ],
+              [
+                1768,
+                1446
+              ],
+              [
+                1768,
+                1570
+              ],
+              [
+                480,
+                1570
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_b08bafa4-a906-4930-ac00-63c8508b9bfa",
+            "bbox": [
+              304,
+              1598,
+              1680,
+              1708
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                304,
+                1598
+              ],
+              [
+                1679,
+                1598
+              ],
+              [
+                1679,
+                1707
+              ],
+              [
+                304,
+                1707
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_06867766-7358-42f0-bc39-9b9eac2ab205",
+            "bbox": [
+              310,
+              1753,
+              1677,
+              1891
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                310,
+                1753
+              ],
+              [
+                1676,
+                1753
+              ],
+              [
+                1676,
+                1890
+              ],
+              [
+                310,
+                1890
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_2eb5d4da-f3b5-48b1-9b3b-06eaaddd0e3f",
+            "bbox": [
+              304,
+              1904,
+              1159,
+              2006
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                304,
+                1904
+              ],
+              [
+                1158,
+                1904
+              ],
+              [
+                1158,
+                2005
+              ],
+              [
+                304,
+                2005
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_78a07df8-989c-436e-9272-6dd0751ba846",
+            "bbox": [
+              301,
+              2054,
+              1220,
+              2161
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                301,
+                2054
+              ],
+              [
+                1219,
+                2054
+              ],
+              [
+                1219,
+                2160
+              ],
+              [
+                301,
+                2160
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_f55b1ef7-47e7-4672-9483-54bedbb755a0",
+            "bbox": [
+              1619,
+              2095,
+              1745,
+              2184
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                1619,
+                2095
+              ],
+              [
+                1744,
+                2095
+              ],
+              [
+                1744,
+                2183
+              ],
+              [
+                1619,
+                2183
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_f813c0dc-4b84-4071-a176-d79251b99ee2",
+            "bbox": [
+              301,
+              2210,
+              1680,
+              2322
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                301,
+                2210
+              ],
+              [
+                1679,
+                2210
+              ],
+              [
+                1679,
+                2321
+              ],
+              [
+                301,
+                2321
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_f46c270b-6ca4-43e6-ae47-76bdb68ccb89",
+            "bbox": [
+              269,
+              2367,
+              1241,
+              2473
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                269,
+                2367
+              ],
+              [
+                1240,
+                2367
+              ],
+              [
+                1240,
+                2472
+              ],
+              [
+                269,
+                2472
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_90c69e30-7ffb-4ed7-8910-39e7d8f7f821",
+            "bbox": [
+              198,
+              2517,
+              1679,
+              2651
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                198,
+                2517
+              ],
+              [
+                1678,
+                2517
+              ],
+              [
+                1678,
+                2650
+              ],
+              [
+                198,
+                2650
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_52f155fb-7667-4e78-93c8-a5b35403d9de",
+            "bbox": [
+              201,
+              2636,
+              1674,
+              2802
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                201,
+                2636
+              ],
+              [
+                1673,
+                2636
+              ],
+              [
+                1673,
+                2801
+              ],
+              [
+                201,
+                2801
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_4b938138-6cef-4681-be0b-79aeb6ff9672",
+            "bbox": [
+              99,
+              2789,
+              1796,
+              2932
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                99,
+                2789
+              ],
+              [
+                1795,
+                2789
+              ],
+              [
+                1795,
+                2931
+              ],
+              [
+                99,
+                2931
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_a1d4fe7d-8deb-408f-afc7-8123cd8b5aab",
+            "bbox": [
+              166,
+              2916,
+              643,
+              3067
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                166,
+                2916
+              ],
+              [
+                642,
+                2916
+              ],
+              [
+                642,
+                3066
+              ],
+              [
+                166,
+                3066
+              ]
+            ],
+            "uncertainty_flags": []
+          }
+        ],
+        "region_count": 0,
+        "reading_order": "Kraken segmentation.lines order; not manually verified"
+      },
+      "lines": [
+        {
+          "raw_hypothesis": "\ud804\ude2e\ud804\ude2e\ud804\ude2f",
+          "normalized_hypothesis": "\ud804\ude2e\ud804\ude2e\ud804\ude2f",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.20244057476520538,
+            0.05917741730809212,
+            0.6652861833572388
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.05917741730809212,
+          "mean_confidence": 0.30896805847684544,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_f895b976-ab2e-47dd-9614-b82988718a93"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude29\ud804\ude0a\ud804\ude15\ud804\ude0a\ud804\ude30\ud804\ude0a\ud804\ude15\ud804\ude2a\ud804\ude3a\ud804\ude3a\ud804\ude2d\ud804\ude2f\ud804\ude08\ud804\ude2a\ud804\ude08\ud804\ude30\ud804\ude3a\ud804\ude2f\ud804\ude2f\ud804\ude29\ud804\ude2f\ud804\ude2f\ud804\ude2f",
+          "normalized_hypothesis": "\ud804\ude29\ud804\ude0a\ud804\ude15\ud804\ude0a\ud804\ude30\ud804\ude0a\ud804\ude15\ud804\ude2a\ud804\ude3a\ud804\ude3a\ud804\ude2d\ud804\ude2f\ud804\ude08\ud804\ude2a\ud804\ude08\ud804\ude30\ud804\ude3a\ud804\ude2f\ud804\ude2f\ud804\ude29\ud804\ude2f\ud804\ude2f\ud804\ude2f",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.17938493192195892,
+            0.12656855583190918,
+            0.18587873876094818,
+            0.11610563844442368,
+            0.08709082007408142,
+            0.08162356913089752,
+            0.22103004157543182,
+            0.07372446358203888,
+            0.5194658637046814,
+            0.09419584274291992,
+            0.2337283343076706,
+            0.6391890048980713,
+            0.13904030621051788,
+            0.09053526073694229,
+            0.08408485352993011,
+            0.1297486424446106,
+            0.2028401494026184,
+            0.612647533416748,
+            0.15854190289974213,
+            0.14211419224739075,
+            0.752953052520752,
+            0.10725246369838715,
+            0.1345677524805069
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.07372446358203888,
+          "mean_confidence": 0.2222744310679643,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_7f178328-ee9e-4a2a-a8fb-5be3d33f8ea3"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude34\ud804\ude3a\ud804\ude0a\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude2c\ud804\ude19\ud804\ude34\ud804\ude3a\ud804\ude21\ud804\ude2e\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude2f",
+          "normalized_hypothesis": "\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude34\ud804\ude3a\ud804\ude0a\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude2c\ud804\ude19\ud804\ude34\ud804\ude3a\ud804\ude21\ud804\ude2e\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude2f",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.6778672337532043,
+            0.3960976004600525,
+            0.8748866319656372,
+            0.9104264378547668,
+            0.7827714681625366,
+            0.9992625117301941,
+            0.3190239369869232,
+            0.9897393584251404,
+            0.9976388216018677,
+            0.9889059066772461,
+            0.9952176809310913,
+            0.987817108631134,
+            0.9808005690574646,
+            0.8011499643325806,
+            0.9974556565284729,
+            0.9796426892280579,
+            0.9282830357551575,
+            0.9686073064804077,
+            0.9990221261978149,
+            0.4783957302570343,
+            0.6685141921043396,
+            0.9953867793083191,
+            0.9993738532066345,
+            0.17810869216918945,
+            0.2068408578634262
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.17810869216918945,
+          "mean_confidence": 0.8040494459867478,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_9a33a954-df28-418a-bc48-f4c472b2d0aa"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude3a\ud804\ude01\ud804\ude1b\ud804\ude24\ud804\ude3a\ud804\ude17\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1a\ud804\ude34\ud804\ude3a\ud804\ude24",
+          "normalized_hypothesis": "\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude3a\ud804\ude01\ud804\ude1b\ud804\ude24\ud804\ude3a\ud804\ude17\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1a\ud804\ude34\ud804\ude3a\ud804\ude24",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.9627391695976257,
+            0.9825968146324158,
+            0.9568067789077759,
+            0.9997202754020691,
+            0.928619384765625,
+            0.7888859510421753,
+            0.994855523109436,
+            0.9991752505302429,
+            0.1580439954996109,
+            0.9849982857704163,
+            0.9981108903884888,
+            0.9761971831321716,
+            0.9966687560081482,
+            0.9221071600914001,
+            0.9992415904998779,
+            0.9749776124954224,
+            0.9423112273216248,
+            0.37888458371162415,
+            0.5702222585678101,
+            0.9994280934333801,
+            0.10236608237028122
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.10236608237028122,
+          "mean_confidence": 0.8389027079656011,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_986b19aa-7750-48b0-becf-5d45b82a0b5b"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude21\ud804\ude3a\ud804\ude2a\ud804\ude2f\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude1f\ud804\ude26\ud804\ude2e\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude2c\ud804\ude34\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude21\ud804\ude3a\ud804\ude2a\ud804\ude2f\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude1f\ud804\ude26\ud804\ude2e\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude2c\ud804\ude34\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.9704153537750244,
+            0.9530497789382935,
+            0.9501170516014099,
+            0.9994279742240906,
+            0.9910950660705566,
+            0.9781342148780823,
+            0.9985820055007935,
+            0.7682310342788696,
+            0.5898929238319397,
+            0.6529330015182495,
+            0.9614460468292236,
+            0.9998276233673096,
+            0.9950329065322876,
+            0.3015182614326477,
+            0.9726137518882751,
+            0.9985870122909546,
+            0.9947777986526489,
+            0.9030972123146057,
+            0.976682186126709,
+            0.6200202703475952,
+            0.8947153091430664,
+            0.9996336698532104
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.3015182614326477,
+          "mean_confidence": 0.8849922933361747,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_0da82765-70c7-4b86-b8b9-ee3713175154"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude1f\ud804\ude26\ud804\ude30\ud804\ude19\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude34\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude0e\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude01\ud804\ude34\ud804\ude3a\ud804\ude1f\ud804\ude2e\ud804\ude10\ud804\ude2e\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude1f\ud804\ude26\ud804\ude30\ud804\ude19\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude34\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude0e\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude01\ud804\ude34\ud804\ude3a\ud804\ude1f\ud804\ude2e\ud804\ude10\ud804\ude2e\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.5557863712310791,
+            0.6896921992301941,
+            0.9953182339668274,
+            0.783480167388916,
+            0.995406985282898,
+            0.8264261484146118,
+            0.9948347806930542,
+            0.9871628880500793,
+            0.9986124038696289,
+            0.9503298401832581,
+            0.9935124516487122,
+            0.9686622023582458,
+            0.9800971150398254,
+            0.9956052899360657,
+            0.9931970834732056,
+            0.9114894866943359,
+            0.7553466558456421,
+            0.9971950054168701,
+            0.8221290707588196,
+            0.5845922231674194,
+            0.9997603297233582,
+            0.17490988969802856,
+            0.9945341348648071,
+            0.8913267850875854,
+            0.9835508465766907,
+            0.9999265670776367
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.17490988969802856,
+          "mean_confidence": 0.8778032752183768,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_44edc2a5-bc61-47e7-a5d2-f368bea92ff1"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude01\ud804\ude1f\ud804\ude3a\ud804\ude1e\ud804\ude2d\ud804\ude26\ud804\ude34\ud804\ude10\ud804\ude1e\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude34\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude01\ud804\ude1f\ud804\ude3a\ud804\ude1e\ud804\ude2d\ud804\ude26\ud804\ude34\ud804\ude10\ud804\ude1e\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude34\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.8590477108955383,
+            0.6975824236869812,
+            0.999416708946228,
+            0.9911221265792847,
+            0.9889618754386902,
+            0.9929700493812561,
+            0.9911823272705078,
+            0.9942851662635803,
+            0.9977743029594421,
+            0.9959476590156555,
+            0.8023762702941895,
+            0.4513637125492096,
+            0.9919636249542236,
+            0.9948464632034302,
+            0.8148182034492493,
+            0.8989312648773193,
+            0.9984709620475769
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.4513637125492096,
+          "mean_confidence": 0.9094741677536684,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_f50c2760-17d5-4432-8188-2227350f87a0"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude00\ud804\ude1e\ud804\ude30\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude03\ud804\ude1f\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude3a\ud804\ude26\ud804\ude30\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude00\ud804\ude1e\ud804\ude30\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude03\ud804\ude1f\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude3a\ud804\ude26\ud804\ude30\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.7591876983642578,
+            0.9074414372444153,
+            0.9468629360198975,
+            0.9997811913490295,
+            0.812161922454834,
+            0.9894704818725586,
+            0.6181554794311523,
+            0.9523780941963196,
+            0.9996949434280396,
+            0.7454641461372375,
+            0.9888756275177002,
+            0.9603914022445679,
+            0.3432643711566925,
+            0.9998117089271545,
+            0.9235308766365051,
+            0.9314215779304504,
+            0.9923306703567505,
+            0.9951850771903992,
+            0.932064950466156,
+            0.9872273206710815,
+            0.9874746203422546
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.3432643711566925,
+          "mean_confidence": 0.8939131682827359,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_f5705a41-090d-4369-b1ad-9c3f497678fe"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude01\ud804\ude1f\ud804\ude29\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude34\ud804\ude1a\ud804\ude2e\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude01\ud804\ude1f\ud804\ude29\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude34\ud804\ude1a\ud804\ude2e\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.8847803473472595,
+            0.9930478930473328,
+            0.9926730990409851,
+            0.9911826848983765,
+            0.9968196153640747,
+            0.54575115442276,
+            0.9786737561225891,
+            0.849358081817627,
+            0.7153400778770447,
+            0.9863054752349854,
+            0.6997649669647217,
+            0.9939095973968506,
+            0.9981701374053955,
+            0.7780047059059143,
+            0.4707430899143219,
+            0.9936861395835876,
+            0.9932219982147217,
+            0.9500009417533875,
+            0.9984606504440308
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.4707430899143219,
+          "mean_confidence": 0.884731284881893,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_e505926c-d8e8-4768-87c7-7891d566bd4d"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1a\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1a\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.9447503089904785,
+            0.9044466614723206,
+            0.9984301924705505,
+            0.7294509410858154,
+            0.9667896032333374,
+            0.9778278470039368,
+            0.9852285385131836,
+            0.9816307425498962,
+            0.9857117533683777,
+            0.9900318384170532,
+            0.3480032682418823,
+            0.9601985812187195,
+            0.986078679561615,
+            0.9361268877983093,
+            0.9978887438774109,
+            0.993350088596344,
+            0.9873983860015869,
+            0.6000176668167114,
+            0.8481829166412354,
+            0.9825008511543274,
+            0.9667046666145325,
+            0.44753485918045044,
+            0.9982441663742065
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.3480032682418823,
+          "mean_confidence": 0.8920229647470557,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_84c75695-bd09-489a-b454-6fc2f30031b8"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude08\ud804\ude30\ud804\ude30\ud804\ude08\ud804\ude3a\ud804\ude10\ud804\ude2f\ud804\ude0a\ud804\ude3a\ud804\ude30\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude26\ud804\ude2a\ud804\ude00\ud804\ude3a\ud804\ude26",
+          "normalized_hypothesis": "\ud804\ude08\ud804\ude30\ud804\ude30\ud804\ude08\ud804\ude3a\ud804\ude10\ud804\ude2f\ud804\ude0a\ud804\ude3a\ud804\ude30\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude26\ud804\ude2a\ud804\ude00\ud804\ude3a\ud804\ude26",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.9804685115814209,
+            0.9548453688621521,
+            0.9766215682029724,
+            0.9869289398193359,
+            0.9970095157623291,
+            0.9398488998413086,
+            0.9343380928039551,
+            0.9720104932785034,
+            0.991951584815979,
+            0.273910790681839,
+            0.862716019153595,
+            0.9403228759765625,
+            0.9960392713546753,
+            0.9952799081802368,
+            0.6752311587333679,
+            0.9842729568481445,
+            0.9969871640205383,
+            0.9906711578369141,
+            0.9987103939056396,
+            0.9949296712875366,
+            0.6667678356170654,
+            0.44749924540519714,
+            0.9986782670021057,
+            0.29075872898101807
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.273910790681839,
+          "mean_confidence": 0.8686166008313497,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_b08bafa4-a906-4930-ac00-63c8508b9bfa"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude21\ud804\ude30\ud804\ude1b\ud804\ude3a\ud804\ude08\ud804\ude2d\ud804\ude34\ud804\ude1e\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude1e\ud804\ude3a\ud804\ude27\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude13",
+          "normalized_hypothesis": "\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude21\ud804\ude30\ud804\ude1b\ud804\ude3a\ud804\ude08\ud804\ude2d\ud804\ude34\ud804\ude1e\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude1e\ud804\ude3a\ud804\ude27\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude13",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.568784773349762,
+            0.373655766248703,
+            0.9724087715148926,
+            0.9917986392974854,
+            0.9389350414276123,
+            0.9997841715812683,
+            0.778348982334137,
+            0.6243839263916016,
+            0.8006985187530518,
+            0.9903460144996643,
+            0.8910542130470276,
+            0.9774456024169922,
+            0.5257261395454407,
+            0.9192014932632446,
+            0.7256187200546265,
+            0.7079153656959534,
+            0.9981669187545776,
+            0.9962899684906006,
+            0.9977834820747375,
+            0.8985738158226013,
+            0.5908240079879761,
+            0.5612545013427734,
+            0.9993188381195068,
+            0.09565921872854233
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.09565921872854233,
+          "mean_confidence": 0.7884990371142825,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_06867766-7358-42f0-bc39-9b9eac2ab205"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude3a\ud804\ude29\ud804\ude2d\ud804\ude26\ud804\ude10\ud804\ude26\ud804\ude00\ud804\ude2a\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude3a\ud804\ude29\ud804\ude2d\ud804\ude26\ud804\ude10\ud804\ude26\ud804\ude00\ud804\ude2a\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.7964807152748108,
+            0.9876667261123657,
+            0.9809964895248413,
+            0.9686233997344971,
+            0.9993390440940857,
+            0.8586113452911377,
+            0.9720413684844971,
+            0.9954184293746948,
+            0.8201053738594055,
+            0.689290463924408,
+            0.9835482239723206,
+            0.991901695728302,
+            0.720681369304657,
+            0.11340036988258362,
+            0.9826786518096924,
+            0.9984843134880066,
+            0.994282603263855,
+            0.9853073358535767,
+            0.9989145994186401
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.11340036988258362,
+          "mean_confidence": 0.8861985535998094,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_2eb5d4da-f3b5-48b1-9b3b-06eaaddd0e3f"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude1f\ud804\ude34\ud804\ude0e\ud804\ude30\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude2a\ud804\ude2c\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2d\ud804\ude26\ud804\ude00\ud804\ude0a\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude1f\ud804\ude34\ud804\ude0e\ud804\ude30\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude2a\ud804\ude2c\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2d\ud804\ude26\ud804\ude00\ud804\ude0a\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.9557234048843384,
+            0.5345365405082703,
+            0.9619969725608826,
+            0.9893444180488586,
+            0.99753737449646,
+            0.9962776303291321,
+            0.9967953562736511,
+            0.9990419745445251,
+            0.994825005531311,
+            0.9968308806419373,
+            0.965364396572113,
+            0.9838324189186096,
+            0.9880861043930054,
+            0.9789891839027405,
+            0.9967474937438965,
+            0.7936062812805176,
+            0.9375755786895752,
+            0.4079676568508148,
+            0.17133398354053497,
+            0.9876295328140259,
+            0.9919677376747131,
+            0.9416586756706238,
+            0.49535587430000305,
+            0.9996086955070496
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.17133398354053497,
+          "mean_confidence": 0.8776097154865662,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_78a07df8-989c-436e-9272-6dd0751ba846"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude24",
+          "normalized_hypothesis": "\ud804\ude24",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.9922933578491211
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.9922933578491211,
+          "mean_confidence": 0.9922933578491211,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_f55b1ef7-47e7-4672-9483-54bedbb755a0"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude29\ud804\ude2d\ud804\ude34\ud804\ude19\ud804\ude30\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude30\ud804\ude29\ud804\ude0a\ud804\ude3a\ud804\ude21\ud804\ude26\ud804\ude29\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude2c\ud804\ude3a\ud804\ude1f",
+          "normalized_hypothesis": "\ud804\ude29\ud804\ude2d\ud804\ude34\ud804\ude19\ud804\ude30\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude30\ud804\ude29\ud804\ude0a\ud804\ude3a\ud804\ude21\ud804\ude26\ud804\ude29\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude2c\ud804\ude3a\ud804\ude1f",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.903281569480896,
+            0.9479156732559204,
+            0.6420189142227173,
+            0.4557013511657715,
+            0.9617864489555359,
+            0.9610326290130615,
+            0.9990288019180298,
+            0.9697132110595703,
+            0.9787530899047852,
+            0.8196775317192078,
+            0.9827437400817871,
+            0.17036078870296478,
+            0.9984593391418457,
+            0.6063073873519897,
+            0.9651662111282349,
+            0.9894856214523315,
+            0.9994100332260132,
+            0.9895119071006775,
+            0.9447879791259766,
+            0.9996949434280396,
+            0.9064646363258362,
+            0.9846449494361877,
+            0.953210711479187,
+            0.7844508290290833,
+            0.2948154807090759,
+            0.999098539352417,
+            0.7997744083404541
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.17036078870296478,
+          "mean_confidence": 0.8521221009669481,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_f813c0dc-4b84-4071-a176-d79251b99ee2"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude03\ud804\ude2f\ud804\ude1f\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude03\ud804\ude2f\ud804\ude1f\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.8010544776916504,
+            0.39899423718452454,
+            0.9667074680328369,
+            0.9056986570358276,
+            0.9958600401878357,
+            0.9964060187339783,
+            0.9905129671096802,
+            0.9815317392349243,
+            0.9975195527076721,
+            0.9953230023384094,
+            0.9659847021102905,
+            0.9994398951530457,
+            0.524389922618866,
+            0.9514576196670532,
+            0.9757775068283081,
+            0.9960687160491943,
+            0.9749290347099304,
+            0.9963967204093933,
+            0.9915741086006165,
+            0.9904878735542297,
+            0.9685049653053284,
+            0.9140437245368958,
+            0.5345222353935242,
+            0.7513527870178223,
+            0.999609649181366
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.39899423718452454,
+          "mean_confidence": 0.9025659048557282,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_f46c270b-6ca4-43e6-ae47-76bdb68ccb89"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude19\ud804\ude21\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude0a\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude26\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2c\ud804\ude24\ud804\ude2c\ud804\ude3a\ud804\ude1e",
+          "normalized_hypothesis": "\ud804\ude19\ud804\ude21\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude0a\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude26\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2c\ud804\ude24\ud804\ude2c\ud804\ude3a\ud804\ude1e",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.964722752571106,
+            0.9579318165779114,
+            0.9684668183326721,
+            0.708340048789978,
+            0.9993014335632324,
+            0.3887021839618683,
+            0.9858637452125549,
+            0.9984960556030273,
+            0.9843964576721191,
+            0.9935997724533081,
+            0.9614307284355164,
+            0.9993483424186707,
+            0.9952549934387207,
+            0.9956408739089966,
+            0.9778698086738586,
+            0.9875584840774536,
+            0.9975622892379761,
+            0.9798278212547302,
+            0.9952687621116638,
+            0.9966905117034912,
+            0.950556755065918,
+            0.9996311664581299,
+            0.39056992530822754
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.3887021839618683,
+          "mean_confidence": 0.9207405020361361,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_90c69e30-7ffb-4ed7-8910-39e7d8f7f821"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2a\ud804\ude2e\ud804\ude2d\ud804\ude34\ud804\ude3a\ud804\ude10\ud804\ude2d\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude2c\ud804\ude27\ud804\ude3a\ud804\ude1e\ud804\ude2c\ud804\ude24\ud804\ude3a\ud804\ude26",
+          "normalized_hypothesis": "\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2a\ud804\ude2e\ud804\ude2d\ud804\ude34\ud804\ude3a\ud804\ude10\ud804\ude2d\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude2c\ud804\ude27\ud804\ude3a\ud804\ude1e\ud804\ude2c\ud804\ude24\ud804\ude3a\ud804\ude26",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.32662123441696167,
+            0.5648103952407837,
+            0.9659914374351501,
+            0.9582117199897766,
+            0.9754396080970764,
+            0.9269394278526306,
+            0.8975645899772644,
+            0.7165800333023071,
+            0.9921608567237854,
+            0.8784263730049133,
+            0.5609371662139893,
+            0.9943324327468872,
+            0.617677628993988,
+            0.9888994097709656,
+            0.5865622758865356,
+            0.9728872179985046,
+            0.7080066800117493,
+            0.5908092260360718,
+            0.6215502619743347,
+            0.5675715804100037,
+            0.9989277720451355,
+            0.9469183087348938,
+            0.9994070529937744,
+            0.4885880947113037,
+            0.9980680346488953,
+            0.13584575057029724
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.13584575057029724,
+          "mean_confidence": 0.76845132960723,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_52f155fb-7667-4e78-93c8-a5b35403d9de"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude32\ud804\ude1b\ud804\ude1b\ud804\ude1b\ud804\ude0e\ud804\ude1b\ud804\ude29\ud804\ude34\ud804\ude0a\ud804\ude34\ud804\ude2d",
+          "normalized_hypothesis": "\ud804\ude32\ud804\ude1b\ud804\ude1b\ud804\ude1b\ud804\ude0e\ud804\ude1b\ud804\ude29\ud804\ude34\ud804\ude0a\ud804\ude34\ud804\ude2d",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.08887919783592224,
+            0.12295057624578476,
+            0.1300501525402069,
+            0.1581377536058426,
+            0.1207960918545723,
+            0.1622963547706604,
+            0.15342962741851807,
+            0.2737486958503723,
+            0.08407969772815704,
+            0.1797669380903244,
+            0.13448920845985413
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.08407969772815704,
+          "mean_confidence": 0.14623857221820138,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_4b938138-6cef-4681-be0b-79aeb6ff9672"
+        },
+        {
+          "raw_hypothesis": "",
+          "normalized_hypothesis": "",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [],
+          "unserializable_confidences": {},
+          "minimum_confidence": null,
+          "mean_confidence": null,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified",
+            "empty_hypothesis",
+            "missing_confidences"
+          ],
+          "line_id": "_a1d4fe7d-8deb-408f-afc7-8123cd8b5aab"
+        }
+      ],
+      "raw_hypothesis": "\ud804\ude2e\ud804\ude2e\ud804\ude2f\n\ud804\ude29\ud804\ude0a\ud804\ude15\ud804\ude0a\ud804\ude30\ud804\ude0a\ud804\ude15\ud804\ude2a\ud804\ude3a\ud804\ude3a\ud804\ude2d\ud804\ude2f\ud804\ude08\ud804\ude2a\ud804\ude08\ud804\ude30\ud804\ude3a\ud804\ude2f\ud804\ude2f\ud804\ude29\ud804\ude2f\ud804\ude2f\ud804\ude2f\n\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude34\ud804\ude3a\ud804\ude0a\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude2c\ud804\ude19\ud804\ude34\ud804\ude3a\ud804\ude21\ud804\ude2e\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude2f\n\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude3a\ud804\ude01\ud804\ude1b\ud804\ude24\ud804\ude3a\ud804\ude17\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1a\ud804\ude34\ud804\ude3a\ud804\ude24\n\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude21\ud804\ude3a\ud804\ude2a\ud804\ude2f\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude1f\ud804\ude26\ud804\ude2e\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude2c\ud804\ude34\ud804\ude3a\n\ud804\ude1f\ud804\ude26\ud804\ude30\ud804\ude19\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude34\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude0e\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude01\ud804\ude34\ud804\ude3a\ud804\ude1f\ud804\ude2e\ud804\ude10\ud804\ude2e\ud804\ude3a\n\ud804\ude01\ud804\ude1f\ud804\ude3a\ud804\ude1e\ud804\ude2d\ud804\ude26\ud804\ude34\ud804\ude10\ud804\ude1e\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude34\ud804\ude3a\n\ud804\ude00\ud804\ude1e\ud804\ude30\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude03\ud804\ude1f\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude3a\ud804\ude26\ud804\ude30\ud804\ude3a\n\ud804\ude01\ud804\ude1f\ud804\ude29\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude34\ud804\ude1a\ud804\ude2e\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude3a\n\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1a\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude3a\n\ud804\ude08\ud804\ude30\ud804\ude30\ud804\ude08\ud804\ude3a\ud804\ude10\ud804\ude2f\ud804\ude0a\ud804\ude3a\ud804\ude30\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude26\ud804\ude2a\ud804\ude00\ud804\ude3a\ud804\ude26\n\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude21\ud804\ude30\ud804\ude1b\ud804\ude3a\ud804\ude08\ud804\ude2d\ud804\ude34\ud804\ude1e\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude1e\ud804\ude3a\ud804\ude27\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude13\n\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude3a\ud804\ude29\ud804\ude2d\ud804\ude26\ud804\ude10\ud804\ude26\ud804\ude00\ud804\ude2a\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\n\ud804\ude1f\ud804\ude34\ud804\ude0e\ud804\ude30\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude2a\ud804\ude2c\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2d\ud804\ude26\ud804\ude00\ud804\ude0a\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\n\ud804\ude24\n\ud804\ude29\ud804\ude2d\ud804\ude34\ud804\ude19\ud804\ude30\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude30\ud804\ude29\ud804\ude0a\ud804\ude3a\ud804\ude21\ud804\ude26\ud804\ude29\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude2c\ud804\ude3a\ud804\ude1f\n\ud804\ude03\ud804\ude2f\ud804\ude1f\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude3a\n\ud804\ude19\ud804\ude21\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude0a\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude26\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2c\ud804\ude24\ud804\ude2c\ud804\ude3a\ud804\ude1e\n\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2a\ud804\ude2e\ud804\ude2d\ud804\ude34\ud804\ude3a\ud804\ude10\ud804\ude2d\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude2c\ud804\ude27\ud804\ude3a\ud804\ude1e\ud804\ude2c\ud804\ude24\ud804\ude3a\ud804\ude26\n\ud804\ude32\ud804\ude1b\ud804\ude1b\ud804\ude1b\ud804\ude0e\ud804\ude1b\ud804\ude29\ud804\ude34\ud804\ude0a\ud804\ude34\ud804\ude2d\n",
+      "draft_text": "\ud804\ude2e\ud804\ude2e\ud804\ude2f\n\ud804\ude29\ud804\ude0a\ud804\ude15\ud804\ude0a\ud804\ude30\ud804\ude0a\ud804\ude15\ud804\ude2a\ud804\ude3a\ud804\ude3a\ud804\ude2d\ud804\ude2f\ud804\ude08\ud804\ude2a\ud804\ude08\ud804\ude30\ud804\ude3a\ud804\ude2f\ud804\ude2f\ud804\ude29\ud804\ude2f\ud804\ude2f\ud804\ude2f\n\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude34\ud804\ude3a\ud804\ude0a\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude2c\ud804\ude19\ud804\ude34\ud804\ude3a\ud804\ude21\ud804\ude2e\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude2f\n\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude3a\ud804\ude01\ud804\ude1b\ud804\ude24\ud804\ude3a\ud804\ude17\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1a\ud804\ude34\ud804\ude3a\ud804\ude24\n\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude21\ud804\ude3a\ud804\ude2a\ud804\ude2f\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude1f\ud804\ude26\ud804\ude2e\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude2c\ud804\ude34\ud804\ude3a\n\ud804\ude1f\ud804\ude26\ud804\ude30\ud804\ude19\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude34\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude0e\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude01\ud804\ude34\ud804\ude3a\ud804\ude1f\ud804\ude2e\ud804\ude10\ud804\ude2e\ud804\ude3a\n\ud804\ude01\ud804\ude1f\ud804\ude3a\ud804\ude1e\ud804\ude2d\ud804\ude26\ud804\ude34\ud804\ude10\ud804\ude1e\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude34\ud804\ude3a\n\ud804\ude00\ud804\ude1e\ud804\ude30\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude03\ud804\ude1f\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude3a\ud804\ude26\ud804\ude30\ud804\ude3a\n\ud804\ude01\ud804\ude1f\ud804\ude29\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude34\ud804\ude1a\ud804\ude2e\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude3a\n\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1a\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude3a\n\ud804\ude08\ud804\ude30\ud804\ude30\ud804\ude08\ud804\ude3a\ud804\ude10\ud804\ude2f\ud804\ude0a\ud804\ude3a\ud804\ude30\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude26\ud804\ude2a\ud804\ude00\ud804\ude3a\ud804\ude26\n\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude21\ud804\ude30\ud804\ude1b\ud804\ude3a\ud804\ude08\ud804\ude2d\ud804\ude34\ud804\ude1e\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude1e\ud804\ude3a\ud804\ude27\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude13\n\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude3a\ud804\ude29\ud804\ude2d\ud804\ude26\ud804\ude10\ud804\ude26\ud804\ude00\ud804\ude2a\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\n\ud804\ude1f\ud804\ude34\ud804\ude0e\ud804\ude30\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude2a\ud804\ude2c\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2d\ud804\ude26\ud804\ude00\ud804\ude0a\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\n\ud804\ude24\n\ud804\ude29\ud804\ude2d\ud804\ude34\ud804\ude19\ud804\ude30\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude30\ud804\ude29\ud804\ude0a\ud804\ude3a\ud804\ude21\ud804\ude26\ud804\ude29\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude2c\ud804\ude3a\ud804\ude1f\n\ud804\ude03\ud804\ude2f\ud804\ude1f\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude3a\n\ud804\ude19\ud804\ude21\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude0a\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude26\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2c\ud804\ude24\ud804\ude2c\ud804\ude3a\ud804\ude1e\n\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2a\ud804\ude2e\ud804\ude2d\ud804\ude34\ud804\ude3a\ud804\ude10\ud804\ude2d\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude2c\ud804\ude27\ud804\ude3a\ud804\ude1e\ud804\ude2c\ud804\ude24\ud804\ude3a\ud804\ude26\n\ud804\ude32\ud804\ude1b\ud804\ude1b\ud804\ude1b\ud804\ude0e\ud804\ude1b\ud804\ude29\ud804\ude34\ud804\ude0a\ud804\ude34\ud804\ude2d\n",
+      "invalid_codepoints": [],
+      "raw_invalid_codepoints": [],
+      "transcript_path": null,
+      "draft_path": "runs/cold-real-pages-003/drafts/page-0018.txt",
+      "line_crops": [],
+      "uncertainty_flags": [
+        "empty_hypothesis",
+        "layout_unverified",
+        "missing_confidences",
+        "script_identity_unverified"
+      ],
+      "errors": [],
+      "recognition_failure_line_ids": [],
+      "recognition_missing_line_ids": [],
+      "draft_review_note": "Unverified raw model text; empty rows may be failed recognition. Consult this report before reuse."
+    },
+    {
+      "page": 19,
+      "raster_digest": "f6110cbe3a25ef833f897434278889bec3606efe7fe1f37df33e14d6619f41b5",
+      "size": [
+        1848,
+        3113
+      ],
+      "source": {
+        "source_kind": "pdf",
+        "dpi": 180.0,
+        "pdf_rotation": 0,
+        "captions": {
+          "mode": "disabled",
+          "allowed_texts": [],
+          "regions": [],
+          "rejected": [],
+          "uncertainty_flags": []
+        }
+      },
+      "status": "review",
+      "review_required": true,
+      "provenance": "model",
+      "raw_raster_statistics": {
+        "near_white_fraction": 0.04253128550430189,
+        "minimum_channel": 0,
+        "high_whiteness": false,
+        "near_white_floor": 250
+      },
+      "preprocessing": {
+        "border_handling": "preserve_full_page",
+        "crop": null,
+        "caption_masks": [],
+        "mask_note": "Disabled unless exact ASCII captions are explicitly named"
+      },
+      "segmentation": {
+        "line_count": 19,
+        "lines": [
+          {
+            "id": "_7a69fd5b-9fa9-4887-af1c-88cdf62e1b6a",
+            "bbox": [
+              810,
+              53,
+              1183,
+              201
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                810,
+                53
+              ],
+              [
+                1182,
+                53
+              ],
+              [
+                1182,
+                200
+              ],
+              [
+                810,
+                200
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_7a7386ab-9427-4d1c-8a26-b0354f0c0614",
+            "bbox": [
+              63,
+              237,
+              1745,
+              324
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                63,
+                237
+              ],
+              [
+                1744,
+                237
+              ],
+              [
+                1744,
+                323
+              ],
+              [
+                63,
+                323
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_2cbe18ac-140a-4539-9e14-64d2bb5d195a",
+            "bbox": [
+              263,
+              425,
+              1639,
+              551
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                263,
+                425
+              ],
+              [
+                1638,
+                425
+              ],
+              [
+                1638,
+                550
+              ],
+              [
+                263,
+                550
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_edc7ba1c-24d0-4c33-9108-65ee008c0aab",
+            "bbox": [
+              158,
+              573,
+              1665,
+              685
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                158,
+                573
+              ],
+              [
+                1664,
+                573
+              ],
+              [
+                1664,
+                684
+              ],
+              [
+                158,
+                684
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_1e271060-ae68-43b3-a036-92641d4a891e",
+            "bbox": [
+              276,
+              732,
+              1049,
+              833
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                276,
+                732
+              ],
+              [
+                1048,
+                732
+              ],
+              [
+                1048,
+                832
+              ],
+              [
+                276,
+                832
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_e51987bc-3284-45f3-a884-ee55124cae7d",
+            "bbox": [
+              271,
+              875,
+              1674,
+              980
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                271,
+                875
+              ],
+              [
+                1673,
+                875
+              ],
+              [
+                1673,
+                979
+              ],
+              [
+                271,
+                979
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_14b9cc8f-d745-465f-82e7-c4f538a2f821",
+            "bbox": [
+              275,
+              1015,
+              1098,
+              1137
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                275,
+                1015
+              ],
+              [
+                1097,
+                1015
+              ],
+              [
+                1097,
+                1136
+              ],
+              [
+                275,
+                1136
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_1e5f3e12-5f63-4ff3-8273-9e432f9d8b7a",
+            "bbox": [
+              272,
+              1175,
+              1683,
+              1274
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                272,
+                1175
+              ],
+              [
+                1682,
+                1175
+              ],
+              [
+                1682,
+                1273
+              ],
+              [
+                272,
+                1273
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_a3061c56-bc21-4dda-aafe-73ee8381f7fe",
+            "bbox": [
+              273,
+              1334,
+              1687,
+              1437
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                273,
+                1334
+              ],
+              [
+                1686,
+                1334
+              ],
+              [
+                1686,
+                1436
+              ],
+              [
+                273,
+                1436
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_57332cf6-bb51-431c-aaf7-0cbd1959b8a5",
+            "bbox": [
+              282,
+              1482,
+              1681,
+              1579
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                282,
+                1482
+              ],
+              [
+                1680,
+                1482
+              ],
+              [
+                1680,
+                1578
+              ],
+              [
+                282,
+                1578
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_b69c8244-3fbf-4802-bf78-b3571bdced1b",
+            "bbox": [
+              286,
+              1627,
+              1134,
+              1726
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                286,
+                1627
+              ],
+              [
+                1133,
+                1627
+              ],
+              [
+                1133,
+                1725
+              ],
+              [
+                286,
+                1725
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_ab16cd6c-7e5e-4f7d-b581-29245a2063f7",
+            "bbox": [
+              278,
+              1786,
+              1695,
+              1905
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                278,
+                1786
+              ],
+              [
+                1694,
+                1786
+              ],
+              [
+                1694,
+                1904
+              ],
+              [
+                278,
+                1904
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_7efe5173-0c9f-4465-935d-891682cd9c7e",
+            "bbox": [
+              630,
+              1932,
+              890,
+              2036
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                630,
+                1932
+              ],
+              [
+                889,
+                1932
+              ],
+              [
+                889,
+                2035
+              ],
+              [
+                630,
+                2035
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_b871b40c-9ce2-4737-b92a-bcfaecd245d4",
+            "bbox": [
+              455,
+              2086,
+              1175,
+              2175
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                455,
+                2086
+              ],
+              [
+                1174,
+                2086
+              ],
+              [
+                1174,
+                2174
+              ],
+              [
+                455,
+                2174
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_107be147-4f27-4dd0-8173-e592f458ec68",
+            "bbox": [
+              459,
+              2228,
+              1233,
+              2328
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                459,
+                2228
+              ],
+              [
+                1232,
+                2228
+              ],
+              [
+                1232,
+                2327
+              ],
+              [
+                459,
+                2327
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_184550cc-86c9-4395-87cc-cf2a56f7a280",
+            "bbox": [
+              461,
+              2382,
+              1208,
+              2488
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                461,
+                2382
+              ],
+              [
+                1207,
+                2382
+              ],
+              [
+                1207,
+                2487
+              ],
+              [
+                461,
+                2487
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_4b5bff9e-574d-4ebd-9907-b8bef2e2135b",
+            "bbox": [
+              463,
+              2530,
+              1744,
+              2633
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                463,
+                2530
+              ],
+              [
+                1743,
+                2530
+              ],
+              [
+                1743,
+                2632
+              ],
+              [
+                463,
+                2632
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_94cd189a-2a51-4ad7-9d94-c05ff84129f7",
+            "bbox": [
+              283,
+              2685,
+              1107,
+              2790
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                283,
+                2685
+              ],
+              [
+                1106,
+                2685
+              ],
+              [
+                1106,
+                2789
+              ],
+              [
+                283,
+                2789
+              ]
+            ],
+            "uncertainty_flags": []
+          },
+          {
+            "id": "_965376d4-1a78-4a11-ac55-3aa05e4d9f13",
+            "bbox": [
+              84,
+              2828,
+              1782,
+              2916
+            ],
+            "baseline": [],
+            "boundary": [
+              [
+                84,
+                2828
+              ],
+              [
+                1781,
+                2828
+              ],
+              [
+                1781,
+                2915
+              ],
+              [
+                84,
+                2915
+              ]
+            ],
+            "uncertainty_flags": []
+          }
+        ],
+        "region_count": 0,
+        "reading_order": "Kraken segmentation.lines order; not manually verified"
+      },
+      "lines": [
+        {
+          "raw_hypothesis": "\ud804\ude0d\ud804\ude2c",
+          "normalized_hypothesis": "\ud804\ude0d\ud804\ude2c",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.11196764558553696,
+            0.5073156356811523
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.11196764558553696,
+          "mean_confidence": 0.30964164063334465,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_7a69fd5b-9fa9-4887-af1c-88cdf62e1b6a"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude2a\ud804\ude15\ud804\ude30\ud804\ude0a\ud804\ude2a\ud804\ude2f\ud804\ude2a\ud804\ude3a\ud804\ude26\ud804\ude27\ud804\ude2d\ud804\ude15\ud804\ude29\ud804\ude2a\ud804\ude2f\ud804\ude1b\ud804\ude0a\ud804\ude2e\ud804\ude2f\ud804\ude24\ud804\ude30\ud804\ude2c\ud804\ude2f\ud804\ude27\ud804\ude2f\ud804\ude30\ud804\ude32\ud804\ude1f",
+          "normalized_hypothesis": "\ud804\ude2a\ud804\ude15\ud804\ude30\ud804\ude0a\ud804\ude2a\ud804\ude2f\ud804\ude2a\ud804\ude3a\ud804\ude26\ud804\ude27\ud804\ude2d\ud804\ude15\ud804\ude29\ud804\ude2a\ud804\ude2f\ud804\ude1b\ud804\ude0a\ud804\ude2e\ud804\ude2f\ud804\ude24\ud804\ude30\ud804\ude2c\ud804\ude2f\ud804\ude27\ud804\ude2f\ud804\ude30\ud804\ude32\ud804\ude1f",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.14024560153484344,
+            0.05635829269886017,
+            0.26118502020835876,
+            0.07949855178594589,
+            0.10356168448925018,
+            0.07428643852472305,
+            0.1391746550798416,
+            0.18650151789188385,
+            0.0699622705578804,
+            0.11840561777353287,
+            0.0979972705245018,
+            0.0651421844959259,
+            0.25488075613975525,
+            0.1569223552942276,
+            0.09432877600193024,
+            0.09752527624368668,
+            0.38707366585731506,
+            0.20975257456302643,
+            0.24078570306301117,
+            0.10866472125053406,
+            0.09775447845458984,
+            0.23185019195079803,
+            0.06009458005428314,
+            0.11561083048582077,
+            0.08179005235433578,
+            0.13669277727603912,
+            0.21846014261245728,
+            0.22599582374095917
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.05635829269886017,
+          "mean_confidence": 0.14680363610386848,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_7a7386ab-9427-4d1c-8a26-b0354f0c0614"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude30\ud804\ude3a\ud804\ude26",
+          "normalized_hypothesis": "\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude30\ud804\ude3a\ud804\ude26",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.993497371673584,
+            0.9111021757125854,
+            0.9996263980865479,
+            0.9403748512268066,
+            0.9200184941291809,
+            0.9990405440330505,
+            0.9921980500221252,
+            0.9934137463569641,
+            0.9977274537086487,
+            0.9917568564414978,
+            0.9943827390670776,
+            0.9997780919075012,
+            0.6369214653968811,
+            0.8207862377166748,
+            0.8147960305213928,
+            0.8836961984634399,
+            0.9613598585128784,
+            0.9945593476295471,
+            0.9993413090705872,
+            0.6439326405525208,
+            0.9983769655227661,
+            0.957676351070404,
+            0.999302864074707,
+            0.3110320270061493
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.3110320270061493,
+          "mean_confidence": 0.9064457528293133,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_2cbe18ac-140a-4539-9e14-64d2bb5d195a"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude2a\ud804\ude2e\ud804\ude3a\ud804\ude30\ud804\ude10\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude08\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude1e\ud804\ude3a\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude30\ud804\ude3a\ud804\ude1f",
+          "normalized_hypothesis": "\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude2a\ud804\ude2e\ud804\ude3a\ud804\ude30\ud804\ude10\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude08\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude1e\ud804\ude3a\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude30\ud804\ude3a\ud804\ude1f",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.7387136220932007,
+            0.6206094622612,
+            0.9694659113883972,
+            0.726799488067627,
+            0.9991766810417175,
+            0.9997424483299255,
+            0.9834170937538147,
+            0.9793480634689331,
+            0.992675244808197,
+            0.9944393634796143,
+            0.9231588840484619,
+            0.982006311416626,
+            0.8106903433799744,
+            0.9551249146461487,
+            0.9990143775939941,
+            0.29064711928367615,
+            0.9855636358261108,
+            0.9983225464820862,
+            0.9938573241233826,
+            0.9964750409126282,
+            0.9494199752807617,
+            0.9969010353088379,
+            0.9961901903152466,
+            0.8083992004394531,
+            0.9941744208335876,
+            0.9983525276184082,
+            0.9931904673576355,
+            0.9977176189422607,
+            0.1446005403995514
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.1446005403995514,
+          "mean_confidence": 0.8902825466517744,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_edc7ba1c-24d0-4c33-9108-65ee008c0aab"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude1a\ud804\ude2e\ud804\ude0f\ud804\ude30\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude2e\ud804\ude3a\ud804\ude00\ud804\ude1f\ud804\ude2c\ud804\ude26\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude1a\ud804\ude2e\ud804\ude0f\ud804\ude30\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude2e\ud804\ude3a\ud804\ude00\ud804\ude1f\ud804\ude2c\ud804\ude26\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.4784885048866272,
+            0.9932996034622192,
+            0.49853459000587463,
+            0.9859724044799805,
+            0.9971486926078796,
+            0.9990279674530029,
+            0.9920917749404907,
+            0.9893833994865417,
+            0.9958856701850891,
+            0.9997912049293518,
+            0.9983842372894287,
+            0.9871779680252075,
+            0.998648464679718,
+            0.9996516704559326,
+            0.7945953011512756,
+            0.977018415927887,
+            0.9979507327079773,
+            0.9975333213806152,
+            0.9838384389877319
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.4784885048866272,
+          "mean_confidence": 0.929706440160149,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_1e271060-ae68-43b3-a036-92641d4a891e"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude1f\ud804\ude2d\ud804\ude34\ud804\ude17\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2f\ud804\ude26\ud804\ude2e\ud804\ude10\ud804\ude1e\ud804\ude2a\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude2d",
+          "normalized_hypothesis": "\ud804\ude1f\ud804\ude2d\ud804\ude34\ud804\ude17\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2f\ud804\ude26\ud804\ude2e\ud804\ude10\ud804\ude1e\ud804\ude2a\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude2d",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.5668547749519348,
+            0.9913399815559387,
+            0.954912006855011,
+            0.8936241269111633,
+            0.9964773058891296,
+            0.8420745134353638,
+            0.9618378281593323,
+            0.5151812434196472,
+            0.7450962066650391,
+            0.9986233711242676,
+            0.6465258598327637,
+            0.47904467582702637,
+            0.8465832471847534,
+            0.9982010126113892,
+            0.9740810990333557,
+            0.9852643013000488,
+            0.9897875785827637,
+            0.8827410340309143,
+            0.2658637464046478,
+            0.657580554485321,
+            0.9919924736022949,
+            0.9879728555679321,
+            0.9900540113449097,
+            0.9991633892059326,
+            0.9915955662727356,
+            0.9997478127479553,
+            0.18009516596794128,
+            0.14620903134346008
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.14620903134346008,
+          "mean_confidence": 0.8028044562254634,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_e51987bc-3284-45f3-a884-ee55124cae7d"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude19\ud804\ude21\ud804\ude2a\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude30\ud804\ude01\ud804\ude3a\ud804\ude1d\ud804\ude34\ud804\ude1d\ud804\ude2f\ud804\ude08\ud804\ude2c\ud804\ude26\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude19\ud804\ude21\ud804\ude2a\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude30\ud804\ude01\ud804\ude3a\ud804\ude1d\ud804\ude34\ud804\ude1d\ud804\ude2f\ud804\ude08\ud804\ude2c\ud804\ude26\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.9973661303520203,
+            0.6046293377876282,
+            0.8616527915000916,
+            0.9995056390762329,
+            0.9998229146003723,
+            0.9920828342437744,
+            0.9748773574829102,
+            0.9948469400405884,
+            0.7518336772918701,
+            0.9992685914039612,
+            0.5593660473823547,
+            0.9534558057785034,
+            0.8350324034690857,
+            0.9970633387565613,
+            0.9748634099960327,
+            0.9953688979148865,
+            0.9971565008163452,
+            0.9997739195823669
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.5593660473823547,
+          "mean_confidence": 0.9159981409708658,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_14b9cc8f-d745-465f-82e7-c4f538a2f821"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude1f\ud804\ude34\ud804\ude0e\ud804\ude30\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2e\ud804\ude01\ud804\ude3a\ud804\ude28\ud804\ude2d\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude24",
+          "normalized_hypothesis": "\ud804\ude1f\ud804\ude34\ud804\ude0e\ud804\ude30\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2e\ud804\ude01\ud804\ude3a\ud804\ude28\ud804\ude2d\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude24",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.9835644960403442,
+            0.716397762298584,
+            0.967080295085907,
+            0.9870955944061279,
+            0.9982988238334656,
+            0.9974977374076843,
+            0.9980700612068176,
+            0.9771199226379395,
+            0.993891716003418,
+            0.9995774626731873,
+            0.9871899485588074,
+            0.9806622266769409,
+            0.8583375811576843,
+            0.998960018157959,
+            0.47266408801078796,
+            0.9926735758781433,
+            0.9608879089355469,
+            0.9974296689033508,
+            0.9977976083755493,
+            0.9674902558326721,
+            0.9996852874755859,
+            0.16491922736167908,
+            0.5091566443443298
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.16491922736167908,
+          "mean_confidence": 0.8915846917940222,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_1e5f3e12-5f63-4ff3-8273-9e432f9d8b7a"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude19\ud804\ude2e\ud804\ude1e\ud804\ude3a\ud804\ude24\ud804\ude2f\ud804\ude26\ud804\ude19\ud804\ude08\ud804\ude2e\ud804\ude3a\ud804\ude10\ud804\ude2f\ud804\ude0a\ud804\ude19\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude26\ud804\ude1f",
+          "normalized_hypothesis": "\ud804\ude19\ud804\ude2e\ud804\ude1e\ud804\ude3a\ud804\ude24\ud804\ude2f\ud804\ude26\ud804\ude19\ud804\ude08\ud804\ude2e\ud804\ude3a\ud804\ude10\ud804\ude2f\ud804\ude0a\ud804\ude19\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude26\ud804\ude1f",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.7033185958862305,
+            0.9984806180000305,
+            0.9965399503707886,
+            0.9915279150009155,
+            0.8987772464752197,
+            0.9994274377822876,
+            0.9975839853286743,
+            0.8359196782112122,
+            0.9403168559074402,
+            0.9939963817596436,
+            0.9995597004890442,
+            0.9313366413116455,
+            0.7678700685501099,
+            0.9879133105278015,
+            0.9874542951583862,
+            0.9993672966957092,
+            0.5123565196990967,
+            0.9929925203323364,
+            0.9982041120529175,
+            0.9960202574729919,
+            0.9967498779296875,
+            0.15616454184055328,
+            0.9886429905891418
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.15616454184055328,
+          "mean_confidence": 0.8987182955379072,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_a3061c56-bc21-4dda-aafe-73ee8381f7fe"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude29\ud804\ude1f\ud804\ude19\ud804\ude2e\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude30\ud804\ude00\ud804\ude3a\ud804\ude29\ud804\ude34\ud804\ude29\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude2d",
+          "normalized_hypothesis": "\ud804\ude29\ud804\ude1f\ud804\ude19\ud804\ude2e\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude30\ud804\ude00\ud804\ude3a\ud804\ude29\ud804\ude34\ud804\ude29\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude2d",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.9924321174621582,
+            0.39245960116386414,
+            0.7664393782615662,
+            0.9962729215621948,
+            0.9998193383216858,
+            0.9955143332481384,
+            0.9917532205581665,
+            0.7270630598068237,
+            0.9970548152923584,
+            0.9839253425598145,
+            0.999782145023346,
+            0.9963957667350769,
+            0.9864556789398193,
+            0.9956979751586914,
+            0.6167199611663818,
+            0.9999003410339355,
+            0.9833381772041321,
+            0.9739418625831604,
+            0.9635978937149048,
+            0.9989674091339111,
+            0.9959302544593811,
+            0.9986081719398499,
+            0.140774667263031,
+            0.32472798228263855
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.140774667263031,
+          "mean_confidence": 0.8673988506197929,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_57332cf6-bb51-431c-aaf7-0cbd1959b8a5"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude1e\ud804\ude30\ud804\ude1c\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude00\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude30\ud804\ude00\ud804\ude26\ud804\ude2c\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude1e\ud804\ude30\ud804\ude1c\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude00\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude30\ud804\ude00\ud804\ude26\ud804\ude2c\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.4234548807144165,
+            0.9896111488342285,
+            0.823901891708374,
+            0.9978691339492798,
+            0.9966183304786682,
+            0.9791070222854614,
+            0.7433929443359375,
+            0.7206425666809082,
+            0.9484250545501709,
+            0.9972735047340393,
+            0.594179093837738,
+            0.9753085970878601,
+            0.9642890691757202,
+            0.9899711608886719,
+            0.9821058511734009,
+            0.9945388436317444,
+            0.9996421337127686,
+            0.9807723760604858,
+            0.9991030693054199,
+            0.7493950724601746,
+            0.9948713779449463,
+            0.9925827980041504,
+            0.9997822642326355
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.4234548807144165,
+          "mean_confidence": 0.905949486338574,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_b69c8244-3fbf-4802-bf78-b3571bdced1b"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude19\ud804\ude2d\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude29\ud804\ude08\ud804\ude27\ud804\ude3a\ud804\ude1f\ud804\ude29\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude26",
+          "normalized_hypothesis": "\ud804\ude19\ud804\ude2d\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude29\ud804\ude08\ud804\ude27\ud804\ude3a\ud804\ude1f\ud804\ude29\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude26",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.9515765905380249,
+            0.9931291937828064,
+            0.9759435057640076,
+            0.994732141494751,
+            0.9628753066062927,
+            0.9999301433563232,
+            0.7978982329368591,
+            0.8619149327278137,
+            0.9997138381004333,
+            0.9813698530197144,
+            0.8392268419265747,
+            0.9856950640678406,
+            0.9978684186935425,
+            0.9930362105369568,
+            0.9934589266777039,
+            0.959941029548645,
+            0.9995729327201843,
+            0.945193886756897,
+            0.9933410286903381,
+            0.9965887069702148,
+            0.9886965751647949,
+            0.9853187799453735,
+            0.9999285936355591,
+            0.21048331260681152,
+            0.10309023410081863
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.10309023410081863,
+          "mean_confidence": 0.9004209712147713,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_ab16cd6c-7e5e-4f7d-b581-29245a2063f7"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude26\ud804\ude30\ud804\ude19\ud804\ude2f\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude34\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude26\ud804\ude30\ud804\ude19\ud804\ude2f\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude34\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.8383966088294983,
+            0.9976670742034912,
+            0.21922986209392548,
+            0.9677358269691467,
+            0.9967766404151917,
+            0.7500944137573242,
+            0.9863988161087036,
+            0.9930557608604431,
+            0.9989672899246216
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.21922986209392548,
+          "mean_confidence": 0.8609246992402606,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_7efe5173-0c9f-4465-935d-891682cd9c7e"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude01\ud804\ude1f\ud804\ude29\ud804\ude3a\ud804\ude19\ud804\ude2c\ud804\ude1e\ud804\ude3a\ud804\ude03\ud804\ude2f\ud804\ude1f\ud804\ude2c\ud804\ude1f\ud804\ude2d\ud804\ude01\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude01\ud804\ude1f\ud804\ude29\ud804\ude3a\ud804\ude19\ud804\ude2c\ud804\ude1e\ud804\ude3a\ud804\ude03\ud804\ude2f\ud804\ude1f\ud804\ude2c\ud804\ude1f\ud804\ude2d\ud804\ude01\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.8115341663360596,
+            0.9854182004928589,
+            0.8169518709182739,
+            0.9958518743515015,
+            0.9386465549468994,
+            0.7729175090789795,
+            0.9899881482124329,
+            0.9941019415855408,
+            0.7723050713539124,
+            0.434335857629776,
+            0.995940089225769,
+            0.8402605652809143,
+            0.8190598487854004,
+            0.9676551222801208,
+            0.7564361691474915,
+            0.9997588992118835
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.434335857629776,
+          "mean_confidence": 0.8681976180523634,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_b871b40c-9ce2-4737-b92a-bcfaecd245d4"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude30\ud804\ude10\ud804\ude3a\ud804\ude2d\ud804\ude34\ud804\ude17\ud804\ude10\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude26\ud804\ude30\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude30\ud804\ude10\ud804\ude3a\ud804\ude2d\ud804\ude34\ud804\ude17\ud804\ude10\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude26\ud804\ude30\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.977889358997345,
+            0.9632620215415955,
+            0.9832393527030945,
+            0.9995261430740356,
+            0.9872995018959045,
+            0.9792842864990234,
+            0.9930156469345093,
+            0.9925724267959595,
+            0.9719854593276978,
+            0.9299852252006531,
+            0.9083335995674133,
+            0.9994325041770935,
+            0.9947633743286133,
+            0.9064116477966309,
+            0.9596219062805176,
+            0.5422218441963196,
+            0.8711279034614563,
+            0.9385353922843933,
+            0.933965265750885,
+            0.988078773021698,
+            0.9991724491119385
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.5422218441963196,
+          "mean_confidence": 0.9437963849022275,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_107be147-4f27-4dd0-8173-e592f458ec68"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude21\ud804\ude2d\ud804\ude26\ud804\ude24\ud804\ude2c\ud804\ude3a\ud804\ude28\ud804\ude2d\ud804\ude29\ud804\ude1e\ud804\ude2f\ud804\ude34\ud804\ude3a\ud804\ude1e\ud804\ude30\ud804\ude3a\ud804\ude26\ud804\ude10\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude21\ud804\ude2d\ud804\ude26\ud804\ude24\ud804\ude2c\ud804\ude3a\ud804\ude28\ud804\ude2d\ud804\ude29\ud804\ude1e\ud804\ude2f\ud804\ude34\ud804\ude3a\ud804\ude1e\ud804\ude30\ud804\ude3a\ud804\ude26\ud804\ude10\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.3243011236190796,
+            0.9968501925468445,
+            0.9955772161483765,
+            0.9961408972740173,
+            0.9931439161300659,
+            0.9961679577827454,
+            0.5764217376708984,
+            0.9059708714485168,
+            0.9937048554420471,
+            0.9664744734764099,
+            0.9987009763717651,
+            0.9979254007339478,
+            0.9995396137237549,
+            0.9652292132377625,
+            0.991370677947998,
+            0.9998049139976501,
+            0.39287760853767395,
+            0.12982477247714996,
+            0.9984610080718994
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.12982477247714996,
+          "mean_confidence": 0.8536046014020318,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_184550cc-86c9-4395-87cc-cf2a56f7a280"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude29\ud804\ude1f\ud804\ude19\ud804\ude2e\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude3a\ud804\ude30\ud804\ude30\ud804\ude2c\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude34\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude3a\ud804\ude29\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude29\ud804\ude1f\ud804\ude19\ud804\ude2e\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude3a\ud804\ude30\ud804\ude30\ud804\ude2c\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude34\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude3a\ud804\ude29\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.9901069402694702,
+            0.6426926851272583,
+            0.7953039407730103,
+            0.9900575280189514,
+            0.9998801946640015,
+            0.984896183013916,
+            0.9556443691253662,
+            0.964126467704773,
+            0.9996253252029419,
+            0.9941576719284058,
+            0.9956094622612,
+            0.9998447895050049,
+            0.6747804284095764,
+            0.7715957164764404,
+            0.9982818365097046,
+            0.9903629422187805,
+            0.9883871674537659,
+            0.9992676377296448,
+            0.994452178478241,
+            0.9836006760597229,
+            0.4933379590511322,
+            0.7461054921150208,
+            0.9589837789535522,
+            0.9016218781471252,
+            0.98451828956604,
+            0.9992990493774414,
+            0.6938804984092712,
+            0.23546205461025238,
+            0.9976426959037781
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.23546205461025238,
+          "mean_confidence": 0.8870181323125444,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_4b5bff9e-574d-4ebd-9907-b8bef2e2135b"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude1d\ud804\ude34\ud804\ude1d\ud804\ude2f\ud804\ude08\ud804\ude2c\ud804\ude26\ud804\ude08\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude1b\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude3a",
+          "normalized_hypothesis": "\ud804\ude1d\ud804\ude34\ud804\ude1d\ud804\ude2f\ud804\ude08\ud804\ude2c\ud804\ude26\ud804\ude08\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude1b\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude3a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.8873228430747986,
+            0.9971278309822083,
+            0.8789243698120117,
+            0.9980999827384949,
+            0.9572378993034363,
+            0.9991746544837952,
+            0.9280122518539429,
+            0.9782280921936035,
+            0.9975540041923523,
+            0.9948797225952148,
+            0.9951398372650146,
+            0.9962777495384216,
+            0.9955915808677673,
+            0.9937361478805542,
+            0.9996988773345947,
+            0.8859153985977173,
+            0.41247397661209106,
+            0.994976282119751,
+            0.9571899771690369,
+            0.9991335272789001
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.41247397661209106,
+          "mean_confidence": 0.9423347502946854,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_94cd189a-2a51-4ad7-9d94-c05ff84129f7"
+        },
+        {
+          "raw_hypothesis": "\ud804\ude3a\ud804\ude08\ud804\ude2a\ud804\ude3a\ud804\ude2f\ud804\ude27\ud804\ude2f\ud804\ude27\ud804\ude2a\ud804\ude2f\ud804\ude27\ud804\ude2d\ud804\ude3a\ud804\ude08\ud804\ude27\ud804\ude3a\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude2f\ud804\ude34\ud804\ude26\ud804\ude2a\ud804\ude08\ud804\ude2a\ud804\ude2c\ud804\ude3a\ud804\ude2d\ud804\ude2a",
+          "normalized_hypothesis": "\ud804\ude3a\ud804\ude08\ud804\ude2a\ud804\ude3a\ud804\ude2f\ud804\ude27\ud804\ude2f\ud804\ude27\ud804\ude2a\ud804\ude2f\ud804\ude27\ud804\ude2d\ud804\ude3a\ud804\ude08\ud804\ude27\ud804\ude3a\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude2f\ud804\ude34\ud804\ude26\ud804\ude2a\ud804\ude08\ud804\ude2a\ud804\ude2c\ud804\ude3a\ud804\ude2d\ud804\ude2a",
+          "raw_invalid_codepoints": [],
+          "invalid_codepoints": [],
+          "character_confidences": [
+            0.10395169258117676,
+            0.056142546236515045,
+            0.10600433498620987,
+            0.3588603138923645,
+            0.05490619316697121,
+            0.10235662758350372,
+            0.10897202044725418,
+            0.11619740724563599,
+            0.2419005185365677,
+            0.0829872414469719,
+            0.10130640864372253,
+            0.3170870244503021,
+            0.6774407625198364,
+            0.08169436454772949,
+            0.13512851297855377,
+            0.13683104515075684,
+            0.18133637309074402,
+            0.0924747958779335,
+            0.3081008791923523,
+            0.5762978196144104,
+            0.4206065833568573,
+            0.09617912024259567,
+            0.11895110458135605,
+            0.07196570187807083,
+            0.16258935630321503,
+            0.14287124574184418,
+            0.07528094202280045,
+            0.28249111771583557,
+            0.12129887193441391
+          ],
+          "unserializable_confidences": {},
+          "minimum_confidence": 0.05490619316697121,
+          "mean_confidence": 0.18731761813677592,
+          "confidence_note": "Decoder scores are not calibrated accuracy or script probabilities",
+          "uncertainty_flags": [
+            "script_identity_unverified"
+          ],
+          "line_id": "_965376d4-1a78-4a11-ac55-3aa05e4d9f13"
+        }
+      ],
+      "raw_hypothesis": "\ud804\ude0d\ud804\ude2c\n\ud804\ude2a\ud804\ude15\ud804\ude30\ud804\ude0a\ud804\ude2a\ud804\ude2f\ud804\ude2a\ud804\ude3a\ud804\ude26\ud804\ude27\ud804\ude2d\ud804\ude15\ud804\ude29\ud804\ude2a\ud804\ude2f\ud804\ude1b\ud804\ude0a\ud804\ude2e\ud804\ude2f\ud804\ude24\ud804\ude30\ud804\ude2c\ud804\ude2f\ud804\ude27\ud804\ude2f\ud804\ude30\ud804\ude32\ud804\ude1f\n\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude30\ud804\ude3a\ud804\ude26\n\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude2a\ud804\ude2e\ud804\ude3a\ud804\ude30\ud804\ude10\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude08\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude1e\ud804\ude3a\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude30\ud804\ude3a\ud804\ude1f\n\ud804\ude1a\ud804\ude2e\ud804\ude0f\ud804\ude30\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude2e\ud804\ude3a\ud804\ude00\ud804\ude1f\ud804\ude2c\ud804\ude26\ud804\ude3a\n\ud804\ude1f\ud804\ude2d\ud804\ude34\ud804\ude17\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2f\ud804\ude26\ud804\ude2e\ud804\ude10\ud804\ude1e\ud804\ude2a\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude2d\n\ud804\ude19\ud804\ude21\ud804\ude2a\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude30\ud804\ude01\ud804\ude3a\ud804\ude1d\ud804\ude34\ud804\ude1d\ud804\ude2f\ud804\ude08\ud804\ude2c\ud804\ude26\ud804\ude3a\n\ud804\ude1f\ud804\ude34\ud804\ude0e\ud804\ude30\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2e\ud804\ude01\ud804\ude3a\ud804\ude28\ud804\ude2d\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude24\n\ud804\ude19\ud804\ude2e\ud804\ude1e\ud804\ude3a\ud804\ude24\ud804\ude2f\ud804\ude26\ud804\ude19\ud804\ude08\ud804\ude2e\ud804\ude3a\ud804\ude10\ud804\ude2f\ud804\ude0a\ud804\ude19\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude26\ud804\ude1f\n\ud804\ude29\ud804\ude1f\ud804\ude19\ud804\ude2e\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude30\ud804\ude00\ud804\ude3a\ud804\ude29\ud804\ude34\ud804\ude29\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude2d\n\ud804\ude1e\ud804\ude30\ud804\ude1c\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude00\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude30\ud804\ude00\ud804\ude26\ud804\ude2c\ud804\ude3a\n\ud804\ude19\ud804\ude2d\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude29\ud804\ude08\ud804\ude27\ud804\ude3a\ud804\ude1f\ud804\ude29\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude26\n\ud804\ude26\ud804\ude30\ud804\ude19\ud804\ude2f\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude34\ud804\ude3a\n\ud804\ude01\ud804\ude1f\ud804\ude29\ud804\ude3a\ud804\ude19\ud804\ude2c\ud804\ude1e\ud804\ude3a\ud804\ude03\ud804\ude2f\ud804\ude1f\ud804\ude2c\ud804\ude1f\ud804\ude2d\ud804\ude01\ud804\ude3a\n\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude30\ud804\ude10\ud804\ude3a\ud804\ude2d\ud804\ude34\ud804\ude17\ud804\ude10\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude26\ud804\ude30\ud804\ude3a\n\ud804\ude21\ud804\ude2d\ud804\ude26\ud804\ude24\ud804\ude2c\ud804\ude3a\ud804\ude28\ud804\ude2d\ud804\ude29\ud804\ude1e\ud804\ude2f\ud804\ude34\ud804\ude3a\ud804\ude1e\ud804\ude30\ud804\ude3a\ud804\ude26\ud804\ude10\ud804\ude3a\n\ud804\ude29\ud804\ude1f\ud804\ude19\ud804\ude2e\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude3a\ud804\ude30\ud804\ude30\ud804\ude2c\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude34\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude3a\ud804\ude29\ud804\ude3a\n\ud804\ude1d\ud804\ude34\ud804\ude1d\ud804\ude2f\ud804\ude08\ud804\ude2c\ud804\ude26\ud804\ude08\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude1b\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude3a\n\ud804\ude3a\ud804\ude08\ud804\ude2a\ud804\ude3a\ud804\ude2f\ud804\ude27\ud804\ude2f\ud804\ude27\ud804\ude2a\ud804\ude2f\ud804\ude27\ud804\ude2d\ud804\ude3a\ud804\ude08\ud804\ude27\ud804\ude3a\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude2f\ud804\ude34\ud804\ude26\ud804\ude2a\ud804\ude08\ud804\ude2a\ud804\ude2c\ud804\ude3a\ud804\ude2d\ud804\ude2a",
+      "draft_text": "\ud804\ude0d\ud804\ude2c\n\ud804\ude2a\ud804\ude15\ud804\ude30\ud804\ude0a\ud804\ude2a\ud804\ude2f\ud804\ude2a\ud804\ude3a\ud804\ude26\ud804\ude27\ud804\ude2d\ud804\ude15\ud804\ude29\ud804\ude2a\ud804\ude2f\ud804\ude1b\ud804\ude0a\ud804\ude2e\ud804\ude2f\ud804\ude24\ud804\ude30\ud804\ude2c\ud804\ude2f\ud804\ude27\ud804\ude2f\ud804\ude30\ud804\ude32\ud804\ude1f\n\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude30\ud804\ude3a\ud804\ude26\n\ud804\ude03\ud804\ude15\ud804\ude29\ud804\ude2a\ud804\ude2e\ud804\ude3a\ud804\ude30\ud804\ude10\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude08\ud804\ude2d\ud804\ude26\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude1e\ud804\ude3a\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude30\ud804\ude3a\ud804\ude1f\n\ud804\ude1a\ud804\ude2e\ud804\ude0f\ud804\ude30\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude2e\ud804\ude3a\ud804\ude00\ud804\ude1f\ud804\ude2c\ud804\ude26\ud804\ude3a\n\ud804\ude1f\ud804\ude2d\ud804\ude34\ud804\ude17\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2f\ud804\ude26\ud804\ude2e\ud804\ude10\ud804\ude1e\ud804\ude2a\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude2d\n\ud804\ude19\ud804\ude21\ud804\ude2a\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude30\ud804\ude01\ud804\ude3a\ud804\ude1d\ud804\ude34\ud804\ude1d\ud804\ude2f\ud804\ude08\ud804\ude2c\ud804\ude26\ud804\ude3a\n\ud804\ude1f\ud804\ude34\ud804\ude0e\ud804\ude30\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude08\ud804\ude2e\ud804\ude01\ud804\ude3a\ud804\ude28\ud804\ude2d\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude24\n\ud804\ude19\ud804\ude2e\ud804\ude1e\ud804\ude3a\ud804\ude24\ud804\ude2f\ud804\ude26\ud804\ude19\ud804\ude08\ud804\ude2e\ud804\ude3a\ud804\ude10\ud804\ude2f\ud804\ude0a\ud804\ude19\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude26\ud804\ude1f\n\ud804\ude29\ud804\ude1f\ud804\ude19\ud804\ude2e\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude30\ud804\ude00\ud804\ude3a\ud804\ude29\ud804\ude34\ud804\ude29\ud804\ude2c\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude2d\n\ud804\ude1e\ud804\ude30\ud804\ude1c\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude30\ud804\ude3a\ud804\ude00\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude1e\ud804\ude30\ud804\ude00\ud804\ude26\ud804\ude2c\ud804\ude3a\n\ud804\ude19\ud804\ude2d\ud804\ude29\ud804\ude08\ud804\ude2c\ud804\ude3a\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude3a\ud804\ude29\ud804\ude08\ud804\ude27\ud804\ude3a\ud804\ude1f\ud804\ude29\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude26\n\ud804\ude26\ud804\ude30\ud804\ude19\ud804\ude2f\ud804\ude34\ud804\ude2a\ud804\ude2e\ud804\ude34\ud804\ude3a\n\ud804\ude01\ud804\ude1f\ud804\ude29\ud804\ude3a\ud804\ude19\ud804\ude2c\ud804\ude1e\ud804\ude3a\ud804\ude03\ud804\ude2f\ud804\ude1f\ud804\ude2c\ud804\ude1f\ud804\ude2d\ud804\ude01\ud804\ude3a\n\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude30\ud804\ude10\ud804\ude3a\ud804\ude2d\ud804\ude34\ud804\ude17\ud804\ude10\ud804\ude3a\ud804\ude24\ud804\ude2c\ud804\ude34\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude26\ud804\ude30\ud804\ude3a\n\ud804\ude21\ud804\ude2d\ud804\ude26\ud804\ude24\ud804\ude2c\ud804\ude3a\ud804\ude28\ud804\ude2d\ud804\ude29\ud804\ude1e\ud804\ude2f\ud804\ude34\ud804\ude3a\ud804\ude1e\ud804\ude30\ud804\ude3a\ud804\ude26\ud804\ude10\ud804\ude3a\n\ud804\ude29\ud804\ude1f\ud804\ude19\ud804\ude2e\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude1e\ud804\ude3a\ud804\ude30\ud804\ude30\ud804\ude2c\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude34\ud804\ude2a\ud804\ude1f\ud804\ude2d\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude3a\ud804\ude29\ud804\ude3a\n\ud804\ude1d\ud804\ude34\ud804\ude1d\ud804\ude2f\ud804\ude08\ud804\ude2c\ud804\ude26\ud804\ude08\ud804\ude2e\ud804\ude3a\ud804\ude26\ud804\ude0e\ud804\ude1e\ud804\ude2c\ud804\ude3a\ud804\ude1b\ud804\ude1f\ud804\ude30\ud804\ude2c\ud804\ude3a\n\ud804\ude3a\ud804\ude08\ud804\ude2a\ud804\ude3a\ud804\ude2f\ud804\ude27\ud804\ude2f\ud804\ude27\ud804\ude2a\ud804\ude2f\ud804\ude27\ud804\ude2d\ud804\ude3a\ud804\ude08\ud804\ude27\ud804\ude3a\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude2f\ud804\ude34\ud804\ude26\ud804\ude2a\ud804\ude08\ud804\ude2a\ud804\ude2c\ud804\ude3a\ud804\ude2d\ud804\ude2a",
+      "invalid_codepoints": [],
+      "raw_invalid_codepoints": [],
+      "transcript_path": null,
+      "draft_path": "runs/cold-real-pages-003/drafts/page-0019.txt",
+      "line_crops": [],
+      "uncertainty_flags": [
+        "layout_unverified",
+        "script_identity_unverified"
+      ],
+      "errors": [],
+      "recognition_failure_line_ids": [],
+      "recognition_missing_line_ids": [],
+      "draft_review_note": "Unverified raw model text; empty rows may be failed recognition. Consult this report before reuse."
+    }
+  ],
+  "errors": [],
+  "config": {
+    "pages": [
+      18,
+      19
+    ],
+    "dpi": 180.0,
+    "mode": "recognition",
+    "model": "models/khojki-printed.safetensors",
+    "model_sha256": "05c02e4be38dc9392e3517c1e3d21d7f4461a15a4c4d7f019e0b18a79019e4c2",
+    "input_contract_sha256": "5ec809545e2dad0a415c3dcf5ca71a1b45ff56a61464fcb1465c66f2e04bdfb2",
+    "references": null,
+    "references_enabled": false,
+    "export_drafts": true,
+    "warn_confidence": null,
+    "precision": "32-true",
+    "pdf_caption_texts": [],
+    "line_crops": null
+  },
+  "limitations": [
+    "No trained Khojki/non-target image classifier; valid decoder symbols do not prove image script",
+    "Model hypotheses always require review and are withheld from final transcripts",
+    "BLLA layout and reading order are pretrained, not validated on these manuscripts",
+    "Character confidences and raster heuristics are not measured OCR accuracy",
+    "Caption masking is opt-in, exact ASCII text only, outside non-text objects; embedded scan captions remain",
+    "PDF scale assumes 72 canvas units per inch; unusual PDF UserUnit values need review"
+  ],
+  "summary": {
+    "processed_pages": 2,
+    "statuses": {
+      "review": 2
+    },
+    "detected_lines": 40,
+    "reference_pages": 0,
+    "model_pages": 2,
+    "review_pages": 2,
+    "transcripts_written": 0,
+    "drafts_written": 2,
+    "pages_with_errors": 0
+  },
+  "models_loaded": {
+    "segmentation": true,
+    "recognition": true
+  }
+}

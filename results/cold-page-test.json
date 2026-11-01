@@ -1,0 +1,380 @@
+{
+  "policy_version": "khojki-only-nfc-v1",
+  "dataset_kind": "real",
+  "result_mode": "model_evaluation",
+  "allow_reference": false,
+  "prediction_provenances": [
+    "model"
+  ],
+  "prediction_format": "geometry_matched_page_reports",
+  "metric": "codepoint_cer",
+  "normalization": "core.normalize_text: NFC and CRLF/CR to LF",
+  "whitespace": "counted",
+  "punctuation": "counted",
+  "warnings": [
+    "Only annotated regions are scored; unlabelled page lines are not assumed false positives",
+    "CER includes recognition and Unicode semantic mapping; valid code points do not prove correct mapping",
+    "Fragments are concatenated without inferred spaces; ambiguous geometry is scored as missing",
+    "Source report status 'completed_with_review' with page errors; failures are not clean output"
+  ],
+  "line_count": 5,
+  "prediction_count": 5,
+  "reference_characters": 103,
+  "prediction_characters": 110,
+  "substitutions": 12,
+  "insertions": 8,
+  "deletions": 1,
+  "errors": 21,
+  "exact_line_count": 0,
+  "missing_prediction_count": 0,
+  "cer": 0.20388349514563106,
+  "exact_line_accuracy": 0.0,
+  "invalid_codepoints": [],
+  "reference_invalid_codepoints": [],
+  "confusion_pairs": {
+    "U+11232 -> U+1122C": 6,
+    "<empty> -> U+11230": 3,
+    "U+11200 -> U+11201": 2,
+    "U+11202 -> U+1123A": 2,
+    "<empty> -> U+11215": 1,
+    "<empty> -> U+11226": 1,
+    "<empty> -> U+11229": 1,
+    "<empty> -> U+1122F": 1,
+    "<empty> -> U+1123A": 1,
+    "U+11219 -> <empty>": 1,
+    "U+11219 -> U+11230": 1,
+    "U+1122A -> U+11230": 1
+  },
+  "lines": [
+    {
+      "id": "p018-row05",
+      "reference_metadata": {
+        "page": 18,
+        "status": "reviewed",
+        "source_preview": "data/private/preview-018.png",
+        "bbox": [
+          509,
+          1044,
+          1248,
+          1165
+        ],
+        "review_note": "Independent chart agreement, including NA+I, independent U and final AA+ANUSVARA."
+      },
+      "provenance": "model",
+      "missing_prediction": false,
+      "reference_text": "\ud804\ude01\ud804\ude1f\ud804\ude3a\ud804\ude1e\ud804\ude2d\ud804\ude26\ud804\ude34\ud804\ude10\ud804\ude1e\ud804\ude3a\ud804\ude03\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude34\ud804\ude3a",
+      "prediction_text": "\ud804\ude01\ud804\ude1f\ud804\ude3a\ud804\ude1e\ud804\ude2d\ud804\ude26\ud804\ude34\ud804\ude10\ud804\ude1e\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude34\ud804\ude3a",
+      "reference_characters": 16,
+      "prediction_characters": 17,
+      "substitutions": 0,
+      "insertions": 1,
+      "deletions": 0,
+      "errors": 1,
+      "cer": 0.0625,
+      "exact_match": false,
+      "invalid_codepoints": [],
+      "reference_invalid_codepoints": [],
+      "confusion_pairs": {
+        "<empty> -> U+11215": 1
+      },
+      "matched_line_ids": [
+        "_f50c2760-17d5-4432-8188-2227350f87a0"
+      ],
+      "candidate_line_ids": [
+        "_f50c2760-17d5-4432-8188-2227350f87a0"
+      ],
+      "shared_candidate_line_ids": [],
+      "split_reference": false,
+      "geometry_ambiguous": false,
+      "recognition_failed": false,
+      "recognition_failed_line_ids": []
+    },
+    {
+      "id": "p018-row06",
+      "reference_metadata": {
+        "page": 18,
+        "status": "reviewed",
+        "source_preview": "data/private/preview-018.png",
+        "bbox": [
+          509,
+          1199,
+          1442,
+          1332
+        ],
+        "review_note": "Independent chart agreement; independent I retains its horizontal dots and no invented separator."
+      },
+      "provenance": "model",
+      "missing_prediction": false,
+      "reference_text": "\ud804\ude00\ud804\ude1e\ud804\ude30\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude03\ud804\ude1f\ud804\ude2c\ud804\ude02\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude3a\ud804\ude26\ud804\ude30\ud804\ude3a",
+      "prediction_text": "\ud804\ude00\ud804\ude1e\ud804\ude30\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude03\ud804\ude1f\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude3a\ud804\ude26\ud804\ude30\ud804\ude3a",
+      "reference_characters": 21,
+      "prediction_characters": 21,
+      "substitutions": 1,
+      "insertions": 0,
+      "deletions": 0,
+      "errors": 1,
+      "cer": 0.047619047619047616,
+      "exact_match": false,
+      "invalid_codepoints": [],
+      "reference_invalid_codepoints": [],
+      "confusion_pairs": {
+        "U+11202 -> U+1123A": 1
+      },
+      "matched_line_ids": [
+        "_f5705a41-090d-4369-b1ad-9c3f497678fe"
+      ],
+      "candidate_line_ids": [
+        "_f5705a41-090d-4369-b1ad-9c3f497678fe"
+      ],
+      "shared_candidate_line_ids": [],
+      "split_reference": false,
+      "geometry_ambiguous": false,
+      "recognition_failed": false,
+      "recognition_failed_line_ids": []
+    },
+    {
+      "id": "p018-row08",
+      "reference_metadata": {
+        "page": 18,
+        "status": "reviewed",
+        "source_preview": "data/private/preview-018.png",
+        "bbox": [
+          505,
+          1525,
+          1445,
+          1655
+        ],
+        "review_note": "Replaced provisional KHA with THA U+1121A: enlarged glyph has two connected bowls and a descending right stem."
+      },
+      "provenance": "model",
+      "missing_prediction": false,
+      "reference_text": "\ud804\ude29\ud804\ude32\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1a\ud804\ude26\ud804\ude30\ud804\ude3a",
+      "prediction_text": "\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1a\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude3a",
+      "reference_characters": 21,
+      "prediction_characters": 23,
+      "substitutions": 1,
+      "insertions": 2,
+      "deletions": 0,
+      "errors": 3,
+      "cer": 0.14285714285714285,
+      "exact_match": false,
+      "invalid_codepoints": [],
+      "reference_invalid_codepoints": [],
+      "confusion_pairs": {
+        "<empty> -> U+11229": 1,
+        "<empty> -> U+1123A": 1,
+        "U+11232 -> U+1122C": 1
+      },
+      "matched_line_ids": [
+        "_84c75695-bd09-489a-b454-6fc2f30031b8"
+      ],
+      "candidate_line_ids": [
+        "_84c75695-bd09-489a-b454-6fc2f30031b8"
+      ],
+      "shared_candidate_line_ids": [],
+      "split_reference": false,
+      "geometry_ambiguous": false,
+      "recognition_failed": false,
+      "recognition_failed_line_ids": []
+    },
+    {
+      "id": "p018-row14",
+      "reference_metadata": {
+        "page": 18,
+        "status": "reviewed",
+        "source_preview": "data/private/preview-018.png",
+        "bbox": [
+          312,
+          2495,
+          1335,
+          2635
+        ],
+        "review_note": "Replaced provisional second PA with SA U+11229: separate descending left stroke is visible. Gujarati line number excluded."
+      },
+      "provenance": "model",
+      "missing_prediction": false,
+      "reference_text": "\ud804\ude03\ud804\ude1f\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude00\ud804\ude0a\ud804\ude32\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude32\ud804\ude3a\ud804\ude02\ud804\ude3a",
+      "prediction_text": "\ud804\ude03\ud804\ude2f\ud804\ude1f\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude3a",
+      "reference_characters": 22,
+      "prediction_characters": 25,
+      "substitutions": 4,
+      "insertions": 3,
+      "deletions": 0,
+      "errors": 7,
+      "cer": 0.3181818181818182,
+      "exact_match": false,
+      "invalid_codepoints": [],
+      "reference_invalid_codepoints": [],
+      "confusion_pairs": {
+        "<empty> -> U+11230": 2,
+        "U+11232 -> U+1122C": 2,
+        "<empty> -> U+1122F": 1,
+        "U+11200 -> U+11201": 1,
+        "U+11202 -> U+1123A": 1
+      },
+      "matched_line_ids": [
+        "_f46c270b-6ca4-43e6-ae47-76bdb68ccb89"
+      ],
+      "candidate_line_ids": [
+        "_f46c270b-6ca4-43e6-ae47-76bdb68ccb89"
+      ],
+      "shared_candidate_line_ids": [],
+      "split_reference": false,
+      "geometry_ambiguous": false,
+      "recognition_failed": false,
+      "recognition_failed_line_ids": []
+    },
+    {
+      "id": "p019-row01",
+      "reference_metadata": {
+        "page": 19,
+        "status": "reviewed",
+        "source_preview": "data/private/preview-019.png",
+        "bbox": [
+          277,
+          449,
+          1381,
+          588
+        ],
+        "review_note": "TA/BA, GA+U, GA+O, CA and final HA+O/TA+E checked against the chart. Gujarati line number excluded."
+      },
+      "provenance": "model",
+      "missing_prediction": false,
+      "reference_text": "\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude19\ud804\ude32\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude00\ud804\ude0a\ud804\ude32\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude2a\ud804\ude32\ud804\ude19\ud804\ude30\ud804\ude3a",
+      "prediction_text": "\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude30\ud804\ude3a\ud804\ude26",
+      "reference_characters": 23,
+      "prediction_characters": 24,
+      "substitutions": 6,
+      "insertions": 2,
+      "deletions": 1,
+      "errors": 9,
+      "cer": 0.391304347826087,
+      "exact_match": false,
+      "invalid_codepoints": [],
+      "reference_invalid_codepoints": [],
+      "confusion_pairs": {
+        "U+11232 -> U+1122C": 3,
+        "<empty> -> U+11226": 1,
+        "<empty> -> U+11230": 1,
+        "U+11200 -> U+11201": 1,
+        "U+11219 -> <empty>": 1,
+        "U+11219 -> U+11230": 1,
+        "U+1122A -> U+11230": 1
+      },
+      "matched_line_ids": [
+        "_2cbe18ac-140a-4539-9e14-64d2bb5d195a"
+      ],
+      "candidate_line_ids": [
+        "_2cbe18ac-140a-4539-9e14-64d2bb5d195a"
+      ],
+      "shared_candidate_line_ids": [],
+      "split_reference": false,
+      "geometry_ambiguous": false,
+      "recognition_failed": false,
+      "recognition_failed_line_ids": []
+    }
+  ],
+  "scope": "end_to_end_annotated_regions",
+  "assignment": "geometry_only",
+  "reference_text_used_for_assignment": false,
+  "model_rerun": false,
+  "missing_annotated_line_count": 0,
+  "split_count": 0,
+  "matched_annotated_line_count": 5,
+  "annotated_line_coverage": 1.0,
+  "matched_detected_line_count": 5,
+  "detected_line_count": 40,
+  "unmatched_detected_line_ids": [
+    "_f895b976-ab2e-47dd-9614-b82988718a93",
+    "_7f178328-ee9e-4a2a-a8fb-5be3d33f8ea3",
+    "_9a33a954-df28-418a-bc48-f4c472b2d0aa",
+    "_986b19aa-7750-48b0-becf-5d45b82a0b5b",
+    "_0da82765-70c7-4b86-b8b9-ee3713175154",
+    "_44edc2a5-bc61-47e7-a5d2-f368bea92ff1",
+    "_e505926c-d8e8-4768-87c7-7891d566bd4d",
+    "_b08bafa4-a906-4930-ac00-63c8508b9bfa",
+    "_06867766-7358-42f0-bc39-9b9eac2ab205",
+    "_2eb5d4da-f3b5-48b1-9b3b-06eaaddd0e3f",
+    "_78a07df8-989c-436e-9272-6dd0751ba846",
+    "_f55b1ef7-47e7-4672-9483-54bedbb755a0",
+    "_f813c0dc-4b84-4071-a176-d79251b99ee2",
+    "_90c69e30-7ffb-4ed7-8910-39e7d8f7f821",
+    "_52f155fb-7667-4e78-93c8-a5b35403d9de",
+    "_4b938138-6cef-4681-be0b-79aeb6ff9672",
+    "_a1d4fe7d-8deb-408f-afc7-8123cd8b5aab",
+    "_7a69fd5b-9fa9-4887-af1c-88cdf62e1b6a",
+    "_7a7386ab-9427-4d1c-8a26-b0354f0c0614",
+    "_edc7ba1c-24d0-4c33-9108-65ee008c0aab",
+    "_1e271060-ae68-43b3-a036-92641d4a891e",
+    "_e51987bc-3284-45f3-a884-ee55124cae7d",
+    "_14b9cc8f-d745-465f-82e7-c4f538a2f821",
+    "_1e5f3e12-5f63-4ff3-8273-9e432f9d8b7a",
+    "_a3061c56-bc21-4dda-aafe-73ee8381f7fe",
+    "_57332cf6-bb51-431c-aaf7-0cbd1959b8a5",
+    "_b69c8244-3fbf-4802-bf78-b3571bdced1b",
+    "_ab16cd6c-7e5e-4f7d-b581-29245a2063f7",
+    "_7efe5173-0c9f-4465-935d-891682cd9c7e",
+    "_b871b40c-9ce2-4737-b92a-bcfaecd245d4",
+    "_107be147-4f27-4dd0-8173-e592f458ec68",
+    "_184550cc-86c9-4395-87cc-cf2a56f7a280",
+    "_4b5bff9e-574d-4ebd-9907-b8bef2e2135b",
+    "_94cd189a-2a51-4ad7-9d94-c05ff84129f7",
+    "_965376d4-1a78-4a11-ac55-3aa05e4d9f13"
+  ],
+  "ambiguous_detected_line_ids": [],
+  "recognition_failed_line_ids": [],
+  "recognition_failed_line_count": 0,
+  "recognition_failed_annotated_line_ids": [],
+  "no_detection_page_ids": [],
+  "pages_with_errors": [],
+  "source_report_status": "completed_with_review",
+  "source_run_id": "733a8a020ecc44a9aa9d0b2e8baedbaa",
+  "model_sha256": "05c02e4be38dc9392e3517c1e3d21d7f4461a15a4c4d7f019e0b18a79019e4c2",
+  "raw_predictions": {
+    "provenance": "model",
+    "lines": [
+      {
+        "id": "p018-row05",
+        "text": "\ud804\ude01\ud804\ude1f\ud804\ude3a\ud804\ude1e\ud804\ude2d\ud804\ude26\ud804\ude34\ud804\ude10\ud804\ude1e\ud804\ude3a\ud804\ude03\ud804\ude15\ud804\ude1f\ud804\ude1e\ud804\ude2c\ud804\ude34\ud804\ude3a",
+        "provenance": "model",
+        "matched_line_ids": [
+          "_f50c2760-17d5-4432-8188-2227350f87a0"
+        ]
+      },
+      {
+        "id": "p018-row06",
+        "text": "\ud804\ude00\ud804\ude1e\ud804\ude30\ud804\ude3a\ud804\ude01\ud804\ude1f\ud804\ude30\ud804\ude34\ud804\ude3a\ud804\ude03\ud804\ude1f\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude10\ud804\ude2c\ud804\ude19\ud804\ude3a\ud804\ude26\ud804\ude30\ud804\ude3a",
+        "provenance": "model",
+        "matched_line_ids": [
+          "_f5705a41-090d-4369-b1ad-9c3f497678fe"
+        ]
+      },
+      {
+        "id": "p018-row08",
+        "text": "\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude1a\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude3a",
+        "provenance": "model",
+        "matched_line_ids": [
+          "_84c75695-bd09-489a-b454-6fc2f30031b8"
+        ]
+      },
+      {
+        "id": "p018-row14",
+        "text": "\ud804\ude03\ud804\ude2f\ud804\ude1f\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude2c\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude3a\ud804\ude3a",
+        "provenance": "model",
+        "matched_line_ids": [
+          "_f46c270b-6ca4-43e6-ae47-76bdb68ccb89"
+        ]
+      },
+      {
+        "id": "p019-row01",
+        "text": "\ud804\ude19\ud804\ude21\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude19\ud804\ude0a\ud804\ude2f\ud804\ude26\ud804\ude3a\ud804\ude01\ud804\ude0a\ud804\ude30\ud804\ude2c\ud804\ude0e\ud804\ude26\ud804\ude3a\ud804\ude30\ud804\ude2c\ud804\ude30\ud804\ude3a\ud804\ude26",
+        "provenance": "model",
+        "matched_line_ids": [
+          "_2cbe18ac-140a-4539-9e14-64d2bb5d195a"
+        ]
+      }
+    ],
+    "scope": "end_to_end_annotated_regions"
+  },
+  "source_report_sha256": "75362e20083c57d78b1e7aeed62689ff5ea1ae8cc3dc7a262e7377125b8d0ad8"
+}

@@ -170,9 +170,26 @@ def iter_pages(input_path: str | Path, pages: Sequence[int] | None = None,
 
 
 def segment_page(image, model=None):
-    """Kraken 7.1.1 task API; default weights are bundled BLLA, not downloaded."""
+    """Extract complete horizontal rows, falling back to learned baselines."""
+    from kraken import binarization, pageseg
     from kraken.configs import SegmentationInferenceConfig
+    from kraken.lib.exceptions import KrakenInputException
     from kraken.tasks import SegmentationTaskModel
+
+    try:
+        with image.convert("L") as grayscale, binarization.nlbin(grayscale).convert("1") as binary:
+            if binary.histogram()[0] >= 16:
+                segmentation = pageseg.segment(binary, text_direction="horizontal-lr",
+                                               black_colseps=True)
+                if segmentation.lines:
+                    lines = [replace(line, bbox=(max(0, line.bbox[0] - 8),
+                                                 max(0, line.bbox[1] - 8),
+                                                 min(image.width, line.bbox[2] + 8),
+                                                 min(image.height, line.bbox[3] + 8)))
+                             for line in segmentation.lines]
+                    return replace(segmentation, lines=lines)
+    except (ValueError, KrakenInputException):
+        pass
 
     if model is None:
         model = SegmentationTaskModel.load_model()
@@ -217,6 +234,51 @@ def load_recognition_model(path, *, require_contract=False):
     return model
 
 
+def _recognize_box_lines(image, segmentation, model, config, contract):
+    """Split overwide rows at whitespace and return one record per source row."""
+    import numpy as np
+    from kraken import binarization
+
+    for line in segmentation.lines:
+        left, top, right, bottom = line.bbox
+        limit = max(1, int((contract["max_width"] - 2 * contract["padding"])
+                           * (bottom - top) / 96 * 0.85))
+        if right - left <= limit:
+            yield from model.predict(image, replace(segmentation, lines=[line]), config)
+            continue
+        with image.crop(tuple(line.bbox)) as crop, crop.convert("L") as grayscale:
+            minimum, maximum = grayscale.getextrema()
+            if minimum == maximum:
+                raise ValueError("Overwide row has no whitespace split; refusing to clip text")
+            with binarization.nlbin(grayscale).convert("1") as binary:
+                whitespace = np.all(np.asarray(binary, dtype=bool), axis=0)
+        edges = np.diff(np.pad(whitespace.astype(np.int8), (1, 1)))
+        gaps = list(zip(np.flatnonzero(edges == 1), np.flatnonzero(edges == -1)))
+        cuts = [0]
+        while right - left - cuts[-1] > limit:
+            start = cuts[-1]
+            candidates = [(int(begin), int(end)) for begin, end in gaps
+                          if start < (begin + end) // 2 <= start + limit]
+            preferred = [gap for gap in candidates
+                         if (gap[0] + gap[1]) // 2 >= start + limit // 2]
+            if not candidates:
+                raise ValueError("Overwide row has no whitespace split; refusing to clip text")
+            begin, end = max(preferred or candidates, key=lambda gap: (gap[1] - gap[0], gap[1]))
+            cuts.append((begin + end) // 2)
+        cuts.append(right - left)
+        texts = []
+        scores = []
+        for part, (start, end) in enumerate(zip(cuts, cuts[1:])):
+            fragment = replace(line, id=f"{line.id}-part-{part}",
+                               bbox=(left + start, top, left + end, bottom))
+            records = list(model.predict(image, replace(segmentation, lines=[fragment]), config))
+            if len(records) != 1 or not records[0].prediction:
+                raise ValueError("Incomplete recognition of an overwide row")
+            texts.append(records[0].prediction)
+            scores.extend(records[0].confidences if records[0].confidences is not None else [])
+        yield SimpleNamespace(id=line.id, prediction="".join(texts), confidences=scores)
+
+
 def recognize_page(image, segmentation, model):
     """Yield the custom model's raw records without filtering decoder symbols."""
     from kraken.configs import RecognitionInferenceConfig
@@ -224,6 +286,10 @@ def recognize_page(image, segmentation, model):
     config = RecognitionInferenceConfig(precision="32-true", batch_size=1,
                                         num_line_workers=0, raise_on_error=True,
                                         bidi_reordering=False, no_legacy_polygons=True)
+    contract = getattr(model, "input_contract", None)
+    if (segmentation.type == "bbox" and isinstance(contract, dict)
+            and contract.get("schema") == "khojki-ppocrv6-input-v1"):
+        return _recognize_box_lines(image, segmentation, model, config, contract)
     return model.predict(image, segmentation, config)
 
 
@@ -232,7 +298,11 @@ def extract_line_crops(image, segmentation, directory: str | Path, page_number: 
     """Yield each saved private crop immediately so partial exports are auditable."""
     from kraken.lib.segmentation import extract_polygons
 
-    for number, (crop, line) in enumerate(extract_polygons(image, segmentation, legacy=False), 1):
+    if segmentation.type == "bbox":
+        crops = ((image.crop(tuple(line.bbox)), line) for line in segmentation.lines)
+    else:
+        crops = extract_polygons(image, segmentation, legacy=False)
+    for number, (crop, line) in enumerate(crops, 1):
         try:
             path = Path(directory) / f"page-{page_number:04d}-{digest[:12]}-line-{number:04d}.png"
             path.parent.mkdir(parents=True, exist_ok=True)
@@ -320,6 +390,19 @@ def line_hypothesis(record, warn_confidence: float | None = None) -> dict:
 
 
 def _line_geometry(line, image) -> dict:
+    box = getattr(line, "bbox", None)
+    if box is not None:
+        if len(box) != 4 or any(not math.isfinite(value) for value in box):
+            raise ValueError("Invalid line bounding box")
+        left, top, right, bottom = box
+        if not (0 <= left < right <= image.width and 0 <= top < bottom <= image.height):
+            raise ValueError("Line bounding box outside page")
+        flags = ["line_touches_page_edge"] if (left == 0 or top == 0 or right == image.width
+                                               or bottom == image.height) else []
+        return {"id": str(line.id), "bbox": list(box), "baseline": [],
+                "boundary": [[left, top], [right - 1, top],
+                             [right - 1, bottom - 1], [left, bottom - 1]],
+                "uncertainty_flags": flags}
     baseline = [[float(horizontal), float(vertical)] for horizontal, vertical in (line.baseline or [])]
     boundary = [[float(horizontal), float(vertical)] for horizontal, vertical in (line.boundary or [])]
     if any(not math.isfinite(value) for point in baseline + boundary for value in point):
@@ -417,8 +500,8 @@ def process_page(image, page_number: int, *, segmenter, recognizer=None,
             report["preprocessing"]["cleanup"] = cleanup
         try:
             segmentation = segmenter(working)
-            if segmentation.type != "baselines":
-                raise ValueError("Expected BLLA baseline segmentation, not bounding boxes")
+            if segmentation.type not in ("baselines", "bbox"):
+                raise ValueError("Expected baseline or bounding-box segmentation")
             geometries = [_line_geometry(line, working) for line in segmentation.lines]
             report["segmentation"] = {
                 "line_count": len(geometries), "lines": geometries,

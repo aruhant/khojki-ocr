@@ -6,7 +6,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 from khojki_ocr.core import POLICY_VERSION, raster_digest
 from khojki_ocr.pipeline import (
@@ -133,6 +133,110 @@ class RecognitionInputContractTests(unittest.TestCase):
 
 
 class PipelinePolicyTests(unittest.TestCase):
+    def test_clear_printed_rows_keep_complete_glyphs_and_reading_order(self):
+        font_path = Path(__file__).resolve().parents[1] / "web/assets/NotoSansKhojki-Regular.ttf"
+        font = ImageFont.truetype(str(font_path), 64, layout_engine=ImageFont.Layout.RAQM)
+        for framed in (False, True):
+            with self.subTest(framed=framed), Image.new("RGB", (1000, 720), "white") as image:
+                model = Mock()
+                draw = ImageDraw.Draw(image)
+                if framed:
+                    draw.rectangle((0, 0, 999, 719), outline="black", width=12)
+                boxes = []
+                for row, base in enumerate((0x1120E, 0x11219, 0x11226, 0x11229)):
+                    text = "\U0001123A".join(
+                        chr(base) + (chr(vowel) if vowel is not None else "")
+                        for vowel in (None, 0x1122C, 0x1122D, 0x1122F, 0x11230, 0x11232)
+                    )
+                    position = (80, 160 + row * 135)
+                    boxes.append(draw.textbbox(position, text, font=font, anchor="ls", direction="ltr"))
+                    draw.text(position, text, font=font, anchor="ls", direction="ltr", fill="black")
+                original = image.tobytes()
+                segmentation = segment_page(image, model)
+                self.assertEqual(segmentation.type, "bbox")
+                self.assertEqual(len(segmentation.lines), 4)
+                for line, expected in zip(segmentation.lines, boxes):
+                    left, top, right, bottom = line.bbox
+                    self.assertLessEqual(left, expected[0] + 2)
+                    self.assertLessEqual(top, expected[1] + 2)
+                    self.assertGreaterEqual(right, expected[2] - 2)
+                    self.assertGreaterEqual(bottom, expected[3] - 2)
+                self.assertEqual(image.tobytes(), original)
+                model.predict.assert_not_called()
+
+    def test_empty_classical_segmentation_uses_learned_fallback(self):
+        model = Mock()
+        result = SimpleNamespace(lines=[])
+        model.predict.return_value = result
+        with Image.new("RGB", (200, 200), "white") as image, patch(
+                "kraken.binarization.nlbin", return_value=image.copy()), patch(
+                "kraken.pageseg.segment", return_value=SimpleNamespace(lines=[])):
+            self.assertIs(segment_page(image, model), result)
+        model.predict.assert_called_once()
+
+    def test_bounding_box_lines_support_reporting_recognition_and_crop_export(self):
+        line = SimpleNamespace(id="complete-row", bbox=(8, 9, 58, 31))
+        segmentation = SimpleNamespace(type="bbox", lines=[line], regions={})
+        record = SimpleNamespace(id=line.id, prediction=KA, confidences=[0.9])
+        with tempfile.TemporaryDirectory() as directory, Image.new("RGB", (64, 64), "white") as image:
+            image.putpixel((8, 9), (0, 0, 0))
+            result = process_page(image, 1, segmenter=lambda source: segmentation,
+                                  recognizer=lambda source, bounds: iter([record]),
+                                  line_crops=directory)
+            self.assertEqual(result["segmentation"]["lines"][0]["bbox"], [8, 9, 58, 31])
+            self.assertEqual(result["raw_hypothesis"], KA)
+            self.assertEqual(result["errors"], [])
+            self.assertEqual(len(result["line_crops"]), 1)
+            with Image.open(result["line_crops"][0]["path"]) as crop:
+                self.assertEqual(crop.size, (50, 22))
+                self.assertEqual(crop.getpixel((0, 0)), (0, 0, 0))
+
+    def test_overwide_row_preserves_all_pixels_and_returns_one_line(self):
+        from kraken.containers import BBoxLine, Segmentation
+
+        line = BBoxLine(id="wide-row", bbox=(0, 0, 600, 80), base_dir="L")
+        segmentation = Segmentation(type="bbox", imagename="test", lines=[line],
+                                    text_direction="horizontal-lr", script_detection=False)
+        contract = {"schema": "khojki-ppocrv6-input-v1", "max_width": 256, "padding": 16}
+        fragments = []
+
+        def predict(source, bounds, config):
+            fragment = bounds.lines[0]
+            fragments.append(fragment.bbox)
+            return [SimpleNamespace(prediction=KA, confidences=[0.9])]
+
+        model = SimpleNamespace(input_contract=contract, predict=predict)
+        with Image.new("RGB", (600, 80), "white") as image:
+            draw = ImageDraw.Draw(image)
+            for start in range(10, 590, 40):
+                draw.rectangle((start, 20, start + 15, 60), fill="black")
+            original = image.tobytes()
+            records = list(recognize_page(image, segmentation, model))
+            self.assertEqual(len(records), 1)
+            self.assertEqual(records[0].id, line.id)
+            self.assertGreater(len(fragments), 1)
+            self.assertEqual(records[0].prediction, KA * len(fragments))
+            self.assertEqual(fragments[0][0], 0)
+            self.assertEqual(fragments[-1][2], 600)
+            for before, after in zip(fragments, fragments[1:]):
+                self.assertEqual(before[2], after[0])
+                self.assertEqual(image.crop((before[2], 0, before[2] + 1, 80)).convert("L").getextrema(), (255, 255))
+            self.assertTrue(all(right - left <= 158 for left, top, right, bottom in fragments))
+            self.assertEqual(image.tobytes(), original)
+
+    def test_overwide_row_without_whitespace_fails_instead_of_clipping(self):
+        from kraken.containers import BBoxLine, Segmentation
+
+        line = BBoxLine(id="uncuttable", bbox=(0, 0, 600, 80), base_dir="L")
+        segmentation = Segmentation(type="bbox", imagename="test", lines=[line],
+                                    text_direction="horizontal-lr", script_detection=False)
+        model = SimpleNamespace(input_contract={"schema": "khojki-ppocrv6-input-v1",
+                                                "max_width": 256, "padding": 16}, predict=Mock())
+        with Image.new("RGB", (600, 80), "black") as image:
+            with self.assertRaisesRegex(ValueError, "no whitespace split"):
+                list(recognize_page(image, segmentation, model))
+        model.predict.assert_not_called()
+
     def test_wide_crop_segmentation_preserves_ink_and_original_coordinates(self):
         configs = SimpleNamespace(SegmentationInferenceConfig=Mock())
         tasks = SimpleNamespace(SegmentationTaskModel=Mock())

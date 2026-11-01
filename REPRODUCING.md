@@ -2,6 +2,18 @@
 
 These steps are optional and are not needed to run the app. Complete [README.md](README.md)'s setup first and activate the `khojki-ocr` environment.
 
+## Check the Included Sample
+
+This generated sample needs no private PDF:
+
+```sh
+python -m khojki_ocr.pipeline --input web/assets/printed-sample.png \
+  --model models/khojki-printed.safetensors --disable-references \
+  --export-drafts --output runs/sample-check
+```
+
+Expected text and measured cold-run results are in [results/cold-run-validation.json](results/cold-run-validation.json).
+
 ## Prepare the Reference Images
 
 The private exercise scans and crops are not included in the repository. To repeat the recorded benchmarks, place the original 47-page exercise PDF at `data/private/sample.pdf`. An arbitrary PDF will not match the reference manifests.
@@ -51,14 +63,14 @@ python -m khojki_ocr.pipeline --input data/private/sample.pdf --pages 18,19 \
   --export-drafts --output runs/page-check
 ```
 
-This benchmark has six oversized-line failures outside the annotated regions, so the pipeline exits with code 1 but still writes its report. Once it finishes, score that report:
+Once processing finishes, score the report:
 
 ```sh
 python -m khojki_ocr.evaluation --references data/references.json \
   --page-report runs/page-check/report.json --output runs/page-check/cer.json
 ```
 
-Compare the outputs with [results/final-crop-test.json](results/final-crop-test.json), [results/final-fresh-words.json](results/final-fresh-words.json) and [results/final-page-test.json](results/final-page-test.json). The recorded page report is [results/final-page-report.json](results/final-page-report.json). Raw text is in [results/final-transcripts/README.md](results/final-transcripts/README.md) and [results/final-pages/page-0018.txt](results/final-pages/page-0018.txt) / [results/final-pages/page-0019.txt](results/final-pages/page-0019.txt).
+Compare the outputs with [results/final-crop-test.json](results/final-crop-test.json), [results/final-fresh-words.json](results/final-fresh-words.json) and [results/cold-page-test.json](results/cold-page-test.json). The current page report, including raw recognized text, is [results/cold-page-report.json](results/cold-page-report.json). Older page reports and text files remain unchanged as historical records.
 
 ## Run the Tests
 
@@ -76,8 +88,8 @@ The final checkpoint was selected on development data before its test evaluation
 
 CER counts NFC-normalized code points, including punctuation and whitespace, without discarding incorrect predictions. The manual-crop result is 21/103 errors: 12 substitutions, six insertions and three deletions. All six reference O signs (U+11232) were predicted as E+AA (U+11230 U+1122C); NFC does not unify those sequences. Visual recognition versus Unicode mapping was not isolated.
 
-The raw-page result is 24/103 errors across the five geometrically matched annotated regions, with 87 total detections. It is not full-page CER. The two-page CLI took 154.77 seconds on the Intel macOS CPU, measured by external `/usr/bin/time -p`, including model loading and report output.
+The current raw-page result is 21/103 errors across the five geometrically matched annotated regions, with 40 total detections and zero recognition failures. It is not full-page CER. The two-page cold CLI took 106.35 seconds on the Intel macOS CPU, timed around the fresh process including model loading and report output. The recognizer weights are unchanged; component-based line extraction handles printed borders, and oversized rows are split at blank columns and rejoined without extra line breaks.
 
 The five historical lines were reused for diagnostics in earlier iterations. References were transcribed without prediction text, using AI assistance and independent chart review, not expert certification. The fresh sample favours short, legible words; one reviewer incidentally saw aggregate metrics, but not predictions. Neither sample is a strong blind benchmark.
 
-Raw input is the default: final normalization tied the 1/46 development error count; an earlier same-model comparison worsened from 1/41 to 2/41. No dictionary correction, trained script classifier or handwriting benchmark is included. Older reports are retained as historical experiments, not measurements of the bundled model.
+Raw input is the default: final normalization tied the 1/46 development error count; an earlier same-model comparison worsened from 1/41 to 2/41. No dictionary correction, trained script classifier or handwriting benchmark is included. Older reports describe earlier experiments and pipeline versions.

@@ -1,0 +1,59 @@
+{
+  "schema": "khojki-cold-run-validation-v1",
+  "verified_at": "2026-11-01T13:51:33.151552-05:00",
+  "model_sha256": "05c02e4be38dc9392e3517c1e3d21d7f4461a15a4c4d7f019e0b18a79019e4c2",
+  "input_contract_sha256": "5ec809545e2dad0a415c3dcf5ca71a1b45ff56a61464fcb1465c66f2e04bdfb2",
+  "pipeline_source_sha256": "f2c09636633068dd9b06fb5792ed75aaecbb5aac12a2272b9714cfe237c3b0d1",
+  "segmentation": "Kraken component-based horizontal rows with black-separator removal; learned-baseline fallback",
+  "wide_rows": "Split at blank image columns; concatenate predictions under original line ID without added spaces or newlines",
+  "generated_sample": {
+    "source": "web/assets/printed-sample.png",
+    "source_sha256": "f25bdfb7ce801aac1a327c6ade00d1bc4e731acc64f53327b65348bcdfc6cab9",
+    "dataset_kind": "synthetic",
+    "reference_text": "\ud804\ude0e\ud804\ude3a\ud804\ude0e\ud804\ude2c\ud804\ude3a\ud804\ude0e\ud804\ude2d\ud804\ude3a\ud804\ude0e\ud804\ude2f\ud804\ude3a\ud804\ude0e\ud804\ude30\ud804\ude3a\ud804\ude0e\ud804\ude32\n\ud804\ude19\ud804\ude3a\ud804\ude19\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude2d\ud804\ude3a\ud804\ude19\ud804\ude2f\ud804\ude3a\ud804\ude19\ud804\ude30\ud804\ude3a\ud804\ude19\ud804\ude32\n\ud804\ude26\ud804\ude3a\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude26\ud804\ude2d\ud804\ude3a\ud804\ude26\ud804\ude2f\ud804\ude3a\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude26\ud804\ude32\n\ud804\ude29\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2d\ud804\ude3a\ud804\ude29\ud804\ude2f\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude32",
+    "prediction_text": "\ud804\ude0e\ud804\ude3a\ud804\ude0e\ud804\ude2c\ud804\ude3a\ud804\ude0e\ud804\ude2d\ud804\ude3a\ud804\ude0a\ud804\ude2f\ud804\ude3a\ud804\ude0e\ud804\ude30\ud804\ude3a\ud804\ude0e\ud804\ude32\n\ud804\ude19\ud804\ude3a\ud804\ude2c\ud804\ude3a\ud804\ude19\ud804\ude2d\ud804\ude3a\ud804\ude19\ud804\ude2f\ud804\ude3a\ud804\ude19\ud804\ude30\ud804\ude3a\ud804\ude19\ud804\ude2c\n\ud804\ude26\ud804\ude3a\ud804\ude26\ud804\ude2c\ud804\ude3a\ud804\ude26\ud804\ude2d\ud804\ude3a\ud804\ude26\ud804\ude3a\ud804\ude26\ud804\ude30\ud804\ude3a\ud804\ude26\ud804\ude2c\n\ud804\ude29\ud804\ude3a\ud804\ude29\ud804\ude2c\ud804\ude3a\ud804\ude29\ud804\ude2d\ud804\ude3a\ud804\ude29\ud804\ude2f\ud804\ude3a\ud804\ude29\ud804\ude30\ud804\ude3a\ud804\ude29\ud804\ude32",
+    "reference_characters": 67,
+    "prediction_characters": 65,
+    "errors": 5,
+    "cer": 0.07462686567164178,
+    "source_lines": 4,
+    "output_lines": 4,
+    "server_cold_start": true,
+    "model_preloaded": false,
+    "elapsed_seconds": 14.354,
+    "stage_seconds": {
+      "validation": 0.058,
+      "model_loading": 10.314,
+      "rendering": 0.017,
+      "segmentation": 1.693,
+      "recognition": 2.277,
+      "page_processing": 4.016
+    },
+    "original_pipeline_errors": 46,
+    "original_pipeline_cer": 0.6865671641791045
+  },
+  "real_pages": {
+    "scope": "end_to_end_annotated_regions",
+    "pages": [
+      18,
+      19
+    ],
+    "source": "results/cold-page-test.json",
+    "report": "results/cold-page-report.json",
+    "source_report_sha256": "75362e20083c57d78b1e7aeed62689ff5ea1ae8cc3dc7a262e7377125b8d0ad8",
+    "errors": 21,
+    "reference_characters": 103,
+    "cer": 0.20388349514563106,
+    "matched_annotated_lines": 5,
+    "missing_annotated_lines": 0,
+    "detected_regions": 40,
+    "recognition_failed_regions": 0,
+    "wall_seconds": 106.35,
+    "wall_time_method": "External monotonic timer around fresh CLI process, including model loading and report output"
+  },
+  "tests": {
+    "passed": 183,
+    "subtests_passed": 201
+  },
+  "scope_note": "Generated sample is an illustrative test, not real-page accuracy. Real-page CER covers only five annotated lines; no handwriting benchmark."
+}

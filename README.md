@@ -28,6 +28,8 @@ python -m khojki_ocr.server
 
 Open [http://127.0.0.1:8765](http://127.0.0.1:8765), upload a PDF, PNG or JPEG, and edit the recognized text beside the source image. Use the download button to save UTF-8 text. Uploads are processed locally; the default limit is 20 MB and 20 pages.
 
+To try the example shown above, upload [web/assets/printed-sample.png](web/assets/printed-sample.png).
+
 In a new terminal session, run `conda activate khojki-ocr` before starting the app again.
 
 ## Command Line
@@ -48,11 +50,12 @@ Character error rate (CER) measures substitutions, insertions and deletions agai
 
 | Input | Evaluated Sample | CER |
 | --- | --- | --- |
-| Raw PDF pages | Five annotated lines, 103 code points | 23.30% |
+| Raw PDF pages, cold run | Five annotated lines, 103 code points | 20.39% |
 | Manual crops of those lines | Five lines, 103 code points | 20.39% |
 | Separate short-word test | Five words, 20 code points | 20.00% |
+| Generated screenshot sample, cold run | Four lines, 67 code points | 7.46% |
 
-See [results/final-model-summary.json](results/final-model-summary.json) for the model and measurements, [REPRODUCING.md](REPRODUCING.md) to rerun evaluations and tests, and [RETRO.md](RETRO.md) for experiments and error analysis.
+See [results/cold-run-validation.json](results/cold-run-validation.json) for the current pipeline checks, [results/final-model-summary.json](results/final-model-summary.json) for model training, [REPRODUCING.md](REPRODUCING.md) to rerun evaluations, and [RETRO.md](RETRO.md) for experiments and error analysis.
 
 ## Attribution
 

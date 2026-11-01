@@ -1,17 +1,17 @@
 # Technical Retro
 
-PDFium renders pages, Kraken BLLA detects lines, and PP-OCRv6 recognizes them after fine-tuning on 23 printed crops. Five test lines (103 code points) score 23.30% CER end to end and 20.39% on manual crops.
+PDFium renders pages, Kraken's connected-component segmenter finds lines, and PP-OCRv6 recognizes them after fine-tuning on 23 printed crops. Cold-run CER on five annotated lines (103 code points) is 20.39%, also 20.39% on manual crops.
 
 ## Error Breakdown by Stage
 
-- **Line detection:** all five annotated lines were found without splits. Raw pages gave 24 text errors versus 21 on manual crops; the net increase of three also includes differences in crop geometry and raster resolution.
+- **Line detection:** all five annotated lines were found without splits. Border-aware component segmentation processed 40 rows without recognition failures. Overwide rows are split at whitespace and rejoined before export.
 - **Recognition and Unicode mapping:** manual crops had 12 substitutions, six insertions and three deletions. All six O signs (U+11232) were output as E+AA (U+11230 U+1122C); NFC does not unify them. The model emits Unicode directly, so these stages were not measured separately.
 - **Common errors:** three inserted TTHA letters, independent vowel I misread both times and A read as AA.
 
 ## Experiments That Did Not Work
 
 - **Synthetic-only training:** 180 font-rendered lines reached 43.7% accuracy on synthetic validation but 98.06% CER on the real test lines.
-- **Default variable-width inference:** training pads lines to a fixed width; padding at inference the same way cut CER from 98.06% to 89.32% with the same weights.
+- **Learned baseline detection:** the four-row demo produced six fragments and 68.66% CER. Component-based rows reduced this to 7.46%.
 - **Mixing synthetic and real lines:** adding 323 synthetic lines to 17 real lines kept development errors at 2/41.
 - **Background flattening:** development errors rose from 1/41 to 2/41 and tied at 1/46 on the final model, so images stay unmodified.
 
@@ -27,7 +27,7 @@ More labelled real lines. Fine-tuning the synthetic model on 17 real lines cut C
 
 ## Scale
 
-At 180 DPI, two pages took 154.77 seconds on a 4-core Intel Core i7-10510U, including model loading: about 77 seconds per page, or one hour for 45 pages, with no paid compute. Handwriting needs real handwritten labels, detection checks on uneven baselines and writer-disjoint evaluation. Labelling becomes the main cost.
+At 180 DPI, two pages took 106.35 seconds on a 4-core Intel Core i7-10510U, including model loading: about 53 seconds per page, or 40 minutes for 45 pages, with no paid compute. Handwriting needs real handwritten labels, detection checks on uneven baselines and writer-disjoint evaluation. Labelling becomes the main cost.
 
 ## AI Tools
 
